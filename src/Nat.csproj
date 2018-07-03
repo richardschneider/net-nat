@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net45;netstandard2</TargetFrameworks>
+    <AssemblyName>Makaretu.Nat</AssemblyName>
+    <RootNamespace>Makaretu.Nat</RootNamespace>
+    <DocumentationFile>Makaretu.Nat.xml</DocumentationFile>
+    <DebugType>full</DebugType>
+    
+    <!-- developer build is always 0.42 -->
+    <AssemblyVersion>0.42</AssemblyVersion>
+    <Version>0.42</Version>
+    
+    <!-- Nuget specs -->
+    <PackageId>Makaretu.Nat</PackageId>
+    <Authors>Richard Schneider</Authors>
+    <Title>Life behind a NAT</Title>
+    <Description>DNS data model with serializer/deserializer for the wire format.</Description>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageReleaseNotes></PackageReleaseNotes>
+    <Copyright>© 2018 Richard Schneider</Copyright>
+    <PackageTags>dns</PackageTags>
+    <IncludeSymbols>True</IncludeSymbols>
+    <PackageLicenseUrl>https://github.com/richardschneider/net-nat/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/richardschneider/net-nat</PackageProjectUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IPNetwork2" Version="2.1.2" />
+  </ItemGroup>
+
+</Project>

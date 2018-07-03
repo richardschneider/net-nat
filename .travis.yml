@@ -1,0 +1,15 @@
+language: csharp
+mono: none
+dotnet: 2.0.0
+dist: trusty
+sudo: required
+os:
+  - linux
+  - osx
+
+install:
+  - dotnet restore
+
+script:
+  - dotnet build -c Release --no-restore --framework netstandard2 ./src
+  - dotnet test  -c Release --no-restore --framework netcoreapp2 ./test
