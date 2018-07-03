@@ -48,7 +48,7 @@ build_script:
   - dotnet pack -c %CONFIGURATION% --no-build --no-restore -p:Version=%GitVersion_MajorMinorPatch% -p:AssemblyVersion=%GitVersion_MajorMinorPatch%
 
 after_build:
-  - cmd: appveyor PushArtifact "src\bin\%CONFIGURATION%\Makaretu.Dns.%GitVersion_MajorMinorPatch%.nupkg"
+  - cmd: appveyor PushArtifact "src\bin\%CONFIGURATION%\Makaretu.Nat.%GitVersion_MajorMinorPatch%.nupkg"
 
 test_script:
   - dotnet test -c %CONFIGURATION% --no-build --no-restore test
@@ -56,7 +56,7 @@ test_script:
 after_test: 
 # Generate coverage report
     - packages\OpenCover.4.6.519\tools\OpenCover.Console.exe 
-        -register:user -filter:"+[Makaretu.Dns*]* -[*Tests]*" 
+        -register:user -filter:"+[Makaretu.Nat*]* -[*Tests]*" 
         -target:"c:\Program Files\dotnet\dotnet.exe" 
         -targetargs:"test -c Release --no-build --no-restore --framework net45 test" 
         -output:coverage.xml  
