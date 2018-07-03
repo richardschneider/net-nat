@@ -1,0 +1,41 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: Makaretu.Nat
+  name: Makaretu.Nat
+  href: api/Makaretu.Nat.html
+  commentId: N:Makaretu.Nat
+  fullName: Makaretu.Nat
+  nameWithType: Makaretu.Nat
+- uid: Makaretu.Nat.IPAddressExtensions
+  name: IPAddressExtensions
+  href: api/Makaretu.Nat.IPAddressExtensions.html
+  commentId: T:Makaretu.Nat.IPAddressExtensions
+  fullName: Makaretu.Nat.IPAddressExtensions
+  nameWithType: IPAddressExtensions
+- uid: Makaretu.Nat.IPAddressExtensions.IsPrivate(System.Net.IPAddress)
+  name: IsPrivate(IPAddress)
+  href: api/Makaretu.Nat.IPAddressExtensions.html#Makaretu_Nat_IPAddressExtensions_IsPrivate_System_Net_IPAddress_
+  commentId: M:Makaretu.Nat.IPAddressExtensions.IsPrivate(System.Net.IPAddress)
+  fullName: Makaretu.Nat.IPAddressExtensions.IsPrivate(System.Net.IPAddress)
+  nameWithType: IPAddressExtensions.IsPrivate(IPAddress)
+- uid: Makaretu.Nat.IPAddressExtensions.IsPrivate*
+  name: IsPrivate
+  href: api/Makaretu.Nat.IPAddressExtensions.html#Makaretu_Nat_IPAddressExtensions_IsPrivate_
+  commentId: Overload:Makaretu.Nat.IPAddressExtensions.IsPrivate
+  isSpec: "True"
+  fullName: Makaretu.Nat.IPAddressExtensions.IsPrivate
+  nameWithType: IPAddressExtensions.IsPrivate
+- uid: Makaretu.Nat.IPAddressExtensions.IsPublic(System.Net.IPAddress)
+  name: IsPublic(IPAddress)
+  href: api/Makaretu.Nat.IPAddressExtensions.html#Makaretu_Nat_IPAddressExtensions_IsPublic_System_Net_IPAddress_
+  commentId: M:Makaretu.Nat.IPAddressExtensions.IsPublic(System.Net.IPAddress)
+  fullName: Makaretu.Nat.IPAddressExtensions.IsPublic(System.Net.IPAddress)
+  nameWithType: IPAddressExtensions.IsPublic(IPAddress)
+- uid: Makaretu.Nat.IPAddressExtensions.IsPublic*
+  name: IsPublic
+  href: api/Makaretu.Nat.IPAddressExtensions.html#Makaretu_Nat_IPAddressExtensions_IsPublic_
+  commentId: Overload:Makaretu.Nat.IPAddressExtensions.IsPublic
+  isSpec: "True"
+  fullName: Makaretu.Nat.IPAddressExtensions.IsPublic
+  nameWithType: IPAddressExtensions.IsPublic
