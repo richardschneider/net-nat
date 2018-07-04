@@ -47,6 +47,22 @@ namespace Makaretu.Nat
         }
 
         /// <summary>
+        ///   The time to wait for a response from NAT.
+        /// </summary>
+        /// <value>
+        ///   Defaults to 250ms.
+        /// </value>
+        public TimeSpan InitialTimeout { get; set; } = TimeSpan.FromMilliseconds(250);
+
+        /// <summary>
+        ///   Number of times to retry sending request.
+        /// </summary>
+        /// <value>
+        ///   Defaults to 4.
+        /// </value>
+        public int MaxRetries { get; set; } = 4;
+
+        /// <summary>
         ///   Determines if the NAT is online.
         /// </summary>
         /// <returns>
@@ -71,9 +87,24 @@ namespace Makaretu.Nat
 
         async Task<byte[]> SendAsync(byte[] request)
         {
-            await nat.SendAsync(request, request.Length);
-            var result = await nat.ReceiveAsync();
-            return result.Buffer;
+            int timeout = (int)InitialTimeout.TotalMilliseconds;
+            int retries = 0;
+            do
+            {
+                await nat.SendAsync(request, request.Length);
+
+                var task = nat.ReceiveAsync();
+                if (await Task.WhenAny(task, Task.Delay(timeout)) == task)
+                {
+                    // task completed within timeout
+                    return task.Result.Buffer;
+                }
+
+                // Timeout.
+                timeout *= 2;
+            } while (retries++ < MaxRetries);
+
+            throw new TimeoutException();
         }
     }
 }

@@ -27,5 +27,16 @@ namespace Makaretu.Nat
             var q = await nat.IsAvailableAsync();
             Assert.IsFalse(q);
         }
+
+        [TestMethod]
+        public async Task Unresponsive_Nat()
+        {
+            using (var server = new MockNat())
+            {
+                var nat = new NatPcp(server.Address) { MaxRetries = 1 };
+                var q = await nat.IsAvailableAsync();
+                Assert.IsFalse(q);
+            }
+        }
     }
 }
