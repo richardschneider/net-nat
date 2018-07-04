@@ -4,7 +4,7 @@
 [![travis build](https://travis-ci.org/richardschneider/net-nat.svg?branch=master)](https://travis-ci.org/richardschneider/net-nat)
 [![Coverage Status](https://coveralls.io/repos/richardschneider/net-nat/badge.svg?branch=master&service=github)](https://coveralls.io/github/richardschneider/net-nat?branch=master)
 [![Version](https://img.shields.io/nuget/v/Ipfs.Core.svg)](https://www.nuget.org/packages/Ipfs.Core)
-[![docs](https://cdn.rawgit.com/richardschneider/net-nat/master/doc/images/docs-latest-green.svg)](https://richardschneider.github.io/net-nat)
+[![docs](https://cdn.rawgit.com/richardschneider/net-nat/master/doc/images/docs-latest-green.svg)](https://richardschneider.github.io/net-nat/articles/intro)
 
 Life behind a NAT (Network Address Translator).
 
