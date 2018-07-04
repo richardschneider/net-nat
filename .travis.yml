@@ -12,4 +12,4 @@ install:
 
 script:
   - dotnet build -c Release --no-restore --framework netstandard2 ./src
-  - dotnet test  -v n -c Release --no-restore --framework netcoreapp2 ./test
+  - dotnet test  -c Release --no-restore --framework netcoreapp2 ./test

@@ -12,7 +12,7 @@ namespace Makaretu.Nat
     {
         public event EventHandler<UdpReceiveResult> RequestReceived;
         public readonly IPAddress Address = IPAddress.Loopback;
-        UdpClient udp;
+        public UdpClient udp;
 
         public MockNat(int port = NatPmp.RequestPort)
         {
@@ -30,7 +30,7 @@ namespace Makaretu.Nat
                     RequestReceived?.Invoke(this, result);
                 }
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 // eat the exception
             }

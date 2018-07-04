@@ -15,9 +15,13 @@ namespace Makaretu.Nat
         [TestMethod]
         public async Task IsAvailable()
         {
-            var nat = new NatPcp(NatDiscovery.GetGateways().First());
-            var q = await nat.IsAvailableAsync();
-            Assert.IsTrue(q);
+            using (var server = new MockNat())
+            {
+                server.RequestReceived += (s, req) => server.udp.Send(new byte[] { 2, 128 }, 2, req.RemoteEndPoint);
+                var nat = new NatPcp(server.Address);
+                var q = await nat.IsAvailableAsync();
+                Assert.IsTrue(q);
+            }
         }
 
         [TestMethod]
