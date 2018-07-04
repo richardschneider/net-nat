@@ -27,6 +27,7 @@
 
   <ItemGroup>
     <PackageReference Include="IPNetwork2" Version="2.1.2" />
+    <PackageReference Include="System.Net.NetworkInformation" Version="4.3.0" />
   </ItemGroup>
 
 </Project>

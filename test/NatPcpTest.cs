@@ -20,5 +20,12 @@ namespace Makaretu.Nat
             Assert.IsTrue(q);
         }
 
+        [TestMethod]
+        public async Task IsAvailble_NotNat()
+        {
+            var nat = new NatPcp(IPAddress.Parse("127.0.0.1"));
+            var q = await nat.IsAvailableAsync();
+            Assert.IsFalse(q);
+        }
     }
 }
