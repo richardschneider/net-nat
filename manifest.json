@@ -40,90 +40,24 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "UidNotFound"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "articles/edns.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/edns.html",
-          "hash": "xUwterDw4ckYY/K+J49MwA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "UidNotFound"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "articles/eopcode.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/eopcode.html",
-          "hash": "kkx0qsZtjy5s+GWlgwgWoA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "UidNotFound"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "articles/eoption.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/eoption.html",
-          "hash": "GZv1oVsuEll/af9VOINz8w=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "UidNotFound"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/intro.md",
       "output": {
         ".html": {
           "relative_path": "articles/intro.html",
-          "hash": "9a5vBBtOJ7NmLTTcbrJVCQ=="
+          "hash": "0mZQFZrw4x4teyVroCiw8w=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "UidNotFound"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "articles/rr.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/rr.html",
-          "hash": "PBVsH6UwmtIIKnF+o7pHCQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Toc",
       "source_relative_path": "articles/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "GHvGP6oMJIRaITyMnAfKiA=="
+          "hash": "R7OD9UNPl/wCTitJt9/q2A=="
         }
       },
       "is_incremental": false,
@@ -173,11 +107,11 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "ConceptualDocumentProcessor": {
+        "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build"
         },
-        "ManagedReferenceDocumentProcessor": {
+        "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build"
         },
