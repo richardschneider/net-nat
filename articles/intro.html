@@ -69,9 +69,14 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="makaretu-nat">Makaretu NAT</h1>
 
-<p>Life behind a NAT (Network Address Translator). 
-The source code is on <a href="https://github.com/richardschneider/net-nat">GitHub</a> and the 
+<p>The main purpose of this package is to allow a server behind a NAT to accept connections from the public internet.</p>
+<p>The source code is on <a href="https://github.com/richardschneider/net-nat">GitHub</a> and the 
 package is published on <a href="https://www.nuget.org/packages/Makaretu.Nat">NuGet</a>.</p>
+<p>It uses the following protocols to create a public IP address</p>
+<ul>
+<li><a href="https://tools.ietf.org/html/rfc6887">RFC 6887 - NAT Port Control Protocol</a></li>
+<li><a href="https://tools.ietf.org/html/rfc6886">RFC 6886 - NAT Port Mapping Protocol</a></li>
+</ul>
 </article>
           </div>
           

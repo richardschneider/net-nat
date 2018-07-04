@@ -17,11 +17,47 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Makaretu.Nat.NatDiscovery.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Makaretu.Nat.NatDiscovery.html",
+          "hash": "GSYooJh8hE/2oT8J2wR8bQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Makaretu.Nat.NatPcp.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Makaretu.Nat.NatPcp.html",
+          "hash": "aTmNfl8ddMF9pyc0n6bUuA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Makaretu.Nat.NatPmp.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Makaretu.Nat.NatPmp.html",
+          "hash": "ejfIrmXTF+ThcRyrua1vpw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Makaretu.Nat.yml",
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Nat.html",
-          "hash": "JRUb0E8MrXYEzspwtGcQQg=="
+          "hash": "Nsqmt+KkTiZClqrK2pADXg=="
         }
       },
       "is_incremental": false,
@@ -33,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "ZZmuk9GwVQaZS9cvCpZrtQ=="
+          "hash": "0lQ61UYiR7FsqZtKVHMMFA=="
         }
       },
       "is_incremental": false,
@@ -45,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/intro.html",
-          "hash": "0mZQFZrw4x4teyVroCiw8w=="
+          "hash": "PwGk99ecmzDNsD/ef421hw=="
         }
       },
       "is_incremental": false,
@@ -107,11 +143,11 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "ManagedReferenceDocumentProcessor": {
+        "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build"
         },
-        "ConceptualDocumentProcessor": {
+        "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build"
         },
