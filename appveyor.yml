@@ -51,7 +51,7 @@ after_build:
   - cmd: appveyor PushArtifact "src\bin\%CONFIGURATION%\Makaretu.Nat.%GitVersion_MajorMinorPatch%.nupkg"
 
 test_script:
-  - dotnet test -c %CONFIGURATION% --no-build --no-restore test
+  - dotnet test -v n -c %CONFIGURATION% --no-build --no-restore test
 
 after_test: 
 # Generate coverage report
