@@ -1,0 +1,79 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Net.Sockets;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Makaretu.Nat
+{
+    /// <summary>
+    ///   Port Control Protocol.
+    /// </summary>
+    /// <remarks>
+    ///  PCP allows applications to create mappings from an external IP
+    ///  address, protocol, and port to an internal IP address, protocol, and
+    ///  port. These mappings are required for successful inbound
+    ///  communications destined to machines located behind a NAT or a
+    ///  firewall.
+    /// </remarks>
+    /// <seealso href="https://tools.ietf.org/html/rfc6887">RFC 6887 - NAT Port Control Protocol</seealso>
+    public class NatPcp
+    {
+        /// <summary>
+        ///   The NAT port that receives NAT-PCP requests.
+        /// </summary>
+        public const int RequestPort = NatPmp.RequestPort;
+
+        /// <summary>
+        ///   The version of the NAT-PCP.
+        /// </summary>
+        public const int ProtocolVersion = 2;
+
+        UdpClient nat;
+
+        /// <summary>
+        ///   Creates a new instance of the <see cref="NatPcp"/> class with the specified
+        ///   IP Address of the NAT.
+        /// </summary>
+        /// <param name="address">
+        ///   The IP address of the NAT server.
+        /// </param>
+        public NatPcp(IPAddress address)
+        {
+            nat = new UdpClient(address.AddressFamily);
+            nat.Connect(address, RequestPort);
+        }
+
+        /// <summary>
+        ///   Determines if the NAT is online.
+        /// </summary>
+        /// <returns>
+        ///   <b>true</b> if the NAT is online and speaks NAT-PCP; otherwise, <b>fale</b>.
+        /// </returns>
+        public async Task<bool> IsAvailableAsync()
+        {
+            var hello = new byte[8 + 16];
+            hello[0] = ProtocolVersion;
+            try
+            {
+                var res = await SendAsync(hello);
+                if (res[0] != ProtocolVersion)
+                    return false;
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        async Task<byte[]> SendAsync(byte[] request)
+        {
+            await nat.SendAsync(request, request.Length);
+            var result = await nat.ReceiveAsync();
+            return result.Buffer;
+        }
+    }
+}
