@@ -75,7 +75,7 @@ namespace Makaretu.Nat
         /// </returns>
         public async Task<bool> IsAvailableAsync()
         {
-            var hello = new byte[2];
+            var hello = new PmpExternalAddressRequest();
             try
             {
                 var res = await SendAsync(hello);
@@ -89,13 +89,14 @@ namespace Makaretu.Nat
             }
         }
 
-        async Task<byte[]> SendAsync(byte[] request)
+        async Task<byte[]> SendAsync(PmpMessage request)
         {
+            var datagram = request.ToByteArray();
             int timeout = (int) InitialTimeout.TotalMilliseconds;
             int retries = 0;
             do
             {
-                await nat.SendAsync(request, request.Length);
+                await nat.SendAsync(datagram, datagram.Length);
 
                 var task = nat.ReceiveAsync();
                 if (await Task.WhenAny(task, Task.Delay(timeout)) == task)
