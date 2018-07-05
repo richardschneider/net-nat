@@ -6,10 +6,10 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Makaretu.Nat
+namespace Makaretu.Nat.Pmp
 {
     /// <summary>
-    ///   Port Mapping Protocol.
+    ///   Communicates with a NAT that speaks the Port Mapping Protocol.
     /// </summary>
     /// <remarks>
     ///   Automates the process of creating Network Address Translation(NAT) port mappings.
@@ -24,7 +24,7 @@ namespace Makaretu.Nat
     /// </remarks>
     /// <seealso href="https://tools.ietf.org/html/rfc6886">RFC 6886 - NAT Port Mapping Protocol</seealso>
     /// <seealso href="https://tools.ietf.org/html/rfc6887">RFC 6887 - NAT Port Control Protocol</seealso>
-    public class NatPmp
+    public class Client
     {
         /// <summary>
         ///   The NAT port that receives NAT-PMP requests.
@@ -39,13 +39,13 @@ namespace Makaretu.Nat
         UdpClient nat;
 
         /// <summary>
-        ///   Creates a new instance of the <see cref="NatPmp"/> class with the specified
+        ///   Creates a new instance of the NAT-PMP <see cref="Client"/> class with the specified
         ///   IP Address of the NAT.
         /// </summary>
         /// <param name="address">
         ///   The IP address of the NAT server.
         /// </param>
-        public NatPmp(IPAddress address)
+        public Client(IPAddress address)
         {
             nat = new UdpClient(address.AddressFamily);
             nat.Connect(address, RequestPort);
@@ -75,7 +75,7 @@ namespace Makaretu.Nat
         /// </returns>
         public async Task<bool> IsAvailableAsync()
         {
-            var hello = new PmpExternalAddressRequest();
+            var hello = new ExternalAddressRequest();
             try
             {
                 var res = await SendAsync(hello);
@@ -89,7 +89,7 @@ namespace Makaretu.Nat
             }
         }
 
-        async Task<byte[]> SendAsync(PmpMessage request)
+        async Task<byte[]> SendAsync(Message request)
         {
             var datagram = request.ToByteArray();
             int timeout = (int) InitialTimeout.TotalMilliseconds;

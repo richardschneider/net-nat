@@ -14,7 +14,7 @@ namespace Makaretu.Nat
         public readonly IPAddress Address = IPAddress.Loopback;
         public UdpClient udp;
 
-        public MockNat(int port = NatPmp.RequestPort)
+        public MockNat(int port = Pmp.Client.RequestPort)
         {
             udp = new UdpClient(port);
             Listener();

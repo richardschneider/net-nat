@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Makaretu.Nat
+namespace Makaretu.Nat.Pmp
 {
     /// <summary>
     ///   Request that an external port is mapped to an internal port.
     /// </summary>
-    public class PmpMapRequest : PmpMessage
+    public class MapRequest : Message
     {
         /// <summary>
         ///   The local port on which the client is listening.

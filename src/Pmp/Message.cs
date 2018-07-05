@@ -4,26 +4,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Makaretu.Nat
+namespace Makaretu.Nat.Pmp
 {
     /// <summary>
     ///   A Port Mapping Protocol message.
     /// </summary>
-    public class PmpMessage : NatMessage
+    public class Message : NatMessage
     {
         /// <summary>
         ///   The protocol version.
         /// </summary>
         /// <value>
-        ///   Defaults to zero, <see cref="NatPmp.ProtocolVersion"/>.
+        ///   Defaults to zero, <see cref="Client.ProtocolVersion"/>.
         /// </value>
-        public byte Version { get; set; } = NatPmp.ProtocolVersion;
+        public byte Version { get; set; } = Client.ProtocolVersion;
 
         /// <summary>
         ///   The operatation.
         /// </summary>
         /// <value>
-        ///   One of the <see cref="PmpOpcode"/> or <see cref="PcpOpcode"/> values.
+        ///   One of the <see cref="Opcode"/> or <see cref="PcpOpcode"/> values.
         /// </value>
         public byte Opcode { get; set; }
 

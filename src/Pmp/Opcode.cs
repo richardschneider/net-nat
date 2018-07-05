@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Makaretu.Nat
+namespace Makaretu.Nat.Pmp
 {
     /// <summary>
-    ///   A PMP operation code.
+    ///   A port mapping operation code.
     /// </summary>
-    public enum PmpOpcode : byte
+    public enum Opcode : byte
     {
         /// <summary>
         ///   The external (public) address of the NAT.

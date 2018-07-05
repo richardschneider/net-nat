@@ -6,10 +6,10 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Makaretu.Nat
+namespace Makaretu.Nat.Pcp
 {
     /// <summary>
-    ///   Port Control Protocol.
+    ///   Communicates with a NAT that speaks the Port Control Protocol.
     /// </summary>
     /// <remarks>
     ///  PCP allows applications to create mappings from an external IP
@@ -19,12 +19,12 @@ namespace Makaretu.Nat
     ///  firewall.
     /// </remarks>
     /// <seealso href="https://tools.ietf.org/html/rfc6887">RFC 6887 - NAT Port Control Protocol</seealso>
-    public class NatPcp
+    public class Client
     {
         /// <summary>
         ///   The NAT port that receives NAT-PCP requests.
         /// </summary>
-        public const int RequestPort = NatPmp.RequestPort;
+        public const int RequestPort = Pmp.Client.RequestPort;
 
         /// <summary>
         ///   The version of the NAT-PCP.
@@ -34,13 +34,13 @@ namespace Makaretu.Nat
         UdpClient nat;
 
         /// <summary>
-        ///   Creates a new instance of the <see cref="NatPcp"/> class with the specified
+        ///   Creates a new instance of the <see cref="Client"/> class with the specified
         ///   IP Address of the NAT.
         /// </summary>
         /// <param name="address">
         ///   The IP address of the NAT server.
         /// </param>
-        public NatPcp(IPAddress address)
+        public Client(IPAddress address)
         {
             nat = new UdpClient(address.AddressFamily);
             nat.Connect(address, RequestPort);

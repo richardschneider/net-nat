@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Makaretu.Nat
+namespace Makaretu.Nat.Pmp
 {
     /// <summary>
     ///   Request the external address of the NAT.
     /// </summary>
-    public class PmpExternalAddressRequest : PmpMessage
+    public class ExternalAddressRequest : Message
     {
     }
 }
