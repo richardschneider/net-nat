@@ -561,9 +561,9 @@ references:
   commentId: F:Makaretu.Nat.Pmp.Opcode.MapTcp
   fullName: Makaretu.Nat.Pmp.Opcode.MapTcp
   nameWithType: Opcode.MapTcp
-- uid: Makaretu.Nat.Pmp.Opcode.MapUtp
-  name: MapUtp
-  href: api/Makaretu.Nat.Pmp.Opcode.html#Makaretu_Nat_Pmp_Opcode_MapUtp
-  commentId: F:Makaretu.Nat.Pmp.Opcode.MapUtp
-  fullName: Makaretu.Nat.Pmp.Opcode.MapUtp
-  nameWithType: Opcode.MapUtp
+- uid: Makaretu.Nat.Pmp.Opcode.MapUdp
+  name: MapUdp
+  href: api/Makaretu.Nat.Pmp.Opcode.html#Makaretu_Nat_Pmp_Opcode_MapUdp
+  commentId: F:Makaretu.Nat.Pmp.Opcode.MapUdp
+  fullName: Makaretu.Nat.Pmp.Opcode.MapUdp
+  nameWithType: Opcode.MapUdp
