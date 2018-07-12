@@ -15,7 +15,7 @@
     <PackageId>Makaretu.Nat</PackageId>
     <Authors>Richard Schneider</Authors>
     <Title>Life behind a NAT</Title>
-    <Description>DNS data model with serializer/deserializer for the wire format.</Description>
+    <Description>Break through the NAT barriar</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageReleaseNotes></PackageReleaseNotes>
     <Copyright>© 2018 Richard Schneider</Copyright>

@@ -1,0 +1,92 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Net.Sockets;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Makaretu.Nat
+{
+    /// <summary>
+    ///   Communicates with a NAT device.
+    /// </summary>
+    /// <remarks>
+    ///   An abstract class that allows communication with a NAT device.
+    public abstract class NatClient
+    {
+        /// <summary>
+        ///   The NAT port that receives  requests.
+        /// </summary>
+        public const int RequestPort = 5351;
+
+        UdpClient nat;
+
+        /// <summary>
+        ///   Creates a new instance of the <see cref="NatClient"/> class with the specified
+        ///   IP Address of the NAT.
+        /// </summary>
+        /// <param name="address">
+        ///   The IP address of the NAT server.
+        /// </param>
+        /// <param name="port">
+        ///   The port of the NAT server.
+        /// </param>
+        public NatClient(IPAddress address, int port = RequestPort)
+        {
+            nat = new UdpClient(address.AddressFamily);
+            nat.Connect(address, port);
+        }
+
+        /// <summary>
+        ///   The time to wait for a response from NAT.
+        /// </summary>
+        /// <value>
+        ///   Defaults to 250ms.
+        /// </value>
+        public TimeSpan InitialTimeout { get; set; } = TimeSpan.FromMilliseconds(250);
+
+        /// <summary>
+        ///   Number of times to retry sending request.
+        /// </summary>
+        /// <value>
+        ///   Defaults to 4.
+        /// </value>
+        public int MaxRetries { get; set; } = 4;
+
+        /// <summary>
+        ///   Determines if the NAT is online.
+        /// </summary>
+        /// <returns>
+        ///   <b>true</b> if the NAT is online and speaks the correct protocol; otherwise, <b>false</b>.
+        /// </returns>
+        public abstract Task<bool> IsAvailableAsync();
+
+        public Task<byte[]> SendAndReceiveAsync(NatMessage request)
+        {
+            return SendAndReceiveAsync(request.ToByteArray());
+        }
+
+        public async Task<byte[]> SendAndReceiveAsync(byte[] request)
+        {
+            int timeout = (int)InitialTimeout.TotalMilliseconds;
+            int retries = 0;
+            do
+            {
+                await nat.SendAsync(request, request.Length);
+
+                var task = nat.ReceiveAsync();
+                if (await Task.WhenAny(task, Task.Delay(timeout)) == task)
+                {
+                    // task completed within timeout
+                    return task.Result.Buffer;
+                }
+
+                // Timeout.
+                timeout *= 2;
+            } while (retries++ < MaxRetries);
+
+            throw new TimeoutException();
+        }
+    }
+}
