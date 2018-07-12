@@ -39,6 +39,92 @@ references:
   isSpec: "True"
   fullName: Makaretu.Nat.IPAddressExtensions.IsPublic
   nameWithType: IPAddressExtensions.IsPublic
+- uid: Makaretu.Nat.NatClient
+  name: NatClient
+  href: api/Makaretu.Nat.NatClient.html
+  commentId: T:Makaretu.Nat.NatClient
+  fullName: Makaretu.Nat.NatClient
+  nameWithType: NatClient
+- uid: Makaretu.Nat.NatClient.#ctor(System.Net.IPAddress,System.Int32)
+  name: NatClient(IPAddress, Int32)
+  href: api/Makaretu.Nat.NatClient.html#Makaretu_Nat_NatClient__ctor_System_Net_IPAddress_System_Int32_
+  commentId: M:Makaretu.Nat.NatClient.#ctor(System.Net.IPAddress,System.Int32)
+  fullName: Makaretu.Nat.NatClient.NatClient(System.Net.IPAddress, System.Int32)
+  nameWithType: NatClient.NatClient(IPAddress, Int32)
+- uid: Makaretu.Nat.NatClient.#ctor*
+  name: NatClient
+  href: api/Makaretu.Nat.NatClient.html#Makaretu_Nat_NatClient__ctor_
+  commentId: Overload:Makaretu.Nat.NatClient.#ctor
+  isSpec: "True"
+  fullName: Makaretu.Nat.NatClient.NatClient
+  nameWithType: NatClient.NatClient
+- uid: Makaretu.Nat.NatClient.InitialTimeout
+  name: InitialTimeout
+  href: api/Makaretu.Nat.NatClient.html#Makaretu_Nat_NatClient_InitialTimeout
+  commentId: P:Makaretu.Nat.NatClient.InitialTimeout
+  fullName: Makaretu.Nat.NatClient.InitialTimeout
+  nameWithType: NatClient.InitialTimeout
+- uid: Makaretu.Nat.NatClient.InitialTimeout*
+  name: InitialTimeout
+  href: api/Makaretu.Nat.NatClient.html#Makaretu_Nat_NatClient_InitialTimeout_
+  commentId: Overload:Makaretu.Nat.NatClient.InitialTimeout
+  isSpec: "True"
+  fullName: Makaretu.Nat.NatClient.InitialTimeout
+  nameWithType: NatClient.InitialTimeout
+- uid: Makaretu.Nat.NatClient.IsAvailableAsync
+  name: IsAvailableAsync()
+  href: api/Makaretu.Nat.NatClient.html#Makaretu_Nat_NatClient_IsAvailableAsync
+  commentId: M:Makaretu.Nat.NatClient.IsAvailableAsync
+  fullName: Makaretu.Nat.NatClient.IsAvailableAsync()
+  nameWithType: NatClient.IsAvailableAsync()
+- uid: Makaretu.Nat.NatClient.IsAvailableAsync*
+  name: IsAvailableAsync
+  href: api/Makaretu.Nat.NatClient.html#Makaretu_Nat_NatClient_IsAvailableAsync_
+  commentId: Overload:Makaretu.Nat.NatClient.IsAvailableAsync
+  isSpec: "True"
+  fullName: Makaretu.Nat.NatClient.IsAvailableAsync
+  nameWithType: NatClient.IsAvailableAsync
+- uid: Makaretu.Nat.NatClient.MaxRetries
+  name: MaxRetries
+  href: api/Makaretu.Nat.NatClient.html#Makaretu_Nat_NatClient_MaxRetries
+  commentId: P:Makaretu.Nat.NatClient.MaxRetries
+  fullName: Makaretu.Nat.NatClient.MaxRetries
+  nameWithType: NatClient.MaxRetries
+- uid: Makaretu.Nat.NatClient.MaxRetries*
+  name: MaxRetries
+  href: api/Makaretu.Nat.NatClient.html#Makaretu_Nat_NatClient_MaxRetries_
+  commentId: Overload:Makaretu.Nat.NatClient.MaxRetries
+  isSpec: "True"
+  fullName: Makaretu.Nat.NatClient.MaxRetries
+  nameWithType: NatClient.MaxRetries
+- uid: Makaretu.Nat.NatClient.RequestPort
+  name: RequestPort
+  href: api/Makaretu.Nat.NatClient.html#Makaretu_Nat_NatClient_RequestPort
+  commentId: F:Makaretu.Nat.NatClient.RequestPort
+  fullName: Makaretu.Nat.NatClient.RequestPort
+  nameWithType: NatClient.RequestPort
+- uid: Makaretu.Nat.NatClient.SendAndReceiveAsync(Makaretu.Nat.NatMessage)
+  name: SendAndReceiveAsync(NatMessage)
+  href: api/Makaretu.Nat.NatClient.html#Makaretu_Nat_NatClient_SendAndReceiveAsync_Makaretu_Nat_NatMessage_
+  commentId: M:Makaretu.Nat.NatClient.SendAndReceiveAsync(Makaretu.Nat.NatMessage)
+  fullName: Makaretu.Nat.NatClient.SendAndReceiveAsync(Makaretu.Nat.NatMessage)
+  nameWithType: NatClient.SendAndReceiveAsync(NatMessage)
+- uid: Makaretu.Nat.NatClient.SendAndReceiveAsync(System.Byte[])
+  name: SendAndReceiveAsync(Byte[])
+  href: api/Makaretu.Nat.NatClient.html#Makaretu_Nat_NatClient_SendAndReceiveAsync_System_Byte___
+  commentId: M:Makaretu.Nat.NatClient.SendAndReceiveAsync(System.Byte[])
+  name.vb: SendAndReceiveAsync(Byte())
+  fullName: Makaretu.Nat.NatClient.SendAndReceiveAsync(System.Byte[])
+  fullName.vb: Makaretu.Nat.NatClient.SendAndReceiveAsync(System.Byte())
+  nameWithType: NatClient.SendAndReceiveAsync(Byte[])
+  nameWithType.vb: NatClient.SendAndReceiveAsync(Byte())
+- uid: Makaretu.Nat.NatClient.SendAndReceiveAsync*
+  name: SendAndReceiveAsync
+  href: api/Makaretu.Nat.NatClient.html#Makaretu_Nat_NatClient_SendAndReceiveAsync_
+  commentId: Overload:Makaretu.Nat.NatClient.SendAndReceiveAsync
+  isSpec: "True"
+  fullName: Makaretu.Nat.NatClient.SendAndReceiveAsync
+  nameWithType: NatClient.SendAndReceiveAsync
 - uid: Makaretu.Nat.NatDiscovery
   name: NatDiscovery
   href: api/Makaretu.Nat.NatDiscovery.html
@@ -288,19 +374,6 @@ references:
   isSpec: "True"
   fullName: Makaretu.Nat.Pcp.Client.Client
   nameWithType: Client.Client
-- uid: Makaretu.Nat.Pcp.Client.InitialTimeout
-  name: InitialTimeout
-  href: api/Makaretu.Nat.Pcp.Client.html#Makaretu_Nat_Pcp_Client_InitialTimeout
-  commentId: P:Makaretu.Nat.Pcp.Client.InitialTimeout
-  fullName: Makaretu.Nat.Pcp.Client.InitialTimeout
-  nameWithType: Client.InitialTimeout
-- uid: Makaretu.Nat.Pcp.Client.InitialTimeout*
-  name: InitialTimeout
-  href: api/Makaretu.Nat.Pcp.Client.html#Makaretu_Nat_Pcp_Client_InitialTimeout_
-  commentId: Overload:Makaretu.Nat.Pcp.Client.InitialTimeout
-  isSpec: "True"
-  fullName: Makaretu.Nat.Pcp.Client.InitialTimeout
-  nameWithType: Client.InitialTimeout
 - uid: Makaretu.Nat.Pcp.Client.IsAvailableAsync
   name: IsAvailableAsync()
   href: api/Makaretu.Nat.Pcp.Client.html#Makaretu_Nat_Pcp_Client_IsAvailableAsync
@@ -314,31 +387,12 @@ references:
   isSpec: "True"
   fullName: Makaretu.Nat.Pcp.Client.IsAvailableAsync
   nameWithType: Client.IsAvailableAsync
-- uid: Makaretu.Nat.Pcp.Client.MaxRetries
-  name: MaxRetries
-  href: api/Makaretu.Nat.Pcp.Client.html#Makaretu_Nat_Pcp_Client_MaxRetries
-  commentId: P:Makaretu.Nat.Pcp.Client.MaxRetries
-  fullName: Makaretu.Nat.Pcp.Client.MaxRetries
-  nameWithType: Client.MaxRetries
-- uid: Makaretu.Nat.Pcp.Client.MaxRetries*
-  name: MaxRetries
-  href: api/Makaretu.Nat.Pcp.Client.html#Makaretu_Nat_Pcp_Client_MaxRetries_
-  commentId: Overload:Makaretu.Nat.Pcp.Client.MaxRetries
-  isSpec: "True"
-  fullName: Makaretu.Nat.Pcp.Client.MaxRetries
-  nameWithType: Client.MaxRetries
 - uid: Makaretu.Nat.Pcp.Client.ProtocolVersion
   name: ProtocolVersion
   href: api/Makaretu.Nat.Pcp.Client.html#Makaretu_Nat_Pcp_Client_ProtocolVersion
   commentId: F:Makaretu.Nat.Pcp.Client.ProtocolVersion
   fullName: Makaretu.Nat.Pcp.Client.ProtocolVersion
   nameWithType: Client.ProtocolVersion
-- uid: Makaretu.Nat.Pcp.Client.RequestPort
-  name: RequestPort
-  href: api/Makaretu.Nat.Pcp.Client.html#Makaretu_Nat_Pcp_Client_RequestPort
-  commentId: F:Makaretu.Nat.Pcp.Client.RequestPort
-  fullName: Makaretu.Nat.Pcp.Client.RequestPort
-  nameWithType: Client.RequestPort
 - uid: Makaretu.Nat.Pcp.Message
   name: Message
   href: api/Makaretu.Nat.Pcp.Message.html
@@ -383,19 +437,6 @@ references:
   isSpec: "True"
   fullName: Makaretu.Nat.Pmp.Client.Client
   nameWithType: Client.Client
-- uid: Makaretu.Nat.Pmp.Client.InitialTimeout
-  name: InitialTimeout
-  href: api/Makaretu.Nat.Pmp.Client.html#Makaretu_Nat_Pmp_Client_InitialTimeout
-  commentId: P:Makaretu.Nat.Pmp.Client.InitialTimeout
-  fullName: Makaretu.Nat.Pmp.Client.InitialTimeout
-  nameWithType: Client.InitialTimeout
-- uid: Makaretu.Nat.Pmp.Client.InitialTimeout*
-  name: InitialTimeout
-  href: api/Makaretu.Nat.Pmp.Client.html#Makaretu_Nat_Pmp_Client_InitialTimeout_
-  commentId: Overload:Makaretu.Nat.Pmp.Client.InitialTimeout
-  isSpec: "True"
-  fullName: Makaretu.Nat.Pmp.Client.InitialTimeout
-  nameWithType: Client.InitialTimeout
 - uid: Makaretu.Nat.Pmp.Client.IsAvailableAsync
   name: IsAvailableAsync()
   href: api/Makaretu.Nat.Pmp.Client.html#Makaretu_Nat_Pmp_Client_IsAvailableAsync
@@ -409,31 +450,12 @@ references:
   isSpec: "True"
   fullName: Makaretu.Nat.Pmp.Client.IsAvailableAsync
   nameWithType: Client.IsAvailableAsync
-- uid: Makaretu.Nat.Pmp.Client.MaxRetries
-  name: MaxRetries
-  href: api/Makaretu.Nat.Pmp.Client.html#Makaretu_Nat_Pmp_Client_MaxRetries
-  commentId: P:Makaretu.Nat.Pmp.Client.MaxRetries
-  fullName: Makaretu.Nat.Pmp.Client.MaxRetries
-  nameWithType: Client.MaxRetries
-- uid: Makaretu.Nat.Pmp.Client.MaxRetries*
-  name: MaxRetries
-  href: api/Makaretu.Nat.Pmp.Client.html#Makaretu_Nat_Pmp_Client_MaxRetries_
-  commentId: Overload:Makaretu.Nat.Pmp.Client.MaxRetries
-  isSpec: "True"
-  fullName: Makaretu.Nat.Pmp.Client.MaxRetries
-  nameWithType: Client.MaxRetries
 - uid: Makaretu.Nat.Pmp.Client.ProtocolVersion
   name: ProtocolVersion
   href: api/Makaretu.Nat.Pmp.Client.html#Makaretu_Nat_Pmp_Client_ProtocolVersion
   commentId: F:Makaretu.Nat.Pmp.Client.ProtocolVersion
   fullName: Makaretu.Nat.Pmp.Client.ProtocolVersion
   nameWithType: Client.ProtocolVersion
-- uid: Makaretu.Nat.Pmp.Client.RequestPort
-  name: RequestPort
-  href: api/Makaretu.Nat.Pmp.Client.html#Makaretu_Nat_Pmp_Client_RequestPort
-  commentId: F:Makaretu.Nat.Pmp.Client.RequestPort
-  fullName: Makaretu.Nat.Pmp.Client.RequestPort
-  nameWithType: Client.RequestPort
 - uid: Makaretu.Nat.Pmp.ExternalAddressRequest
   name: ExternalAddressRequest
   href: api/Makaretu.Nat.Pmp.ExternalAddressRequest.html

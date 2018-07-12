@@ -79,10 +79,26 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">Client</span></div>
+    <div class="level1"><a class="xref" href="Makaretu.Nat.NatClient.html">NatClient</a></div>
+    <div class="level2"><span class="xref">Client</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Makaretu.Nat.NatClient.html#Makaretu_Nat_NatClient_RequestPort">NatClient.RequestPort</a>
+    </div>
+    <div>
+      <a class="xref" href="Makaretu.Nat.NatClient.html#Makaretu_Nat_NatClient_InitialTimeout">NatClient.InitialTimeout</a>
+    </div>
+    <div>
+      <a class="xref" href="Makaretu.Nat.NatClient.html#Makaretu_Nat_NatClient_MaxRetries">NatClient.MaxRetries</a>
+    </div>
+    <div>
+      <a class="xref" href="Makaretu.Nat.NatClient.html#Makaretu_Nat_NatClient_SendAndReceiveAsync_Makaretu_Nat_NatMessage_">NatClient.SendAndReceiveAsync(NatMessage)</a>
+    </div>
+    <div>
+      <a class="xref" href="Makaretu.Nat.NatClient.html#Makaretu_Nat_NatClient_SendAndReceiveAsync_System_Byte___">NatClient.SendAndReceiveAsync(Byte[])</a>
+    </div>
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
     </div>
@@ -109,7 +125,7 @@
   <h6><strong>Assembly</strong>: Makaretu.Nat.dll</h6>
   <h5 id="Makaretu_Nat_Pmp_Client_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Client</code></pre>
+    <pre><code class="lang-csharp hljs">public class Client : NatClient</code></pre>
   </div>
   <h5 id="Makaretu_Nat_Pmp_Client_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>Automates the process of creating Network Address Translation(NAT) port mappings.
@@ -129,7 +145,7 @@ address and port known to peers that may wish to communicate with it.
     <a href="https://github.com/richardschneider/net-nat/new/master/apiSpec/new?filename=Makaretu_Nat_Pmp_Client__ctor_System_Net_IPAddress_.md&amp;value=---%0Auid%3A%20Makaretu.Nat.Pmp.Client.%23ctor(System.Net.IPAddress)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-nat/blob/master/src/Pmp/Client.cs/#L48">View Source</a>
+    <a href="https://github.com/richardschneider/net-nat/blob/master/src/Pmp/Client.cs/#L41">View Source</a>
   </span>
   <a id="Makaretu_Nat_Pmp_Client__ctor_" data-uid="Makaretu.Nat.Pmp.Client.#ctor*"></a>
   <h4 id="Makaretu_Nat_Pmp_Client__ctor_System_Net_IPAddress_" data-uid="Makaretu.Nat.Pmp.Client.#ctor(System.Net.IPAddress)">Client(IPAddress)</h4>
@@ -166,7 +182,7 @@ IP Address of the NAT.</p>
     <a href="https://github.com/richardschneider/net-nat/new/master/apiSpec/new?filename=Makaretu_Nat_Pmp_Client_ProtocolVersion.md&amp;value=---%0Auid%3A%20Makaretu.Nat.Pmp.Client.ProtocolVersion%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-nat/blob/master/src/Pmp/Client.cs/#L37">View Source</a>
+    <a href="https://github.com/richardschneider/net-nat/blob/master/src/Pmp/Client.cs/#L32">View Source</a>
   </span>
   <h4 id="Makaretu_Nat_Pmp_Client_ProtocolVersion" data-uid="Makaretu.Nat.Pmp.Client.ProtocolVersion">ProtocolVersion</h4>
   <div class="markdown level1 summary"><p>The version of the NAT-PMP.</p>
@@ -191,102 +207,6 @@ IP Address of the NAT.</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/net-nat/new/master/apiSpec/new?filename=Makaretu_Nat_Pmp_Client_RequestPort.md&amp;value=---%0Auid%3A%20Makaretu.Nat.Pmp.Client.RequestPort%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-nat/blob/master/src/Pmp/Client.cs/#L32">View Source</a>
-  </span>
-  <h4 id="Makaretu_Nat_Pmp_Client_RequestPort" data-uid="Makaretu.Nat.Pmp.Client.RequestPort">RequestPort</h4>
-  <div class="markdown level1 summary"><p>The NAT port that receives NAT-PMP requests.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int RequestPort = 5351</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="properties">Properties
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/net-nat/new/master/apiSpec/new?filename=Makaretu_Nat_Pmp_Client_InitialTimeout.md&amp;value=---%0Auid%3A%20Makaretu.Nat.Pmp.Client.InitialTimeout%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-nat/blob/master/src/Pmp/Client.cs/#L60">View Source</a>
-  </span>
-  <a id="Makaretu_Nat_Pmp_Client_InitialTimeout_" data-uid="Makaretu.Nat.Pmp.Client.InitialTimeout*"></a>
-  <h4 id="Makaretu_Nat_Pmp_Client_InitialTimeout" data-uid="Makaretu.Nat.Pmp.Client.InitialTimeout">InitialTimeout</h4>
-  <div class="markdown level1 summary"><p>The time to wait for a response from NAT.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TimeSpan InitialTimeout { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
-        <td><p>Defaults to 250ms.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/net-nat/new/master/apiSpec/new?filename=Makaretu_Nat_Pmp_Client_MaxRetries.md&amp;value=---%0Auid%3A%20Makaretu.Nat.Pmp.Client.MaxRetries%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-nat/blob/master/src/Pmp/Client.cs/#L68">View Source</a>
-  </span>
-  <a id="Makaretu_Nat_Pmp_Client_MaxRetries_" data-uid="Makaretu.Nat.Pmp.Client.MaxRetries*"></a>
-  <h4 id="Makaretu_Nat_Pmp_Client_MaxRetries" data-uid="Makaretu.Nat.Pmp.Client.MaxRetries">MaxRetries</h4>
-  <div class="markdown level1 summary"><p>Number of times to retry sending request.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int MaxRetries { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><p>Defaults to 4.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
@@ -294,7 +214,7 @@ IP Address of the NAT.</p>
     <a href="https://github.com/richardschneider/net-nat/new/master/apiSpec/new?filename=Makaretu_Nat_Pmp_Client_IsAvailableAsync.md&amp;value=---%0Auid%3A%20Makaretu.Nat.Pmp.Client.IsAvailableAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-nat/blob/master/src/Pmp/Client.cs/#L76">View Source</a>
+    <a href="https://github.com/richardschneider/net-nat/blob/master/src/Pmp/Client.cs/#L46">View Source</a>
   </span>
   <a id="Makaretu_Nat_Pmp_Client_IsAvailableAsync_" data-uid="Makaretu.Nat.Pmp.Client.IsAvailableAsync*"></a>
   <h4 id="Makaretu_Nat_Pmp_Client_IsAvailableAsync" data-uid="Makaretu.Nat.Pmp.Client.IsAvailableAsync">IsAvailableAsync()</h4>
@@ -303,7 +223,7 @@ IP Address of the NAT.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; IsAvailableAsync()</code></pre>
+    <pre><code class="lang-csharp hljs">public override Task&lt;bool&gt; IsAvailableAsync()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -316,11 +236,13 @@ IP Address of the NAT.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
-        <td><p><strong>true</strong> if the NAT is online and speaks NAT-PMP; otherwise, <strong>fale</strong>.</p>
+        <td><p><strong>true</strong> if the NAT is online and speaks the correct protocol; otherwise, <strong>false</strong>.</p>
 </td>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Makaretu.Nat.NatClient.html#Makaretu_Nat_NatClient_IsAvailableAsync">NatClient.IsAvailableAsync()</a></div>
   <h3 id="seealso">See Also</h3>
   <div class="seealso">
       <div><span><a href="https://tools.ietf.org/html/rfc6886">RFC 6886 - NAT Port Mapping Protocol</a></span></div>
