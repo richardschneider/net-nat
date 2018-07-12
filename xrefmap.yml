@@ -58,6 +58,19 @@ references:
   isSpec: "True"
   fullName: Makaretu.Nat.NatDiscovery.GetGateways
   nameWithType: NatDiscovery.GetGateways
+- uid: Makaretu.Nat.NatDiscovery.GetIPAddresses
+  name: GetIPAddresses()
+  href: api/Makaretu.Nat.NatDiscovery.html#Makaretu_Nat_NatDiscovery_GetIPAddresses
+  commentId: M:Makaretu.Nat.NatDiscovery.GetIPAddresses
+  fullName: Makaretu.Nat.NatDiscovery.GetIPAddresses()
+  nameWithType: NatDiscovery.GetIPAddresses()
+- uid: Makaretu.Nat.NatDiscovery.GetIPAddresses*
+  name: GetIPAddresses
+  href: api/Makaretu.Nat.NatDiscovery.html#Makaretu_Nat_NatDiscovery_GetIPAddresses_
+  commentId: Overload:Makaretu.Nat.NatDiscovery.GetIPAddresses
+  isSpec: "True"
+  fullName: Makaretu.Nat.NatDiscovery.GetIPAddresses
+  nameWithType: NatDiscovery.GetIPAddresses
 - uid: Makaretu.Nat.NatMessage
   name: NatMessage
   href: api/Makaretu.Nat.NatMessage.html
