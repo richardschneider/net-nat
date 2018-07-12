@@ -17,9 +17,9 @@ namespace Makaretu.Nat.Pmp
         ExternalAddress = 0,
 
         /// <summary>
-        ///   Map an UTP port.
+        ///   Map an UDP port.
         /// </summary>
-        MapUtp = 1,
+        MapUdp = 1,
 
         /// <summary>
         ///   Map a TCP port.

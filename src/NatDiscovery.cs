@@ -10,8 +10,11 @@ using System.Threading.Tasks;
 namespace Makaretu.Nat
 {
     /// <summary>
-    ///   TODO
+    ///   Discoveres the possible NATs.
     /// </summary>
+    /// <remarks>
+    ///   A gateway to the internet can be a NAT.
+    /// </remarks>
     public static class NatDiscovery
     {
         /// <summary>
