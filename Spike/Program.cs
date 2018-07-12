@@ -10,6 +10,14 @@ namespace Spike
             Console.WriteLine("NAT Spike!");
 
             Console.WriteLine();
+            Console.WriteLine("Unicast addresses");
+            foreach (var a in NatDiscovery.GetIPAddresses())
+            {
+                Console.WriteLine($"  {a} is public {a.IsPublic()}");
+            }
+
+
+            Console.WriteLine();
             Console.WriteLine("Gateways");
             foreach (var g in NatDiscovery.GetGateways())
             {

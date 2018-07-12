@@ -17,10 +17,6 @@ namespace Makaretu.Nat
         {
             var gateways = NatDiscovery.GetGateways();
             Assert.AreNotEqual(0, gateways.Count(), "no gateway found");
-            foreach (var g in gateways)
-            {
-                Console.WriteLine($"Gateway at {g}");
-            }
         }
 
         [TestMethod]
@@ -28,10 +24,6 @@ namespace Makaretu.Nat
         {
             var addresses = NatDiscovery.GetIPAddresses();
             Assert.AreNotEqual(0, addresses.Count(), "no IP address found");
-            foreach (var a in addresses)
-            {
-                Console.WriteLine($"{a} public={a.IsPublic()}");
-            }
         }
 
     }

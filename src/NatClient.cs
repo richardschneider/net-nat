@@ -13,6 +13,7 @@ namespace Makaretu.Nat
     /// </summary>
     /// <remarks>
     ///   An abstract class that allows communication with a NAT device.
+    /// </remarks>
     public abstract class NatClient
     {
         /// <summary>
@@ -62,11 +63,21 @@ namespace Makaretu.Nat
         /// </returns>
         public abstract Task<bool> IsAvailableAsync();
 
+        /// <summary>
+        ///   TODO
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         public Task<byte[]> SendAndReceiveAsync(NatMessage request)
         {
             return SendAndReceiveAsync(request.ToByteArray());
         }
 
+        /// <summary>
+        ///   TODO
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         public async Task<byte[]> SendAndReceiveAsync(byte[] request)
         {
             int timeout = (int)InitialTimeout.TotalMilliseconds;

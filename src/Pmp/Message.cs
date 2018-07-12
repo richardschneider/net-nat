@@ -23,7 +23,7 @@ namespace Makaretu.Nat.Pmp
         ///   The operatation.
         /// </summary>
         /// <value>
-        ///   One of the <see cref="Opcode"/> or <see cref="PcpOpcode"/> values.
+        ///   One of the <see cref="Opcode"/> values.
         /// </value>
         public byte Opcode { get; set; }
 
