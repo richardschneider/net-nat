@@ -22,6 +22,8 @@ namespace Makaretu.Nat
             IPNetwork.Parse("10.0.0.0/8"),
             IPNetwork.Parse("172.16.0.0/12"),
             IPNetwork.Parse("fc00::/7"),
+            IPNetwork.Parse("169.254.0.0/16"),
+            IPNetwork.Parse("fe80::/10"),
         };
 
         /// <summary>

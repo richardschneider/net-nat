@@ -23,5 +23,16 @@ namespace Makaretu.Nat
             }
         }
 
+        [TestMethod]
+        public void IPAddresses()
+        {
+            var addresses = NatDiscovery.GetIPAddresses();
+            Assert.AreNotEqual(0, addresses.Count(), "no IP address found");
+            foreach (var a in addresses)
+            {
+                Console.WriteLine($"{a} public={a.IsPublic()}");
+            }
+        }
+
     }
 }

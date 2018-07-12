@@ -18,7 +18,7 @@ namespace Makaretu.Nat
     public static class NatDiscovery
     {
         /// <summary>
-        ///   Get the devices addresses of gateway(s) to the internet.
+        ///   Get the addresses of gateway(s) to the internet.
         /// </summary>
         /// <returns>
         ///   A sequence of gateway IP addresses. 
@@ -40,5 +40,22 @@ namespace Makaretu.Nat
                 .Distinct()
                 ;
         }
+
+        /// <summary>
+        ///   Get the IP addresses of the local machine.
+        /// </summary>
+        /// <returns>
+        ///   A sequence of IP addresses of the local machine.
+        /// </returns>
+        public static IEnumerable<IPAddress> GetIPAddresses()
+        {
+            return NetworkInterface
+                .GetAllNetworkInterfaces()
+                .Where(n => n.OperationalStatus == OperationalStatus.Up)
+                .Where(n => n.NetworkInterfaceType != NetworkInterfaceType.Loopback)
+                .SelectMany(nic => nic.GetIPProperties().UnicastAddresses)
+                .Select(u => u.Address);
+        }
+
     }
 }
