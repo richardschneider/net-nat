@@ -149,5 +149,15 @@ namespace Makaretu.Nat
         /// </remarks>
         public abstract void Write(NatWriter writer);
 
+        /// <summary>
+        ///   Reads the NAT message.
+        /// </summary>
+        /// <param name="reader">
+        ///   The source for the NAT message.
+        /// </param>
+        /// <remarks>
+        ///   Derived classes must override this.
+        /// </remarks>
+        public abstract void Read(NatReader reader);
     }
 }

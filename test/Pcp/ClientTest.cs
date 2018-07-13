@@ -15,9 +15,10 @@ namespace Makaretu.Nat.Pcp
         [TestMethod]
         public async Task IsAvailable()
         {
+            var response = new Response().ToByteArray();
             using (var server = new MockNat())
             {
-                server.RequestReceived += (s, req) => server.udp.Send(new byte[] { 2, 128, 0, 0 }, 4, req.RemoteEndPoint);
+                server.RequestReceived += (s, req) => server.udp.Send(response, response.Length, req.RemoteEndPoint);
                 var nat = new Client(server.Address);
                 var q = await nat.IsAvailableAsync();
                 Assert.IsTrue(q);

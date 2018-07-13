@@ -50,7 +50,8 @@ namespace Makaretu.Nat.Pcp
             try
             {
                 var res = await SendAndReceiveAsync(hello);
-                return res[0] == ProtocolVersion && res[3] == 0;
+                var response = Message.Create<Response>(res);
+                return response.Version == ProtocolVersion && response.ResultCode == 0;
             }
             catch (Exception)
             {
@@ -75,6 +76,7 @@ namespace Makaretu.Nat.Pcp
                 SuggestedExternalPort = (ushort)port
             };
             var res = await SendAndReceiveAsync(map);
+            var response = Message.Create<Response>(res);
             //return res[0] == ProtocolVersion && res[3] == 0;
             return null;
         }

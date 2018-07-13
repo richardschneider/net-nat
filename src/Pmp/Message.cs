@@ -42,9 +42,15 @@ namespace Makaretu.Nat.Pmp
             byte opcode = (byte)Opcode;
             if (IsResponse)
             {
-                opcode |= 80;
+                opcode |= 0x80;
             }
             writer.WriteByte(opcode);
+        }
+
+        /// <inheritdoc />
+        public override void Read(NatReader reader)
+        {
+
         }
     }
 }
