@@ -977,6 +977,32 @@ references:
   isSpec: "True"
   fullName: Makaretu.Nat.Pcp.Response.Response
   nameWithType: Response.Response
+- uid: Makaretu.Nat.Pcp.Response.EnsureSuccess
+  name: EnsureSuccess()
+  href: api/Makaretu.Nat.Pcp.Response.html#Makaretu_Nat_Pcp_Response_EnsureSuccess
+  commentId: M:Makaretu.Nat.Pcp.Response.EnsureSuccess
+  fullName: Makaretu.Nat.Pcp.Response.EnsureSuccess()
+  nameWithType: Response.EnsureSuccess()
+- uid: Makaretu.Nat.Pcp.Response.EnsureSuccess*
+  name: EnsureSuccess
+  href: api/Makaretu.Nat.Pcp.Response.html#Makaretu_Nat_Pcp_Response_EnsureSuccess_
+  commentId: Overload:Makaretu.Nat.Pcp.Response.EnsureSuccess
+  isSpec: "True"
+  fullName: Makaretu.Nat.Pcp.Response.EnsureSuccess
+  nameWithType: Response.EnsureSuccess
+- uid: Makaretu.Nat.Pcp.Response.EpochTime
+  name: EpochTime
+  href: api/Makaretu.Nat.Pcp.Response.html#Makaretu_Nat_Pcp_Response_EpochTime
+  commentId: P:Makaretu.Nat.Pcp.Response.EpochTime
+  fullName: Makaretu.Nat.Pcp.Response.EpochTime
+  nameWithType: Response.EpochTime
+- uid: Makaretu.Nat.Pcp.Response.EpochTime*
+  name: EpochTime
+  href: api/Makaretu.Nat.Pcp.Response.html#Makaretu_Nat_Pcp_Response_EpochTime_
+  commentId: Overload:Makaretu.Nat.Pcp.Response.EpochTime
+  isSpec: "True"
+  fullName: Makaretu.Nat.Pcp.Response.EpochTime
+  nameWithType: Response.EpochTime
 - uid: Makaretu.Nat.Pcp.Response.Lifetime
   name: Lifetime
   href: api/Makaretu.Nat.Pcp.Response.html#Makaretu_Nat_Pcp_Response_Lifetime
