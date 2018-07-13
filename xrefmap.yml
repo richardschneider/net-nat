@@ -269,6 +269,19 @@ references:
   isSpec: "True"
   fullName: Makaretu.Nat.NatMessage.Length
   nameWithType: NatMessage.Length
+- uid: Makaretu.Nat.NatMessage.Read(Makaretu.Nat.NatReader)
+  name: Read(NatReader)
+  href: api/Makaretu.Nat.NatMessage.html#Makaretu_Nat_NatMessage_Read_Makaretu_Nat_NatReader_
+  commentId: M:Makaretu.Nat.NatMessage.Read(Makaretu.Nat.NatReader)
+  fullName: Makaretu.Nat.NatMessage.Read(Makaretu.Nat.NatReader)
+  nameWithType: NatMessage.Read(NatReader)
+- uid: Makaretu.Nat.NatMessage.Read*
+  name: Read
+  href: api/Makaretu.Nat.NatMessage.html#Makaretu_Nat_NatMessage_Read_
+  commentId: Overload:Makaretu.Nat.NatMessage.Read
+  isSpec: "True"
+  fullName: Makaretu.Nat.NatMessage.Read
+  nameWithType: NatMessage.Read
 - uid: Makaretu.Nat.NatMessage.ToByteArray
   name: ToByteArray()
   href: api/Makaretu.Nat.NatMessage.html#Makaretu_Nat_NatMessage_ToByteArray
@@ -301,6 +314,129 @@ references:
   isSpec: "True"
   fullName: Makaretu.Nat.NatMessage.Write
   nameWithType: NatMessage.Write
+- uid: Makaretu.Nat.NatReader
+  name: NatReader
+  href: api/Makaretu.Nat.NatReader.html
+  commentId: T:Makaretu.Nat.NatReader
+  fullName: Makaretu.Nat.NatReader
+  nameWithType: NatReader
+- uid: Makaretu.Nat.NatReader.#ctor(System.IO.Stream)
+  name: NatReader(Stream)
+  href: api/Makaretu.Nat.NatReader.html#Makaretu_Nat_NatReader__ctor_System_IO_Stream_
+  commentId: M:Makaretu.Nat.NatReader.#ctor(System.IO.Stream)
+  fullName: Makaretu.Nat.NatReader.NatReader(System.IO.Stream)
+  nameWithType: NatReader.NatReader(Stream)
+- uid: Makaretu.Nat.NatReader.#ctor*
+  name: NatReader
+  href: api/Makaretu.Nat.NatReader.html#Makaretu_Nat_NatReader__ctor_
+  commentId: Overload:Makaretu.Nat.NatReader.#ctor
+  isSpec: "True"
+  fullName: Makaretu.Nat.NatReader.NatReader
+  nameWithType: NatReader.NatReader
+- uid: Makaretu.Nat.NatReader.Position
+  name: Position
+  href: api/Makaretu.Nat.NatReader.html#Makaretu_Nat_NatReader_Position
+  commentId: P:Makaretu.Nat.NatReader.Position
+  fullName: Makaretu.Nat.NatReader.Position
+  nameWithType: NatReader.Position
+- uid: Makaretu.Nat.NatReader.Position*
+  name: Position
+  href: api/Makaretu.Nat.NatReader.html#Makaretu_Nat_NatReader_Position_
+  commentId: Overload:Makaretu.Nat.NatReader.Position
+  isSpec: "True"
+  fullName: Makaretu.Nat.NatReader.Position
+  nameWithType: NatReader.Position
+- uid: Makaretu.Nat.NatReader.ReadByte
+  name: ReadByte()
+  href: api/Makaretu.Nat.NatReader.html#Makaretu_Nat_NatReader_ReadByte
+  commentId: M:Makaretu.Nat.NatReader.ReadByte
+  fullName: Makaretu.Nat.NatReader.ReadByte()
+  nameWithType: NatReader.ReadByte()
+- uid: Makaretu.Nat.NatReader.ReadByte*
+  name: ReadByte
+  href: api/Makaretu.Nat.NatReader.html#Makaretu_Nat_NatReader_ReadByte_
+  commentId: Overload:Makaretu.Nat.NatReader.ReadByte
+  isSpec: "True"
+  fullName: Makaretu.Nat.NatReader.ReadByte
+  nameWithType: NatReader.ReadByte
+- uid: Makaretu.Nat.NatReader.ReadBytes(System.Int32)
+  name: ReadBytes(Int32)
+  href: api/Makaretu.Nat.NatReader.html#Makaretu_Nat_NatReader_ReadBytes_System_Int32_
+  commentId: M:Makaretu.Nat.NatReader.ReadBytes(System.Int32)
+  fullName: Makaretu.Nat.NatReader.ReadBytes(System.Int32)
+  nameWithType: NatReader.ReadBytes(Int32)
+- uid: Makaretu.Nat.NatReader.ReadBytes*
+  name: ReadBytes
+  href: api/Makaretu.Nat.NatReader.html#Makaretu_Nat_NatReader_ReadBytes_
+  commentId: Overload:Makaretu.Nat.NatReader.ReadBytes
+  isSpec: "True"
+  fullName: Makaretu.Nat.NatReader.ReadBytes
+  nameWithType: NatReader.ReadBytes
+- uid: Makaretu.Nat.NatReader.ReadIPv4Address
+  name: ReadIPv4Address()
+  href: api/Makaretu.Nat.NatReader.html#Makaretu_Nat_NatReader_ReadIPv4Address
+  commentId: M:Makaretu.Nat.NatReader.ReadIPv4Address
+  fullName: Makaretu.Nat.NatReader.ReadIPv4Address()
+  nameWithType: NatReader.ReadIPv4Address()
+- uid: Makaretu.Nat.NatReader.ReadIPv4Address*
+  name: ReadIPv4Address
+  href: api/Makaretu.Nat.NatReader.html#Makaretu_Nat_NatReader_ReadIPv4Address_
+  commentId: Overload:Makaretu.Nat.NatReader.ReadIPv4Address
+  isSpec: "True"
+  fullName: Makaretu.Nat.NatReader.ReadIPv4Address
+  nameWithType: NatReader.ReadIPv4Address
+- uid: Makaretu.Nat.NatReader.ReadIPv6Address
+  name: ReadIPv6Address()
+  href: api/Makaretu.Nat.NatReader.html#Makaretu_Nat_NatReader_ReadIPv6Address
+  commentId: M:Makaretu.Nat.NatReader.ReadIPv6Address
+  fullName: Makaretu.Nat.NatReader.ReadIPv6Address()
+  nameWithType: NatReader.ReadIPv6Address()
+- uid: Makaretu.Nat.NatReader.ReadIPv6Address*
+  name: ReadIPv6Address
+  href: api/Makaretu.Nat.NatReader.html#Makaretu_Nat_NatReader_ReadIPv6Address_
+  commentId: Overload:Makaretu.Nat.NatReader.ReadIPv6Address
+  isSpec: "True"
+  fullName: Makaretu.Nat.NatReader.ReadIPv6Address
+  nameWithType: NatReader.ReadIPv6Address
+- uid: Makaretu.Nat.NatReader.ReadTimeSpan
+  name: ReadTimeSpan()
+  href: api/Makaretu.Nat.NatReader.html#Makaretu_Nat_NatReader_ReadTimeSpan
+  commentId: M:Makaretu.Nat.NatReader.ReadTimeSpan
+  fullName: Makaretu.Nat.NatReader.ReadTimeSpan()
+  nameWithType: NatReader.ReadTimeSpan()
+- uid: Makaretu.Nat.NatReader.ReadTimeSpan*
+  name: ReadTimeSpan
+  href: api/Makaretu.Nat.NatReader.html#Makaretu_Nat_NatReader_ReadTimeSpan_
+  commentId: Overload:Makaretu.Nat.NatReader.ReadTimeSpan
+  isSpec: "True"
+  fullName: Makaretu.Nat.NatReader.ReadTimeSpan
+  nameWithType: NatReader.ReadTimeSpan
+- uid: Makaretu.Nat.NatReader.ReadUInt16
+  name: ReadUInt16()
+  href: api/Makaretu.Nat.NatReader.html#Makaretu_Nat_NatReader_ReadUInt16
+  commentId: M:Makaretu.Nat.NatReader.ReadUInt16
+  fullName: Makaretu.Nat.NatReader.ReadUInt16()
+  nameWithType: NatReader.ReadUInt16()
+- uid: Makaretu.Nat.NatReader.ReadUInt16*
+  name: ReadUInt16
+  href: api/Makaretu.Nat.NatReader.html#Makaretu_Nat_NatReader_ReadUInt16_
+  commentId: Overload:Makaretu.Nat.NatReader.ReadUInt16
+  isSpec: "True"
+  fullName: Makaretu.Nat.NatReader.ReadUInt16
+  nameWithType: NatReader.ReadUInt16
+- uid: Makaretu.Nat.NatReader.ReadUInt32
+  name: ReadUInt32()
+  href: api/Makaretu.Nat.NatReader.html#Makaretu_Nat_NatReader_ReadUInt32
+  commentId: M:Makaretu.Nat.NatReader.ReadUInt32
+  fullName: Makaretu.Nat.NatReader.ReadUInt32()
+  nameWithType: NatReader.ReadUInt32()
+- uid: Makaretu.Nat.NatReader.ReadUInt32*
+  name: ReadUInt32
+  href: api/Makaretu.Nat.NatReader.html#Makaretu_Nat_NatReader_ReadUInt32_
+  commentId: Overload:Makaretu.Nat.NatReader.ReadUInt32
+  isSpec: "True"
+  fullName: Makaretu.Nat.NatReader.ReadUInt32
+  nameWithType: NatReader.ReadUInt32
 - uid: Makaretu.Nat.NatWriter
   name: NatWriter
   href: api/Makaretu.Nat.NatWriter.html
@@ -612,6 +748,31 @@ references:
   commentId: T:Makaretu.Nat.Pcp.Message
   fullName: Makaretu.Nat.Pcp.Message
   nameWithType: Message
+- uid: Makaretu.Nat.Pcp.Message.Create(System.Byte[])
+  name: Create(Byte[])
+  href: api/Makaretu.Nat.Pcp.Message.html#Makaretu_Nat_Pcp_Message_Create_System_Byte___
+  commentId: M:Makaretu.Nat.Pcp.Message.Create(System.Byte[])
+  name.vb: Create(Byte())
+  fullName: Makaretu.Nat.Pcp.Message.Create(System.Byte[])
+  fullName.vb: Makaretu.Nat.Pcp.Message.Create(System.Byte())
+  nameWithType: Message.Create(Byte[])
+  nameWithType.vb: Message.Create(Byte())
+- uid: Makaretu.Nat.Pcp.Message.Create*
+  name: Create
+  href: api/Makaretu.Nat.Pcp.Message.html#Makaretu_Nat_Pcp_Message_Create_
+  commentId: Overload:Makaretu.Nat.Pcp.Message.Create
+  isSpec: "True"
+  fullName: Makaretu.Nat.Pcp.Message.Create
+  nameWithType: Message.Create
+- uid: Makaretu.Nat.Pcp.Message.Create``1(System.Byte[])
+  name: Create<T>(Byte[])
+  href: api/Makaretu.Nat.Pcp.Message.html#Makaretu_Nat_Pcp_Message_Create__1_System_Byte___
+  commentId: M:Makaretu.Nat.Pcp.Message.Create``1(System.Byte[])
+  name.vb: Create(Of T)(Byte())
+  fullName: Makaretu.Nat.Pcp.Message.Create<T>(System.Byte[])
+  fullName.vb: Makaretu.Nat.Pcp.Message.Create(Of T)(System.Byte())
+  nameWithType: Message.Create<T>(Byte[])
+  nameWithType.vb: Message.Create(Of T)(Byte())
 - uid: Makaretu.Nat.Pcp.Message.IsResponse
   name: IsResponse
   href: api/Makaretu.Nat.Pcp.Message.html#Makaretu_Nat_Pcp_Message_IsResponse
@@ -644,6 +805,19 @@ references:
   isSpec: "True"
   fullName: Makaretu.Nat.Pcp.Message.Opcode
   nameWithType: Message.Opcode
+- uid: Makaretu.Nat.Pcp.Message.Read(Makaretu.Nat.NatReader)
+  name: Read(NatReader)
+  href: api/Makaretu.Nat.Pcp.Message.html#Makaretu_Nat_Pcp_Message_Read_Makaretu_Nat_NatReader_
+  commentId: M:Makaretu.Nat.Pcp.Message.Read(Makaretu.Nat.NatReader)
+  fullName: Makaretu.Nat.Pcp.Message.Read(Makaretu.Nat.NatReader)
+  nameWithType: Message.Read(NatReader)
+- uid: Makaretu.Nat.Pcp.Message.Read*
+  name: Read
+  href: api/Makaretu.Nat.Pcp.Message.html#Makaretu_Nat_Pcp_Message_Read_
+  commentId: Overload:Makaretu.Nat.Pcp.Message.Read
+  isSpec: "True"
+  fullName: Makaretu.Nat.Pcp.Message.Read
+  nameWithType: Message.Read
 - uid: Makaretu.Nat.Pcp.Message.Version
   name: Version
   href: api/Makaretu.Nat.Pcp.Message.html#Makaretu_Nat_Pcp_Message_Version
@@ -784,6 +958,77 @@ references:
   isSpec: "True"
   fullName: Makaretu.Nat.Pcp.Request.Write
   nameWithType: Request.Write
+- uid: Makaretu.Nat.Pcp.Response
+  name: Response
+  href: api/Makaretu.Nat.Pcp.Response.html
+  commentId: T:Makaretu.Nat.Pcp.Response
+  fullName: Makaretu.Nat.Pcp.Response
+  nameWithType: Response
+- uid: Makaretu.Nat.Pcp.Response.#ctor
+  name: Response()
+  href: api/Makaretu.Nat.Pcp.Response.html#Makaretu_Nat_Pcp_Response__ctor
+  commentId: M:Makaretu.Nat.Pcp.Response.#ctor
+  fullName: Makaretu.Nat.Pcp.Response.Response()
+  nameWithType: Response.Response()
+- uid: Makaretu.Nat.Pcp.Response.#ctor*
+  name: Response
+  href: api/Makaretu.Nat.Pcp.Response.html#Makaretu_Nat_Pcp_Response__ctor_
+  commentId: Overload:Makaretu.Nat.Pcp.Response.#ctor
+  isSpec: "True"
+  fullName: Makaretu.Nat.Pcp.Response.Response
+  nameWithType: Response.Response
+- uid: Makaretu.Nat.Pcp.Response.Lifetime
+  name: Lifetime
+  href: api/Makaretu.Nat.Pcp.Response.html#Makaretu_Nat_Pcp_Response_Lifetime
+  commentId: P:Makaretu.Nat.Pcp.Response.Lifetime
+  fullName: Makaretu.Nat.Pcp.Response.Lifetime
+  nameWithType: Response.Lifetime
+- uid: Makaretu.Nat.Pcp.Response.Lifetime*
+  name: Lifetime
+  href: api/Makaretu.Nat.Pcp.Response.html#Makaretu_Nat_Pcp_Response_Lifetime_
+  commentId: Overload:Makaretu.Nat.Pcp.Response.Lifetime
+  isSpec: "True"
+  fullName: Makaretu.Nat.Pcp.Response.Lifetime
+  nameWithType: Response.Lifetime
+- uid: Makaretu.Nat.Pcp.Response.Read(Makaretu.Nat.NatReader)
+  name: Read(NatReader)
+  href: api/Makaretu.Nat.Pcp.Response.html#Makaretu_Nat_Pcp_Response_Read_Makaretu_Nat_NatReader_
+  commentId: M:Makaretu.Nat.Pcp.Response.Read(Makaretu.Nat.NatReader)
+  fullName: Makaretu.Nat.Pcp.Response.Read(Makaretu.Nat.NatReader)
+  nameWithType: Response.Read(NatReader)
+- uid: Makaretu.Nat.Pcp.Response.Read*
+  name: Read
+  href: api/Makaretu.Nat.Pcp.Response.html#Makaretu_Nat_Pcp_Response_Read_
+  commentId: Overload:Makaretu.Nat.Pcp.Response.Read
+  isSpec: "True"
+  fullName: Makaretu.Nat.Pcp.Response.Read
+  nameWithType: Response.Read
+- uid: Makaretu.Nat.Pcp.Response.ResultCode
+  name: ResultCode
+  href: api/Makaretu.Nat.Pcp.Response.html#Makaretu_Nat_Pcp_Response_ResultCode
+  commentId: P:Makaretu.Nat.Pcp.Response.ResultCode
+  fullName: Makaretu.Nat.Pcp.Response.ResultCode
+  nameWithType: Response.ResultCode
+- uid: Makaretu.Nat.Pcp.Response.ResultCode*
+  name: ResultCode
+  href: api/Makaretu.Nat.Pcp.Response.html#Makaretu_Nat_Pcp_Response_ResultCode_
+  commentId: Overload:Makaretu.Nat.Pcp.Response.ResultCode
+  isSpec: "True"
+  fullName: Makaretu.Nat.Pcp.Response.ResultCode
+  nameWithType: Response.ResultCode
+- uid: Makaretu.Nat.Pcp.Response.Write(Makaretu.Nat.NatWriter)
+  name: Write(NatWriter)
+  href: api/Makaretu.Nat.Pcp.Response.html#Makaretu_Nat_Pcp_Response_Write_Makaretu_Nat_NatWriter_
+  commentId: M:Makaretu.Nat.Pcp.Response.Write(Makaretu.Nat.NatWriter)
+  fullName: Makaretu.Nat.Pcp.Response.Write(Makaretu.Nat.NatWriter)
+  nameWithType: Response.Write(NatWriter)
+- uid: Makaretu.Nat.Pcp.Response.Write*
+  name: Write
+  href: api/Makaretu.Nat.Pcp.Response.html#Makaretu_Nat_Pcp_Response_Write_
+  commentId: Overload:Makaretu.Nat.Pcp.Response.Write
+  isSpec: "True"
+  fullName: Makaretu.Nat.Pcp.Response.Write
+  nameWithType: Response.Write
 - uid: Makaretu.Nat.Pmp
   name: Makaretu.Nat.Pmp
   href: api/Makaretu.Nat.Pmp.html
@@ -950,6 +1195,19 @@ references:
   isSpec: "True"
   fullName: Makaretu.Nat.Pmp.Message.Opcode
   nameWithType: Message.Opcode
+- uid: Makaretu.Nat.Pmp.Message.Read(Makaretu.Nat.NatReader)
+  name: Read(NatReader)
+  href: api/Makaretu.Nat.Pmp.Message.html#Makaretu_Nat_Pmp_Message_Read_Makaretu_Nat_NatReader_
+  commentId: M:Makaretu.Nat.Pmp.Message.Read(Makaretu.Nat.NatReader)
+  fullName: Makaretu.Nat.Pmp.Message.Read(Makaretu.Nat.NatReader)
+  nameWithType: Message.Read(NatReader)
+- uid: Makaretu.Nat.Pmp.Message.Read*
+  name: Read
+  href: api/Makaretu.Nat.Pmp.Message.html#Makaretu_Nat_Pmp_Message_Read_
+  commentId: Overload:Makaretu.Nat.Pmp.Message.Read
+  isSpec: "True"
+  fullName: Makaretu.Nat.Pmp.Message.Read
+  nameWithType: Message.Read
 - uid: Makaretu.Nat.Pmp.Message.Version
   name: Version
   href: api/Makaretu.Nat.Pmp.Message.html#Makaretu_Nat_Pmp_Message_Version
