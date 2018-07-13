@@ -293,10 +293,111 @@ IP Address of the NAT.</p>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-nat/new/master/apiSpec/new?filename=Makaretu_Nat_NatClient_CreatePublicEndpointAsync_System_Int32_.md&amp;value=---%0Auid%3A%20Makaretu.Nat.NatClient.CreatePublicEndpointAsync(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-nat/blob/master/src/NatClient.cs/#L91">View Source</a>
+  </span>
+  <a id="Makaretu_Nat_NatClient_CreatePublicEndpointAsync_" data-uid="Makaretu.Nat.NatClient.CreatePublicEndpointAsync*"></a>
+  <h4 id="Makaretu_Nat_NatClient_CreatePublicEndpointAsync_System_Int32_" data-uid="Makaretu.Nat.NatClient.CreatePublicEndpointAsync(System.Int32)">CreatePublicEndpointAsync(Int32)</h4>
+  <div class="markdown level1 summary"><p>Create an endpoint that can be connected to by devices outside of the NAT.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract Task&lt;LeasedEndpoint&gt; CreatePublicEndpointAsync(int port)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">port</span></td>
+        <td><p>The intenral port of the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Makaretu.Nat.LeasedEndpoint.html">LeasedEndpoint</a>&gt;</td>
+        <td><p>A task that represents the asynchronous operation. The task&apos;s result is
+an endpoint that is connectable by devices not behind the NAT.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-nat/new/master/apiSpec/new?filename=Makaretu_Nat_NatClient_DeletePublicEndpointAsync_Makaretu_Nat_LeasedEndpoint_.md&amp;value=---%0Auid%3A%20Makaretu.Nat.NatClient.DeletePublicEndpointAsync(Makaretu.Nat.LeasedEndpoint)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-nat/blob/master/src/NatClient.cs/#L102">View Source</a>
+  </span>
+  <a id="Makaretu_Nat_NatClient_DeletePublicEndpointAsync_" data-uid="Makaretu.Nat.NatClient.DeletePublicEndpointAsync*"></a>
+  <h4 id="Makaretu_Nat_NatClient_DeletePublicEndpointAsync_Makaretu_Nat_LeasedEndpoint_" data-uid="Makaretu.Nat.NatClient.DeletePublicEndpointAsync(Makaretu.Nat.LeasedEndpoint)">DeletePublicEndpointAsync(LeasedEndpoint)</h4>
+  <div class="markdown level1 summary"><p>Remove the endpoint.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract Task DeletePublicEndpointAsync(LeasedEndpoint endpoint)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Makaretu.Nat.LeasedEndpoint.html">LeasedEndpoint</a></td>
+        <td><span class="parametername">endpoint</span></td>
+        <td><p>The endpoint to remove.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>A task that represents the asynchronous operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/richardschneider/net-nat/new/master/apiSpec/new?filename=Makaretu_Nat_NatClient_IsAvailableAsync.md&amp;value=---%0Auid%3A%20Makaretu.Nat.NatClient.IsAvailableAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-nat/blob/master/src/NatClient.cs/#L78">View Source</a>
+    <a href="https://github.com/richardschneider/net-nat/blob/master/src/NatClient.cs/#L79">View Source</a>
   </span>
   <a id="Makaretu_Nat_NatClient_IsAvailableAsync_" data-uid="Makaretu.Nat.NatClient.IsAvailableAsync*"></a>
   <h4 id="Makaretu_Nat_NatClient_IsAvailableAsync" data-uid="Makaretu.Nat.NatClient.IsAvailableAsync">IsAvailableAsync()</h4>
@@ -318,7 +419,8 @@ IP Address of the NAT.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
-        <td><p><strong>true</strong> if the NAT is online and speaks the correct protocol; otherwise, <strong>false</strong>.</p>
+        <td><p>A task that represents the asynchronous operation. The task&apos;s result is
+<strong>true</strong> if the NAT is online and speaks the correct protocol; otherwise, <strong>false</strong>.</p>
 </td>
       </tr>
     </tbody>
@@ -328,7 +430,7 @@ IP Address of the NAT.</p>
     <a href="https://github.com/richardschneider/net-nat/new/master/apiSpec/new?filename=Makaretu_Nat_NatClient_SendAndReceiveAsync_Makaretu_Nat_NatMessage_.md&amp;value=---%0Auid%3A%20Makaretu.Nat.NatClient.SendAndReceiveAsync(Makaretu.Nat.NatMessage)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-nat/blob/master/src/NatClient.cs/#L85">View Source</a>
+    <a href="https://github.com/richardschneider/net-nat/blob/master/src/NatClient.cs/#L109">View Source</a>
   </span>
   <a id="Makaretu_Nat_NatClient_SendAndReceiveAsync_" data-uid="Makaretu.Nat.NatClient.SendAndReceiveAsync*"></a>
   <h4 id="Makaretu_Nat_NatClient_SendAndReceiveAsync_Makaretu_Nat_NatMessage_" data-uid="Makaretu.Nat.NatClient.SendAndReceiveAsync(Makaretu.Nat.NatMessage)">SendAndReceiveAsync(NatMessage)</h4>
@@ -376,7 +478,7 @@ IP Address of the NAT.</p>
     <a href="https://github.com/richardschneider/net-nat/new/master/apiSpec/new?filename=Makaretu_Nat_NatClient_SendAndReceiveAsync_System_Byte___.md&amp;value=---%0Auid%3A%20Makaretu.Nat.NatClient.SendAndReceiveAsync(System.Byte%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-nat/blob/master/src/NatClient.cs/#L95">View Source</a>
+    <a href="https://github.com/richardschneider/net-nat/blob/master/src/NatClient.cs/#L119">View Source</a>
   </span>
   <a id="Makaretu_Nat_NatClient_SendAndReceiveAsync_" data-uid="Makaretu.Nat.NatClient.SendAndReceiveAsync*"></a>
   <h4 id="Makaretu_Nat_NatClient_SendAndReceiveAsync_System_Byte___" data-uid="Makaretu.Nat.NatClient.SendAndReceiveAsync(System.Byte[])">SendAndReceiveAsync(Byte[])</h4>
