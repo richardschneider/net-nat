@@ -58,6 +58,33 @@ namespace Makaretu.Nat.Pcp
             }
         }
 
+        /// <inheritdoc />
+        public override async Task<LeasedEndpoint> CreatePublicEndpointAsync(int port)
+        {
+            var map = new MapRequest
+            {
+                ClientAddress = LocalEndPoint.Address,
+                InternalPort = (ushort)port,
+                Nonce = GenerateNonce(),
+                Protocol = 6, // TODO
+                RequestedLifetime = TimeSpan.FromHours(1), // TODO
+                // TODO: SuggestedExternalAdddress
+                SuggestedExternalAdddress = LocalEndPoint.AddressFamily == AddressFamily.InterNetwork
+                    ? IPAddress.Any
+                    : IPAddress.IPv6Any,
+                SuggestedExternalPort = (ushort)port
+            };
+            var res = await SendAndReceiveAsync(map);
+            //return res[0] == ProtocolVersion && res[3] == 0;
+            return null;
+        }
+
+        /// <inheritdoc />
+        public override Task DeletePublicEndpointAsync(LeasedEndpoint endpoint)
+        {
+            throw new NotImplementedException();
+        }
+
         byte[] GenerateNonce()
         {
             var nonce = new byte[Message.NonceLength];

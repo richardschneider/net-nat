@@ -20,6 +20,7 @@ namespace Spike
 
             Console.WriteLine();
             Console.WriteLine("Gateways");
+            NatClient nat = null;
             foreach (var g in NatDiscovery.GetGateways())
             {
                 bool q;
@@ -28,12 +29,29 @@ namespace Spike
                 var pcp = new Makaretu.Nat.Pcp.Client(g);
                 q = pcp.IsAvailableAsync().Result;
                 Console.WriteLine($"    supports NAT-PCP {q}");
+                if (q && nat == null)
+                {
+                    nat = pcp;
+                }
 
                 var pmp = new Makaretu.Nat.Pmp.Client(g);
                 q = pmp.IsAvailableAsync().Result;
                 Console.WriteLine($"    supports NAT-PMP {q}");
+                if (q && nat == null)
+                {
+                    nat = pmp;
+                }
             }
 
+            if (nat != null)
+            {
+                Console.WriteLine();
+                Console.WriteLine("Create public end point");
+                using (var endpoint = nat.CreatePublicEndpointAsync(8080).Result)
+                {
+                    Console.WriteLine($"  public address '{endpoint}'");
+                }
+            }
         }
     }
 }

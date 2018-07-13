@@ -73,9 +73,33 @@ namespace Makaretu.Nat
         ///   Determines if the NAT is online.
         /// </summary>
         /// <returns>
+        ///   A task that represents the asynchronous operation. The task's result is
         ///   <b>true</b> if the NAT is online and speaks the correct protocol; otherwise, <b>false</b>.
         /// </returns>
         public abstract Task<bool> IsAvailableAsync();
+
+        /// <summary>
+        ///   Create an endpoint that can be connected to by devices outside of the NAT.
+        /// </summary>
+        /// <param name="port">
+        ///   The intenral port of the server.
+        /// </param>
+        /// <returns>
+        ///   A task that represents the asynchronous operation. The task's result is
+        ///   an endpoint that is connectable by devices not behind the NAT.
+        /// </returns>
+        public abstract Task<LeasedEndpoint> CreatePublicEndpointAsync(int port);
+
+        /// <summary>
+        ///   Remove the endpoint.
+        /// </summary>
+        /// <param name="endpoint">
+        ///   The endpoint to remove.
+        /// </param>
+        /// <returns>
+        ///   A task that represents the asynchronous operation.
+        /// </returns>
+        public abstract Task DeletePublicEndpointAsync(LeasedEndpoint endpoint);
 
         /// <summary>
         ///   TODO
