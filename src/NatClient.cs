@@ -56,6 +56,20 @@ namespace Makaretu.Nat
         public int MaxRetries { get; set; } = 4;
 
         /// <summary>
+        ///   The local endpoint of NAT.
+        /// </summary>
+        /// <value>
+        ///   An <see cref="IPEndPoint"/>.
+        /// </value>
+        public IPEndPoint LocalEndPoint
+        {
+            get
+            {
+                return (IPEndPoint)nat.Client.LocalEndPoint;
+            }
+        }
+
+        /// <summary>
         ///   Determines if the NAT is online.
         /// </summary>
         /// <returns>

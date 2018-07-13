@@ -1,5 +1,6 @@
 ﻿using Makaretu.Nat;
 using System;
+using System.Net;
 
 namespace Spike
 {

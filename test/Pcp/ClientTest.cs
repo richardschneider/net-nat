@@ -17,7 +17,7 @@ namespace Makaretu.Nat.Pcp
         {
             using (var server = new MockNat())
             {
-                server.RequestReceived += (s, req) => server.udp.Send(new byte[] { 2, 128 }, 2, req.RemoteEndPoint);
+                server.RequestReceived += (s, req) => server.udp.Send(new byte[] { 2, 128, 0, 0 }, 4, req.RemoteEndPoint);
                 var nat = new Client(server.Address);
                 var q = await nat.IsAvailableAsync();
                 Assert.IsTrue(q);

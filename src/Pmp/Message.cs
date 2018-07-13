@@ -25,7 +25,7 @@ namespace Makaretu.Nat.Pmp
         /// <value>
         ///   One of the <see cref="Opcode"/> values.
         /// </value>
-        public byte Opcode { get; set; }
+        public Opcode Opcode { get; set; }
 
         /// <summary>
         ///   Indicates that the message is a response.
@@ -39,7 +39,7 @@ namespace Makaretu.Nat.Pmp
         public override void Write(NatWriter writer)
         {
             writer.WriteByte(Version);
-            var opcode = Opcode;
+            byte opcode = (byte)Opcode;
             if (IsResponse)
             {
                 opcode |= 80;

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -26,6 +27,8 @@ namespace Makaretu.Nat.Pcp
         /// </summary>
         public const int ProtocolVersion = 2;
 
+        RNGCryptoServiceProvider rng = new RNGCryptoServiceProvider();
+
         /// <summary>
         ///   Creates a new instance of the <see cref="Client"/> class with the specified
         ///   IP Address of the NAT.
@@ -40,19 +43,26 @@ namespace Makaretu.Nat.Pcp
         /// <inheritdoc />
         public override async Task<bool> IsAvailableAsync()
         {
-            var hello = new byte[8 + 16];
-            hello[0] = ProtocolVersion;
+            var hello = new AnnounceRequest
+            {
+                ClientAddress = LocalEndPoint.Address
+            };
             try
             {
                 var res = await SendAndReceiveAsync(hello);
-                if (res[0] != ProtocolVersion)
-                    return false;
-                return true;
+                return res[0] == ProtocolVersion && res[3] == 0;
             }
             catch (Exception)
             {
                 return false;
             }
+        }
+
+        byte[] GenerateNonce()
+        {
+            var nonce = new byte[Message.NonceLength];
+            rng.GetBytes(nonce);
+            return nonce;
         }
 
     }

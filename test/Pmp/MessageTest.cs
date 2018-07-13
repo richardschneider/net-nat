@@ -17,7 +17,7 @@ namespace Makaretu.Nat.Pmp
         {
             var msg = new Message();
             Assert.AreEqual(0, msg.Version);
-            Assert.AreEqual(0, msg.Opcode);
+            Assert.AreEqual(0, (int)msg.Opcode);
             Assert.AreEqual(false, msg.IsResponse);
         }
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Net;
+using System.Net.Sockets;
 using System.Text;
 
 namespace Makaretu.Nat
@@ -104,7 +105,11 @@ namespace Makaretu.Nat
         /// <param name="value"></param>
         public void WriteIPv6Address(IPAddress value)
         {
-            // TODO: map IPv4 to IPv6
+            // Map IPv4 to IPv6
+            if (value.AddressFamily == AddressFamily.InterNetwork)
+            {
+                value = value.MapToIPv6();
+            }
             WriteBytes(value.GetAddressBytes());
         }
     }

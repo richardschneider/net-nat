@@ -17,7 +17,7 @@ namespace Makaretu.Nat.Pcp
         {
             var msg = new Message();
             Assert.AreEqual(2, msg.Version);
-            Assert.AreEqual(0, msg.Opcode);
+            Assert.AreEqual(0, (int)msg.Opcode);
         }
 
         [TestMethod]
