@@ -96,7 +96,7 @@ namespace Makaretu.Nat.Pcp
                             msg = new Response(); // no specific response data
                             break;
                         case Opcode.Map:
-                            msg = new Response(); // TODO
+                            msg = new MapResponse();
                             break;
                         case Opcode.Peer:
                             msg = new Response(); // TODO

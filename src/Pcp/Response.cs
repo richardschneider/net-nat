@@ -67,7 +67,7 @@ namespace Makaretu.Nat.Pcp
             ResultCode = reader.ReadByte();
             Lifetime = reader.ReadTimeSpan();
             EpochTime = reader.ReadTimeSpan();
-            reader.ReadBytes(reserved2.Length);
+            var _ = reader.ReadBytes(reserved2.Length);
         }
         
         /// <summary>

@@ -64,7 +64,6 @@ namespace Makaretu.Nat
                     throw new EndOfStreamException();
                 offset += n;
                 length -= n;
-                Position += n;
             }
 
             return buffer;

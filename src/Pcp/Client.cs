@@ -77,15 +77,37 @@ namespace Makaretu.Nat.Pcp
                 SuggestedExternalPort = (ushort)port
             };
             var res = await SendAndReceiveAsync(map);
-            var response = Message.Create<Response>(res);
+            var response = Message.Create<MapResponse>(res);
+            response.EnsureSuccess();
+            var address = response.AssignedExternalAdddress;
+            if (address.IsIPv4MappedToIPv6)
+            {
+                address = address.MapToIPv4();
+            }
+            return new LeasedEndpoint(
+                this, 
+                address, response.AssignedExternalPort,
+                response.InternalPort, response.Lifetime);
             //return res[0] == ProtocolVersion && res[3] == 0;
-            return null;
+            //return null;
         }
 
         /// <inheritdoc />
-        public override Task DeletePublicEndpointAsync(LeasedEndpoint endpoint)
+        public override async Task DeletePublicEndpointAsync(LeasedEndpoint endpoint)
         {
-            throw new NotImplementedException();
+            var map = new MapRequest
+            {
+                ClientAddress = LocalEndPoint.Address,
+                InternalPort = (ushort)endpoint.InternalPort,
+                Nonce = GenerateNonce(),
+                Protocol = 6, // TODO
+                RequestedLifetime = TimeSpan.Zero, // indicates delete
+                SuggestedExternalAdddress = endpoint.Address,
+                SuggestedExternalPort = (ushort)endpoint.Port
+            };
+            var res = await SendAndReceiveAsync(map);
+            var response = Message.Create<MapResponse>(res);
+            response.EnsureSuccess();
         }
 
         byte[] GenerateNonce()

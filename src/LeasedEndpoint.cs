@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Makaretu.Nat
 {
     /// <summary>
-    ///   A public endpoint that is managed by a NAT.
+    ///   A public endpoint that is rented from a NAT.
     /// </summary>
     /// <remarks>
     ///   <see cref="NatClient.CreatePublicEndpointAsync"/> should be used to construct
@@ -30,12 +30,30 @@ namespace Makaretu.Nat
         /// <param name="port">
         ///   The public port.
         /// </param>
+        /// <param name="internalPort">
+        ///   The host local port.
+        /// </param>
+        /// <param name="lifetime">
+        ///   The leased time.
+        /// </param>
         /// <seealso cref="NatClient.CreatePublicEndpointAsync"/>
-        public LeasedEndpoint(NatClient nat, IPAddress address, int port)
+        public LeasedEndpoint(NatClient nat, IPAddress address, int port, int internalPort, TimeSpan lifetime)
             : base(address, port)
         {
             this.nat = nat;
+            InternalPort = internalPort;
+            Lifetime = lifetime;
         }
+
+        /// <summary>
+        ///   The internal port for the public endpoint.
+        /// </summary>
+        public int InternalPort { get; private set; }
+
+        /// <summary>
+        ///   The lifetime of the leased public endpoint.
+        /// </summary>
+        public TimeSpan Lifetime { get; set; }
 
         /// <inheritdoc />
         public void Dispose()
