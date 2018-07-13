@@ -80,8 +80,8 @@
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><a class="xref" href="Makaretu.Nat.NatMessage.html">NatMessage</a></div>
-    <div class="level2"><a class="xref" href="Makaretu.Nat.Pmp.Message.html">Message</a></div>
-    <div class="level3"><span class="xref">Message</span></div>
+    <div class="level2"><span class="xref">Message</span></div>
+      <div class="level3"><a class="xref" href="Makaretu.Nat.Pcp.Request.html">Request</a></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -89,18 +89,6 @@
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="Makaretu.Nat.Pmp.Message.html#Makaretu_Nat_Pmp_Message_Version">Message.Version</a>
-    </div>
-    <div>
-      <a class="xref" href="Makaretu.Nat.Pmp.Message.html#Makaretu_Nat_Pmp_Message_Opcode">Message.Opcode</a>
-    </div>
-    <div>
-      <a class="xref" href="Makaretu.Nat.Pmp.Message.html#Makaretu_Nat_Pmp_Message_IsResponse">Message.IsResponse</a>
-    </div>
-    <div>
-      <a class="xref" href="Makaretu.Nat.Pmp.Message.html#Makaretu_Nat_Pmp_Message_Write_Makaretu_Nat_NatWriter_">Message.Write(NatWriter)</a>
-    </div>
     <div>
       <a class="xref" href="Makaretu.Nat.NatMessage.html#Makaretu_Nat_NatMessage_Length">NatMessage.Length()</a>
     </div>
@@ -142,28 +130,179 @@
   <h6><strong>Assembly</strong>: Makaretu.Nat.dll</h6>
   <h5 id="Makaretu_Nat_Pcp_Message_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Message : Message, ICloneable</code></pre>
+    <pre><code class="lang-csharp hljs">public class Message : NatMessage, ICloneable</code></pre>
   </div>
-  <h3 id="constructors">Constructors
+  <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/net-nat/new/master/apiSpec/new?filename=Makaretu_Nat_Pcp_Message__ctor.md&amp;value=---%0Auid%3A%20Makaretu.Nat.Pcp.Message.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/richardschneider/net-nat/new/master/apiSpec/new?filename=Makaretu_Nat_Pcp_Message_NonceLength.md&amp;value=---%0Auid%3A%20Makaretu.Nat.Pcp.Message.NonceLength%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/richardschneider/net-nat/blob/master/src/Pcp/Message.cs/#L20">View Source</a>
   </span>
-  <a id="Makaretu_Nat_Pcp_Message__ctor_" data-uid="Makaretu.Nat.Pcp.Message.#ctor*"></a>
-  <h4 id="Makaretu_Nat_Pcp_Message__ctor" data-uid="Makaretu.Nat.Pcp.Message.#ctor">Message()</h4>
-  <div class="markdown level1 summary"><p>Creates a new instance of the <a class="xref" href="Makaretu.Nat.Pcp.Message.html">Message</a> class.</p>
+  <h4 id="Makaretu_Nat_Pcp_Message_NonceLength" data-uid="Makaretu.Nat.Pcp.Message.NonceLength">NonceLength</h4>
+  <div class="markdown level1 summary"><p>The size of a nonce in bytes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Message()</code></pre>
+    <pre><code class="lang-csharp hljs">public const int NonceLength = 12</code></pre>
   </div>
-  <h5 id="Makaretu_Nat_Pcp_Message__ctor_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Set <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.version">Version</a> to <a class="xref" href="Makaretu.Nat.Pcp.Client.html#Makaretu_Nat_Pcp_Client_ProtocolVersion">ProtocolVersion</a>.</p>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>12 bytes.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-nat/new/master/apiSpec/new?filename=Makaretu_Nat_Pcp_Message_IsResponse.md&amp;value=---%0Auid%3A%20Makaretu.Nat.Pcp.Message.IsResponse%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-nat/blob/master/src/Pcp/Message.cs/#L44">View Source</a>
+  </span>
+  <a id="Makaretu_Nat_Pcp_Message_IsResponse_" data-uid="Makaretu.Nat.Pcp.Message.IsResponse*"></a>
+  <h4 id="Makaretu_Nat_Pcp_Message_IsResponse" data-uid="Makaretu.Nat.Pcp.Message.IsResponse">IsResponse</h4>
+  <div class="markdown level1 summary"><p>Indicates that the message is a response.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsResponse { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>Defaults to <strong>false</strong>, e.g. its a request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-nat/new/master/apiSpec/new?filename=Makaretu_Nat_Pcp_Message_Opcode.md&amp;value=---%0Auid%3A%20Makaretu.Nat.Pcp.Message.Opcode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-nat/blob/master/src/Pcp/Message.cs/#L36">View Source</a>
+  </span>
+  <a id="Makaretu_Nat_Pcp_Message_Opcode_" data-uid="Makaretu.Nat.Pcp.Message.Opcode*"></a>
+  <h4 id="Makaretu_Nat_Pcp_Message_Opcode" data-uid="Makaretu.Nat.Pcp.Message.Opcode">Opcode</h4>
+  <div class="markdown level1 summary"><p>The operatation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Opcode Opcode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Makaretu.Nat.Pcp.Opcode.html">Opcode</a></td>
+        <td><p>One of the <a class="xref" href="Makaretu.Nat.Pcp.Message.html#Makaretu_Nat_Pcp_Message_Opcode">Opcode</a> values.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-nat/new/master/apiSpec/new?filename=Makaretu_Nat_Pcp_Message_Version.md&amp;value=---%0Auid%3A%20Makaretu.Nat.Pcp.Message.Version%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-nat/blob/master/src/Pcp/Message.cs/#L28">View Source</a>
+  </span>
+  <a id="Makaretu_Nat_Pcp_Message_Version_" data-uid="Makaretu.Nat.Pcp.Message.Version*"></a>
+  <h4 id="Makaretu_Nat_Pcp_Message_Version" data-uid="Makaretu.Nat.Pcp.Message.Version">Version</h4>
+  <div class="markdown level1 summary"><p>The protocol version.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte Version { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a></td>
+        <td><p>Defaults to zero, <a class="xref" href="Makaretu.Nat.Pcp.Client.html#Makaretu_Nat_Pcp_Client_ProtocolVersion">ProtocolVersion</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-nat/new/master/apiSpec/new?filename=Makaretu_Nat_Pcp_Message_Write_Makaretu_Nat_NatWriter_.md&amp;value=---%0Auid%3A%20Makaretu.Nat.Pcp.Message.Write(Makaretu.Nat.NatWriter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-nat/blob/master/src/Pcp/Message.cs/#L47">View Source</a>
+  </span>
+  <a id="Makaretu_Nat_Pcp_Message_Write_" data-uid="Makaretu.Nat.Pcp.Message.Write*"></a>
+  <h4 id="Makaretu_Nat_Pcp_Message_Write_Makaretu_Nat_NatWriter_" data-uid="Makaretu.Nat.Pcp.Message.Write(Makaretu.Nat.NatWriter)">Write(NatWriter)</h4>
+  <div class="markdown level1 summary"><p>Writes the NAT message.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Write(NatWriter writer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Makaretu.Nat.NatWriter.html">NatWriter</a></td>
+        <td><span class="parametername">writer</span></td>
+        <td><p>The destination for the NAT message.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Makaretu.Nat.NatMessage.html#Makaretu_Nat_NatMessage_Write_Makaretu_Nat_NatWriter_">NatMessage.Write(NatWriter)</a></div>
+  <h5 id="Makaretu_Nat_Pcp_Message_Write_Makaretu_Nat_NatWriter__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Derived classes must override this.</p>
 </div>
   <h3 id="implements">Implements</h3>
   <div>

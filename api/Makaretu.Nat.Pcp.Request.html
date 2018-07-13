@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class Client
+    <title>Class Request
    | Life behind a NAT </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class Client
+    <meta name="title" content="Class Request
    | Life behind a NAT ">
     <meta name="generator" content="docfx 2.37.0.0">
     
@@ -68,39 +68,55 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Makaretu.Nat.Pmp.Client">
+            <article class="content wrap" id="_content" data-uid="Makaretu.Nat.Pcp.Request">
   
   
-  <h1 id="Makaretu_Nat_Pmp_Client" data-uid="Makaretu.Nat.Pmp.Client" class="text-break">Class Client
+  <h1 id="Makaretu_Nat_Pcp_Request" data-uid="Makaretu.Nat.Pcp.Request" class="text-break">Class Request
   </h1>
-  <div class="markdown level0 summary"><p>Communicates with a NAT that speaks the Port Mapping Protocol.</p>
+  <div class="markdown level0 summary"><p>A Port Control Protocol request message.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><a class="xref" href="Makaretu.Nat.NatClient.html">NatClient</a></div>
-    <div class="level2"><span class="xref">Client</span></div>
+    <div class="level1"><a class="xref" href="Makaretu.Nat.NatMessage.html">NatMessage</a></div>
+    <div class="level2"><a class="xref" href="Makaretu.Nat.Pcp.Message.html">Message</a></div>
+    <div class="level3"><span class="xref">Request</span></div>
+      <div class="level4"><a class="xref" href="Makaretu.Nat.Pcp.AnnounceRequest.html">AnnounceRequest</a></div>
+      <div class="level4"><a class="xref" href="Makaretu.Nat.Pcp.MapRequest.html">MapRequest</a></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.icloneable">ICloneable</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="Makaretu.Nat.NatClient.html#Makaretu_Nat_NatClient_RequestPort">NatClient.RequestPort</a>
+      <a class="xref" href="Makaretu.Nat.Pcp.Message.html#Makaretu_Nat_Pcp_Message_NonceLength">Message.NonceLength</a>
     </div>
     <div>
-      <a class="xref" href="Makaretu.Nat.NatClient.html#Makaretu_Nat_NatClient_InitialTimeout">NatClient.InitialTimeout</a>
+      <a class="xref" href="Makaretu.Nat.Pcp.Message.html#Makaretu_Nat_Pcp_Message_Version">Message.Version</a>
     </div>
     <div>
-      <a class="xref" href="Makaretu.Nat.NatClient.html#Makaretu_Nat_NatClient_MaxRetries">NatClient.MaxRetries</a>
+      <a class="xref" href="Makaretu.Nat.Pcp.Message.html#Makaretu_Nat_Pcp_Message_Opcode">Message.Opcode</a>
     </div>
     <div>
-      <a class="xref" href="Makaretu.Nat.NatClient.html#Makaretu_Nat_NatClient_LocalEndPoint">NatClient.LocalEndPoint</a>
+      <a class="xref" href="Makaretu.Nat.Pcp.Message.html#Makaretu_Nat_Pcp_Message_IsResponse">Message.IsResponse</a>
     </div>
     <div>
-      <a class="xref" href="Makaretu.Nat.NatClient.html#Makaretu_Nat_NatClient_SendAndReceiveAsync_Makaretu_Nat_NatMessage_">NatClient.SendAndReceiveAsync(NatMessage)</a>
+      <a class="xref" href="Makaretu.Nat.NatMessage.html#Makaretu_Nat_NatMessage_Length">NatMessage.Length()</a>
     </div>
     <div>
-      <a class="xref" href="Makaretu.Nat.NatClient.html#Makaretu_Nat_NatClient_SendAndReceiveAsync_System_Byte___">NatClient.SendAndReceiveAsync(Byte[])</a>
+      <a class="xref" href="Makaretu.Nat.NatMessage.html#Makaretu_Nat_NatMessage_Clone">NatMessage.Clone()</a>
+    </div>
+    <div>
+      <a class="xref" href="Makaretu.Nat.NatMessage.html#Makaretu_Nat_NatMessage_Clone__1">NatMessage.Clone&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Makaretu.Nat.NatMessage.html#Makaretu_Nat_NatMessage_ToByteArray">NatMessage.ToByteArray()</a>
+    </div>
+    <div>
+      <a class="xref" href="Makaretu.Nat.NatMessage.html#Makaretu_Nat_NatMessage_Write_System_IO_Stream_">NatMessage.Write(Stream)</a>
     </div>
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
@@ -124,41 +140,95 @@
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Makaretu.Nat.Pmp.html">Makaretu.Nat.Pmp</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Makaretu.Nat.Pcp.html">Makaretu.Nat.Pcp</a></h6>
   <h6><strong>Assembly</strong>: Makaretu.Nat.dll</h6>
-  <h5 id="Makaretu_Nat_Pmp_Client_syntax">Syntax</h5>
+  <h5 id="Makaretu_Nat_Pcp_Request_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Client : NatClient</code></pre>
+    <pre><code class="lang-csharp hljs">public class Request : Message, ICloneable</code></pre>
   </div>
-  <h5 id="Makaretu_Nat_Pmp_Client_remarks"><strong>Remarks</strong></h5>
-  <div class="markdown level0 remarks"><p>Automates the process of creating Network Address Translation(NAT) port mappings.
-Allows retrieving the external IPv4 address
-of a NAT gateway, thus allowing a client to make its external IPv4
-address and port known to peers that may wish to communicate with it.
-<p>
- NAT-PMP is  superseded by the IETF Standards Track RFC &quot;Port Control Protocol
- (PCP)&quot;, which builds on NAT-PMP and uses a compatible packet format,
- but adds a number of significant enhancements.
-</p></p>
-</div>
-  <h3 id="constructors">Constructors
+  <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/net-nat/new/master/apiSpec/new?filename=Makaretu_Nat_Pmp_Client__ctor_System_Net_IPAddress_.md&amp;value=---%0Auid%3A%20Makaretu.Nat.Pmp.Client.%23ctor(System.Net.IPAddress)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/richardschneider/net-nat/new/master/apiSpec/new?filename=Makaretu_Nat_Pcp_Request_ClientAddress.md&amp;value=---%0Auid%3A%20Makaretu.Nat.Pcp.Request.ClientAddress%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-nat/blob/master/src/Pmp/Client.cs/#L41">View Source</a>
+    <a href="https://github.com/richardschneider/net-nat/blob/master/src/Pcp/Request.cs/#L29">View Source</a>
   </span>
-  <a id="Makaretu_Nat_Pmp_Client__ctor_" data-uid="Makaretu.Nat.Pmp.Client.#ctor*"></a>
-  <h4 id="Makaretu_Nat_Pmp_Client__ctor_System_Net_IPAddress_" data-uid="Makaretu.Nat.Pmp.Client.#ctor(System.Net.IPAddress)">Client(IPAddress)</h4>
-  <div class="markdown level1 summary"><p>Creates a new instance of the NAT-PMP <a class="xref" href="Makaretu.Nat.Pmp.Client.html">Client</a> class with the specified
-IP Address of the NAT.</p>
+  <a id="Makaretu_Nat_Pcp_Request_ClientAddress_" data-uid="Makaretu.Nat.Pcp.Request.ClientAddress*"></a>
+  <h4 id="Makaretu_Nat_Pcp_Request_ClientAddress" data-uid="Makaretu.Nat.Pcp.Request.ClientAddress">ClientAddress</h4>
+  <div class="markdown level1 summary"><p>The IP address of the client sending the request.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Client(IPAddress address)</code></pre>
+    <pre><code class="lang-csharp hljs">public IPAddress ClientAddress { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.net.ipaddress">IPAddress</a></td>
+        <td><p>Either IPv4 or IPv6.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-nat/new/master/apiSpec/new?filename=Makaretu_Nat_Pcp_Request_RequestedLifetime.md&amp;value=---%0Auid%3A%20Makaretu.Nat.Pcp.Request.RequestedLifetime%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-nat/blob/master/src/Pcp/Request.cs/#L21">View Source</a>
+  </span>
+  <a id="Makaretu_Nat_Pcp_Request_RequestedLifetime_" data-uid="Makaretu.Nat.Pcp.Request.RequestedLifetime*"></a>
+  <h4 id="Makaretu_Nat_Pcp_Request_RequestedLifetime" data-uid="Makaretu.Nat.Pcp.Request.RequestedLifetime">RequestedLifetime</h4>
+  <div class="markdown level1 summary"><p>The requested lifetime of a operation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan RequestedLifetime { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td><p>Resolution in seconds.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-nat/new/master/apiSpec/new?filename=Makaretu_Nat_Pcp_Request_Write_Makaretu_Nat_NatWriter_.md&amp;value=---%0Auid%3A%20Makaretu.Nat.Pcp.Request.Write(Makaretu.Nat.NatWriter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-nat/blob/master/src/Pcp/Request.cs/#L32">View Source</a>
+  </span>
+  <a id="Makaretu_Nat_Pcp_Request_Write_" data-uid="Makaretu.Nat.Pcp.Request.Write*"></a>
+  <h4 id="Makaretu_Nat_Pcp_Request_Write_Makaretu_Nat_NatWriter_" data-uid="Makaretu.Nat.Pcp.Request.Write(Makaretu.Nat.NatWriter)">Write(NatWriter)</h4>
+  <div class="markdown level1 summary"><p>Writes the NAT message.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Write(NatWriter writer)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -171,85 +241,21 @@ IP Address of the NAT.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.net.ipaddress">IPAddress</a></td>
-        <td><span class="parametername">address</span></td>
-        <td><p>The IP address of the NAT server.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="fields">Fields
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/net-nat/new/master/apiSpec/new?filename=Makaretu_Nat_Pmp_Client_ProtocolVersion.md&amp;value=---%0Auid%3A%20Makaretu.Nat.Pmp.Client.ProtocolVersion%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-nat/blob/master/src/Pmp/Client.cs/#L32">View Source</a>
-  </span>
-  <h4 id="Makaretu_Nat_Pmp_Client_ProtocolVersion" data-uid="Makaretu.Nat.Pmp.Client.ProtocolVersion">ProtocolVersion</h4>
-  <div class="markdown level1 summary"><p>The version of the NAT-PMP.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int ProtocolVersion = 0</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="methods">Methods
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/net-nat/new/master/apiSpec/new?filename=Makaretu_Nat_Pmp_Client_IsAvailableAsync.md&amp;value=---%0Auid%3A%20Makaretu.Nat.Pmp.Client.IsAvailableAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-nat/blob/master/src/Pmp/Client.cs/#L46">View Source</a>
-  </span>
-  <a id="Makaretu_Nat_Pmp_Client_IsAvailableAsync_" data-uid="Makaretu.Nat.Pmp.Client.IsAvailableAsync*"></a>
-  <h4 id="Makaretu_Nat_Pmp_Client_IsAvailableAsync" data-uid="Makaretu.Nat.Pmp.Client.IsAvailableAsync">IsAvailableAsync()</h4>
-  <div class="markdown level1 summary"><p>Determines if the NAT is online.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override Task&lt;bool&gt; IsAvailableAsync()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
-        <td><p><strong>true</strong> if the NAT is online and speaks the correct protocol; otherwise, <strong>false</strong>.</p>
+        <td><a class="xref" href="Makaretu.Nat.NatWriter.html">NatWriter</a></td>
+        <td><span class="parametername">writer</span></td>
+        <td><p>The destination for the NAT message.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Makaretu.Nat.NatClient.html#Makaretu_Nat_NatClient_IsAvailableAsync">NatClient.IsAvailableAsync()</a></div>
-  <h3 id="seealso">See Also</h3>
-  <div class="seealso">
-      <div><span><a href="https://tools.ietf.org/html/rfc6886">RFC 6886 - NAT Port Mapping Protocol</a></span></div>
-      <div><span><a href="https://tools.ietf.org/html/rfc6887">RFC 6887 - NAT Port Control Protocol</a></span></div>
+  <div><a class="xref" href="Makaretu.Nat.Pcp.Message.html#Makaretu_Nat_Pcp_Message_Write_Makaretu_Nat_NatWriter_">Message.Write(NatWriter)</a></div>
+  <h5 id="Makaretu_Nat_Pcp_Request_Write_Makaretu_Nat_NatWriter__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Derived classes must override this.</p>
+</div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.icloneable">System.ICloneable</a>
   </div>
 </article>
           </div>
@@ -259,10 +265,10 @@ IP Address of the NAT.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/richardschneider/net-nat/new/master/apiSpec/new?filename=Makaretu_Nat_Pmp_Client.md&amp;value=---%0Auid%3A%20Makaretu.Nat.Pmp.Client%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/richardschneider/net-nat/new/master/apiSpec/new?filename=Makaretu_Nat_Pcp_Request.md&amp;value=---%0Auid%3A%20Makaretu.Nat.Pcp.Request%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/richardschneider/net-nat/blob/master/src/Pmp/Client.cs/#L27" class="contribution-link">View Source</a>
+                    <a href="https://github.com/richardschneider/net-nat/blob/master/src/Pcp/Request.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
