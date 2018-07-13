@@ -93,7 +93,7 @@ namespace Makaretu.Nat.Pcp
                     switch (header.Opcode)
                     {
                         case Opcode.Announce:
-                            msg = new Response(); // TODO
+                            msg = new Response(); // no specific response data
                             break;
                         case Opcode.Map:
                             msg = new Response(); // TODO
@@ -116,7 +116,7 @@ namespace Makaretu.Nat.Pcp
                             msg = new MapRequest();
                             break;
                         case Opcode.Peer:
-                            msg = new MapRequest();
+                            msg = new PeerRequest();
                             break;
                         default:
                             throw new NotSupportedException($"NAT-PCP request with opcode {header.Opcode}.");

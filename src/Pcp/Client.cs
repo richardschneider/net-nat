@@ -51,7 +51,8 @@ namespace Makaretu.Nat.Pcp
             {
                 var res = await SendAndReceiveAsync(hello);
                 var response = Message.Create<Response>(res);
-                return response.Version == ProtocolVersion && response.ResultCode == 0;
+                response.EnsureSuccess();
+                return response.Version == ProtocolVersion;
             }
             catch (Exception)
             {
