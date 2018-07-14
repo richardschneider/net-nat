@@ -78,7 +78,7 @@ namespace Makaretu.Nat.Pcp
         {
             if (datagram == null || datagram.Length < 4)
             {
-                throw new FormatException("NAT-PCP datagram must be at least 4 bytes.");
+                throw new InvalidDataException("NAT-PCP datagram must be at least 4 bytes.");
             }
 
             using (var ms = new MemoryStream(datagram, false))
