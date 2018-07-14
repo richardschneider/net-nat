@@ -45,12 +45,12 @@ references:
   commentId: T:Makaretu.Nat.LeasedEndpoint
   fullName: Makaretu.Nat.LeasedEndpoint
   nameWithType: LeasedEndpoint
-- uid: Makaretu.Nat.LeasedEndpoint.#ctor(Makaretu.Nat.NatClient,System.Net.IPAddress,System.Int32)
-  name: LeasedEndpoint(NatClient, IPAddress, Int32)
-  href: api/Makaretu.Nat.LeasedEndpoint.html#Makaretu_Nat_LeasedEndpoint__ctor_Makaretu_Nat_NatClient_System_Net_IPAddress_System_Int32_
-  commentId: M:Makaretu.Nat.LeasedEndpoint.#ctor(Makaretu.Nat.NatClient,System.Net.IPAddress,System.Int32)
-  fullName: Makaretu.Nat.LeasedEndpoint.LeasedEndpoint(Makaretu.Nat.NatClient, System.Net.IPAddress, System.Int32)
-  nameWithType: LeasedEndpoint.LeasedEndpoint(NatClient, IPAddress, Int32)
+- uid: Makaretu.Nat.LeasedEndpoint.#ctor(Makaretu.Nat.NatClient,System.Net.IPAddress,System.Int32,System.Int32,System.TimeSpan)
+  name: LeasedEndpoint(NatClient, IPAddress, Int32, Int32, TimeSpan)
+  href: api/Makaretu.Nat.LeasedEndpoint.html#Makaretu_Nat_LeasedEndpoint__ctor_Makaretu_Nat_NatClient_System_Net_IPAddress_System_Int32_System_Int32_System_TimeSpan_
+  commentId: M:Makaretu.Nat.LeasedEndpoint.#ctor(Makaretu.Nat.NatClient,System.Net.IPAddress,System.Int32,System.Int32,System.TimeSpan)
+  fullName: Makaretu.Nat.LeasedEndpoint.LeasedEndpoint(Makaretu.Nat.NatClient, System.Net.IPAddress, System.Int32, System.Int32, System.TimeSpan)
+  nameWithType: LeasedEndpoint.LeasedEndpoint(NatClient, IPAddress, Int32, Int32, TimeSpan)
 - uid: Makaretu.Nat.LeasedEndpoint.#ctor*
   name: LeasedEndpoint
   href: api/Makaretu.Nat.LeasedEndpoint.html#Makaretu_Nat_LeasedEndpoint__ctor_
@@ -71,6 +71,32 @@ references:
   isSpec: "True"
   fullName: Makaretu.Nat.LeasedEndpoint.Dispose
   nameWithType: LeasedEndpoint.Dispose
+- uid: Makaretu.Nat.LeasedEndpoint.InternalPort
+  name: InternalPort
+  href: api/Makaretu.Nat.LeasedEndpoint.html#Makaretu_Nat_LeasedEndpoint_InternalPort
+  commentId: P:Makaretu.Nat.LeasedEndpoint.InternalPort
+  fullName: Makaretu.Nat.LeasedEndpoint.InternalPort
+  nameWithType: LeasedEndpoint.InternalPort
+- uid: Makaretu.Nat.LeasedEndpoint.InternalPort*
+  name: InternalPort
+  href: api/Makaretu.Nat.LeasedEndpoint.html#Makaretu_Nat_LeasedEndpoint_InternalPort_
+  commentId: Overload:Makaretu.Nat.LeasedEndpoint.InternalPort
+  isSpec: "True"
+  fullName: Makaretu.Nat.LeasedEndpoint.InternalPort
+  nameWithType: LeasedEndpoint.InternalPort
+- uid: Makaretu.Nat.LeasedEndpoint.Lifetime
+  name: Lifetime
+  href: api/Makaretu.Nat.LeasedEndpoint.html#Makaretu_Nat_LeasedEndpoint_Lifetime
+  commentId: P:Makaretu.Nat.LeasedEndpoint.Lifetime
+  fullName: Makaretu.Nat.LeasedEndpoint.Lifetime
+  nameWithType: LeasedEndpoint.Lifetime
+- uid: Makaretu.Nat.LeasedEndpoint.Lifetime*
+  name: Lifetime
+  href: api/Makaretu.Nat.LeasedEndpoint.html#Makaretu_Nat_LeasedEndpoint_Lifetime_
+  commentId: Overload:Makaretu.Nat.LeasedEndpoint.Lifetime
+  isSpec: "True"
+  fullName: Makaretu.Nat.LeasedEndpoint.Lifetime
+  nameWithType: LeasedEndpoint.Lifetime
 - uid: Makaretu.Nat.NatClient
   name: NatClient
   href: api/Makaretu.Nat.NatClient.html
@@ -703,6 +729,19 @@ references:
   isSpec: "True"
   fullName: Makaretu.Nat.Pcp.MapRequest.Protocol
   nameWithType: MapRequest.Protocol
+- uid: Makaretu.Nat.Pcp.MapRequest.Read(Makaretu.Nat.NatReader)
+  name: Read(NatReader)
+  href: api/Makaretu.Nat.Pcp.MapRequest.html#Makaretu_Nat_Pcp_MapRequest_Read_Makaretu_Nat_NatReader_
+  commentId: M:Makaretu.Nat.Pcp.MapRequest.Read(Makaretu.Nat.NatReader)
+  fullName: Makaretu.Nat.Pcp.MapRequest.Read(Makaretu.Nat.NatReader)
+  nameWithType: MapRequest.Read(NatReader)
+- uid: Makaretu.Nat.Pcp.MapRequest.Read*
+  name: Read
+  href: api/Makaretu.Nat.Pcp.MapRequest.html#Makaretu_Nat_Pcp_MapRequest_Read_
+  commentId: Overload:Makaretu.Nat.Pcp.MapRequest.Read
+  isSpec: "True"
+  fullName: Makaretu.Nat.Pcp.MapRequest.Read
+  nameWithType: MapRequest.Read
 - uid: Makaretu.Nat.Pcp.MapRequest.SuggestedExternalAdddress
   name: SuggestedExternalAdddress
   href: api/Makaretu.Nat.Pcp.MapRequest.html#Makaretu_Nat_Pcp_MapRequest_SuggestedExternalAdddress
@@ -742,6 +781,116 @@ references:
   isSpec: "True"
   fullName: Makaretu.Nat.Pcp.MapRequest.Write
   nameWithType: MapRequest.Write
+- uid: Makaretu.Nat.Pcp.MapResponse
+  name: MapResponse
+  href: api/Makaretu.Nat.Pcp.MapResponse.html
+  commentId: T:Makaretu.Nat.Pcp.MapResponse
+  fullName: Makaretu.Nat.Pcp.MapResponse
+  nameWithType: MapResponse
+- uid: Makaretu.Nat.Pcp.MapResponse.#ctor
+  name: MapResponse()
+  href: api/Makaretu.Nat.Pcp.MapResponse.html#Makaretu_Nat_Pcp_MapResponse__ctor
+  commentId: M:Makaretu.Nat.Pcp.MapResponse.#ctor
+  fullName: Makaretu.Nat.Pcp.MapResponse.MapResponse()
+  nameWithType: MapResponse.MapResponse()
+- uid: Makaretu.Nat.Pcp.MapResponse.#ctor*
+  name: MapResponse
+  href: api/Makaretu.Nat.Pcp.MapResponse.html#Makaretu_Nat_Pcp_MapResponse__ctor_
+  commentId: Overload:Makaretu.Nat.Pcp.MapResponse.#ctor
+  isSpec: "True"
+  fullName: Makaretu.Nat.Pcp.MapResponse.MapResponse
+  nameWithType: MapResponse.MapResponse
+- uid: Makaretu.Nat.Pcp.MapResponse.AssignedExternalAdddress
+  name: AssignedExternalAdddress
+  href: api/Makaretu.Nat.Pcp.MapResponse.html#Makaretu_Nat_Pcp_MapResponse_AssignedExternalAdddress
+  commentId: P:Makaretu.Nat.Pcp.MapResponse.AssignedExternalAdddress
+  fullName: Makaretu.Nat.Pcp.MapResponse.AssignedExternalAdddress
+  nameWithType: MapResponse.AssignedExternalAdddress
+- uid: Makaretu.Nat.Pcp.MapResponse.AssignedExternalAdddress*
+  name: AssignedExternalAdddress
+  href: api/Makaretu.Nat.Pcp.MapResponse.html#Makaretu_Nat_Pcp_MapResponse_AssignedExternalAdddress_
+  commentId: Overload:Makaretu.Nat.Pcp.MapResponse.AssignedExternalAdddress
+  isSpec: "True"
+  fullName: Makaretu.Nat.Pcp.MapResponse.AssignedExternalAdddress
+  nameWithType: MapResponse.AssignedExternalAdddress
+- uid: Makaretu.Nat.Pcp.MapResponse.AssignedExternalPort
+  name: AssignedExternalPort
+  href: api/Makaretu.Nat.Pcp.MapResponse.html#Makaretu_Nat_Pcp_MapResponse_AssignedExternalPort
+  commentId: P:Makaretu.Nat.Pcp.MapResponse.AssignedExternalPort
+  fullName: Makaretu.Nat.Pcp.MapResponse.AssignedExternalPort
+  nameWithType: MapResponse.AssignedExternalPort
+- uid: Makaretu.Nat.Pcp.MapResponse.AssignedExternalPort*
+  name: AssignedExternalPort
+  href: api/Makaretu.Nat.Pcp.MapResponse.html#Makaretu_Nat_Pcp_MapResponse_AssignedExternalPort_
+  commentId: Overload:Makaretu.Nat.Pcp.MapResponse.AssignedExternalPort
+  isSpec: "True"
+  fullName: Makaretu.Nat.Pcp.MapResponse.AssignedExternalPort
+  nameWithType: MapResponse.AssignedExternalPort
+- uid: Makaretu.Nat.Pcp.MapResponse.InternalPort
+  name: InternalPort
+  href: api/Makaretu.Nat.Pcp.MapResponse.html#Makaretu_Nat_Pcp_MapResponse_InternalPort
+  commentId: P:Makaretu.Nat.Pcp.MapResponse.InternalPort
+  fullName: Makaretu.Nat.Pcp.MapResponse.InternalPort
+  nameWithType: MapResponse.InternalPort
+- uid: Makaretu.Nat.Pcp.MapResponse.InternalPort*
+  name: InternalPort
+  href: api/Makaretu.Nat.Pcp.MapResponse.html#Makaretu_Nat_Pcp_MapResponse_InternalPort_
+  commentId: Overload:Makaretu.Nat.Pcp.MapResponse.InternalPort
+  isSpec: "True"
+  fullName: Makaretu.Nat.Pcp.MapResponse.InternalPort
+  nameWithType: MapResponse.InternalPort
+- uid: Makaretu.Nat.Pcp.MapResponse.Nonce
+  name: Nonce
+  href: api/Makaretu.Nat.Pcp.MapResponse.html#Makaretu_Nat_Pcp_MapResponse_Nonce
+  commentId: P:Makaretu.Nat.Pcp.MapResponse.Nonce
+  fullName: Makaretu.Nat.Pcp.MapResponse.Nonce
+  nameWithType: MapResponse.Nonce
+- uid: Makaretu.Nat.Pcp.MapResponse.Nonce*
+  name: Nonce
+  href: api/Makaretu.Nat.Pcp.MapResponse.html#Makaretu_Nat_Pcp_MapResponse_Nonce_
+  commentId: Overload:Makaretu.Nat.Pcp.MapResponse.Nonce
+  isSpec: "True"
+  fullName: Makaretu.Nat.Pcp.MapResponse.Nonce
+  nameWithType: MapResponse.Nonce
+- uid: Makaretu.Nat.Pcp.MapResponse.Protocol
+  name: Protocol
+  href: api/Makaretu.Nat.Pcp.MapResponse.html#Makaretu_Nat_Pcp_MapResponse_Protocol
+  commentId: P:Makaretu.Nat.Pcp.MapResponse.Protocol
+  fullName: Makaretu.Nat.Pcp.MapResponse.Protocol
+  nameWithType: MapResponse.Protocol
+- uid: Makaretu.Nat.Pcp.MapResponse.Protocol*
+  name: Protocol
+  href: api/Makaretu.Nat.Pcp.MapResponse.html#Makaretu_Nat_Pcp_MapResponse_Protocol_
+  commentId: Overload:Makaretu.Nat.Pcp.MapResponse.Protocol
+  isSpec: "True"
+  fullName: Makaretu.Nat.Pcp.MapResponse.Protocol
+  nameWithType: MapResponse.Protocol
+- uid: Makaretu.Nat.Pcp.MapResponse.Read(Makaretu.Nat.NatReader)
+  name: Read(NatReader)
+  href: api/Makaretu.Nat.Pcp.MapResponse.html#Makaretu_Nat_Pcp_MapResponse_Read_Makaretu_Nat_NatReader_
+  commentId: M:Makaretu.Nat.Pcp.MapResponse.Read(Makaretu.Nat.NatReader)
+  fullName: Makaretu.Nat.Pcp.MapResponse.Read(Makaretu.Nat.NatReader)
+  nameWithType: MapResponse.Read(NatReader)
+- uid: Makaretu.Nat.Pcp.MapResponse.Read*
+  name: Read
+  href: api/Makaretu.Nat.Pcp.MapResponse.html#Makaretu_Nat_Pcp_MapResponse_Read_
+  commentId: Overload:Makaretu.Nat.Pcp.MapResponse.Read
+  isSpec: "True"
+  fullName: Makaretu.Nat.Pcp.MapResponse.Read
+  nameWithType: MapResponse.Read
+- uid: Makaretu.Nat.Pcp.MapResponse.Write(Makaretu.Nat.NatWriter)
+  name: Write(NatWriter)
+  href: api/Makaretu.Nat.Pcp.MapResponse.html#Makaretu_Nat_Pcp_MapResponse_Write_Makaretu_Nat_NatWriter_
+  commentId: M:Makaretu.Nat.Pcp.MapResponse.Write(Makaretu.Nat.NatWriter)
+  fullName: Makaretu.Nat.Pcp.MapResponse.Write(Makaretu.Nat.NatWriter)
+  nameWithType: MapResponse.Write(NatWriter)
+- uid: Makaretu.Nat.Pcp.MapResponse.Write*
+  name: Write
+  href: api/Makaretu.Nat.Pcp.MapResponse.html#Makaretu_Nat_Pcp_MapResponse_Write_
+  commentId: Overload:Makaretu.Nat.Pcp.MapResponse.Write
+  isSpec: "True"
+  fullName: Makaretu.Nat.Pcp.MapResponse.Write
+  nameWithType: MapResponse.Write
 - uid: Makaretu.Nat.Pcp.Message
   name: Message
   href: api/Makaretu.Nat.Pcp.Message.html
@@ -932,6 +1081,19 @@ references:
   isSpec: "True"
   fullName: Makaretu.Nat.Pcp.Request.ClientAddress
   nameWithType: Request.ClientAddress
+- uid: Makaretu.Nat.Pcp.Request.Read(Makaretu.Nat.NatReader)
+  name: Read(NatReader)
+  href: api/Makaretu.Nat.Pcp.Request.html#Makaretu_Nat_Pcp_Request_Read_Makaretu_Nat_NatReader_
+  commentId: M:Makaretu.Nat.Pcp.Request.Read(Makaretu.Nat.NatReader)
+  fullName: Makaretu.Nat.Pcp.Request.Read(Makaretu.Nat.NatReader)
+  nameWithType: Request.Read(NatReader)
+- uid: Makaretu.Nat.Pcp.Request.Read*
+  name: Read
+  href: api/Makaretu.Nat.Pcp.Request.html#Makaretu_Nat_Pcp_Request_Read_
+  commentId: Overload:Makaretu.Nat.Pcp.Request.Read
+  isSpec: "True"
+  fullName: Makaretu.Nat.Pcp.Request.Read
+  nameWithType: Request.Read
 - uid: Makaretu.Nat.Pcp.Request.RequestedLifetime
   name: RequestedLifetime
   href: api/Makaretu.Nat.Pcp.Request.html#Makaretu_Nat_Pcp_Request_RequestedLifetime

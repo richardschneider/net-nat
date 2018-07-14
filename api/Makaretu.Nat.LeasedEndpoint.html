@@ -73,7 +73,7 @@
   
   <h1 id="Makaretu_Nat_LeasedEndpoint" data-uid="Makaretu.Nat.LeasedEndpoint" class="text-break">Class LeasedEndpoint
   </h1>
-  <div class="markdown level0 summary"><p>A public endpoint that is managed by a NAT.</p>
+  <div class="markdown level0 summary"><p>A public endpoint that is rented from a NAT.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -146,19 +146,19 @@ the <strong>LeasedEndpoint</strong>.</p>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/net-nat/new/master/apiSpec/new?filename=Makaretu_Nat_LeasedEndpoint__ctor_Makaretu_Nat_NatClient_System_Net_IPAddress_System_Int32_.md&amp;value=---%0Auid%3A%20Makaretu.Nat.LeasedEndpoint.%23ctor(Makaretu.Nat.NatClient%2CSystem.Net.IPAddress%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/richardschneider/net-nat/new/master/apiSpec/new?filename=Makaretu_Nat_LeasedEndpoint__ctor_Makaretu_Nat_NatClient_System_Net_IPAddress_System_Int32_System_Int32_System_TimeSpan_.md&amp;value=---%0Auid%3A%20Makaretu.Nat.LeasedEndpoint.%23ctor(Makaretu.Nat.NatClient%2CSystem.Net.IPAddress%2CSystem.Int32%2CSystem.Int32%2CSystem.TimeSpan)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-nat/blob/master/src/LeasedEndpoint.cs/#L34">View Source</a>
+    <a href="https://github.com/richardschneider/net-nat/blob/master/src/LeasedEndpoint.cs/#L40">View Source</a>
   </span>
   <a id="Makaretu_Nat_LeasedEndpoint__ctor_" data-uid="Makaretu.Nat.LeasedEndpoint.#ctor*"></a>
-  <h4 id="Makaretu_Nat_LeasedEndpoint__ctor_Makaretu_Nat_NatClient_System_Net_IPAddress_System_Int32_" data-uid="Makaretu.Nat.LeasedEndpoint.#ctor(Makaretu.Nat.NatClient,System.Net.IPAddress,System.Int32)">LeasedEndpoint(NatClient, IPAddress, Int32)</h4>
+  <h4 id="Makaretu_Nat_LeasedEndpoint__ctor_Makaretu_Nat_NatClient_System_Net_IPAddress_System_Int32_System_Int32_System_TimeSpan_" data-uid="Makaretu.Nat.LeasedEndpoint.#ctor(Makaretu.Nat.NatClient,System.Net.IPAddress,System.Int32,System.Int32,System.TimeSpan)">LeasedEndpoint(NatClient, IPAddress, Int32, Int32, TimeSpan)</h4>
   <div class="markdown level1 summary"><p>Create a new instance of the <a class="xref" href="Makaretu.Nat.LeasedEndpoint.html">LeasedEndpoint</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public LeasedEndpoint(NatClient nat, IPAddress address, int port)</code></pre>
+    <pre><code class="lang-csharp hljs">public LeasedEndpoint(NatClient nat, IPAddress address, int port, int internalPort, TimeSpan lifetime)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -188,12 +188,88 @@ the <strong>LeasedEndpoint</strong>.</p>
         <td><p>The public port.</p>
 </td>
       </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">internalPort</span></td>
+        <td><p>The host local port.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td><span class="parametername">lifetime</span></td>
+        <td><p>The leased time.</p>
+</td>
+      </tr>
     </tbody>
   </table>
-  <h5 id="Makaretu_Nat_LeasedEndpoint__ctor_Makaretu_Nat_NatClient_System_Net_IPAddress_System_Int32__seealso">See Also</h5>
+  <h5 id="Makaretu_Nat_LeasedEndpoint__ctor_Makaretu_Nat_NatClient_System_Net_IPAddress_System_Int32_System_Int32_System_TimeSpan__seealso">See Also</h5>
   <div class="seealso">
       <div><a class="xref" href="Makaretu.Nat.NatClient.html#Makaretu_Nat_NatClient_CreatePublicEndpointAsync_System_Int32_">CreatePublicEndpointAsync</a>(<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>)</div>
   </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-nat/new/master/apiSpec/new?filename=Makaretu_Nat_LeasedEndpoint_InternalPort.md&amp;value=---%0Auid%3A%20Makaretu.Nat.LeasedEndpoint.InternalPort%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-nat/blob/master/src/LeasedEndpoint.cs/#L51">View Source</a>
+  </span>
+  <a id="Makaretu_Nat_LeasedEndpoint_InternalPort_" data-uid="Makaretu.Nat.LeasedEndpoint.InternalPort*"></a>
+  <h4 id="Makaretu_Nat_LeasedEndpoint_InternalPort" data-uid="Makaretu.Nat.LeasedEndpoint.InternalPort">InternalPort</h4>
+  <div class="markdown level1 summary"><p>The internal port for the public endpoint.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int InternalPort { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-nat/new/master/apiSpec/new?filename=Makaretu_Nat_LeasedEndpoint_Lifetime.md&amp;value=---%0Auid%3A%20Makaretu.Nat.LeasedEndpoint.Lifetime%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-nat/blob/master/src/LeasedEndpoint.cs/#L56">View Source</a>
+  </span>
+  <a id="Makaretu_Nat_LeasedEndpoint_Lifetime_" data-uid="Makaretu.Nat.LeasedEndpoint.Lifetime*"></a>
+  <h4 id="Makaretu_Nat_LeasedEndpoint_Lifetime" data-uid="Makaretu.Nat.LeasedEndpoint.Lifetime">Lifetime</h4>
+  <div class="markdown level1 summary"><p>The lifetime of the leased public endpoint.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan Lifetime { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
@@ -201,7 +277,7 @@ the <strong>LeasedEndpoint</strong>.</p>
     <a href="https://github.com/richardschneider/net-nat/new/master/apiSpec/new?filename=Makaretu_Nat_LeasedEndpoint_Dispose.md&amp;value=---%0Auid%3A%20Makaretu.Nat.LeasedEndpoint.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-nat/blob/master/src/LeasedEndpoint.cs/#L41">View Source</a>
+    <a href="https://github.com/richardschneider/net-nat/blob/master/src/LeasedEndpoint.cs/#L59">View Source</a>
   </span>
   <a id="Makaretu_Nat_LeasedEndpoint_Dispose_" data-uid="Makaretu.Nat.LeasedEndpoint.Dispose*"></a>
   <h4 id="Makaretu_Nat_LeasedEndpoint_Dispose" data-uid="Makaretu.Nat.LeasedEndpoint.Dispose">Dispose()</h4>
