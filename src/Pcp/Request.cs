@@ -38,5 +38,15 @@ namespace Makaretu.Nat.Pcp
             writer.WriteIPv6Address(ClientAddress);
         }
 
+        /// <inheritdoc />
+        public override void Read(NatReader reader)
+        {
+            base.Read(reader);
+
+            reader.ReadUInt16(); // reserved
+            RequestedLifetime = reader.ReadTimeSpan();
+            ClientAddress = reader.ReadIPv6Address();
+        }
+
     }
 }

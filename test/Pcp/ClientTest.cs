@@ -43,5 +43,39 @@ namespace Makaretu.Nat.Pcp
                 Assert.IsFalse(q);
             }
         }
+
+        [TestMethod]
+        public async Task CreateDeleteEndpoint()
+        {
+            var ttl = TimeSpan.FromSeconds(10);
+            using (var server = new MockNat())
+            {
+                server.RequestReceived += (s, req) =>
+                {
+                    var map = Message.Create<MapRequest>(req.Buffer);
+                    var response = new MapResponse
+                    {
+                        AssignedExternalAdddress = IPAddress.Loopback,
+                        AssignedExternalPort = 1234,
+                        EpochTime = TimeSpan.FromSeconds(1),
+                        Lifetime = ttl,
+                        Opcode = Opcode.Map,
+                        Nonce = map.Nonce,
+                        InternalPort = map.InternalPort,
+                        Protocol = map.Protocol
+                    }.ToByteArray();
+                    server.udp.Send(response, response.Length, req.RemoteEndPoint);
+                };
+                var nat = new Client(server.Address);
+
+                var endpoint = await nat.CreatePublicEndpointAsync(4321);
+                Assert.AreEqual(IPAddress.Loopback, endpoint.Address);
+                Assert.AreEqual(4321, endpoint.InternalPort);
+                Assert.AreEqual(1234, endpoint.Port);
+                Assert.AreEqual(ttl, endpoint.Lifetime);
+
+                await nat.DeletePublicEndpointAsync(endpoint);
+            }
+        }
     }
 }

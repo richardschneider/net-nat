@@ -86,5 +86,20 @@ namespace Makaretu.Nat.Pcp
             writer.WriteUInt16(SuggestedExternalPort);
             writer.WriteIPv6Address(SuggestedExternalAdddress);
         }
+
+        /// <inheritdoc />
+        public override void Read(NatReader reader)
+        {
+            base.Read(reader);
+
+            Nonce = reader.ReadBytes(NonceLength);
+            Protocol = reader.ReadByte();
+            reader.ReadByte(); // reserved 24 bit (3 bytes)
+            reader.ReadByte();
+            reader.ReadByte();
+            InternalPort = reader.ReadUInt16();
+            SuggestedExternalPort = reader.ReadUInt16();
+            SuggestedExternalAdddress = reader.ReadIPv6Address();
+        }
     }
 }
