@@ -39,18 +39,89 @@ references:
   isSpec: "True"
   fullName: Makaretu.Nat.IPAddressExtensions.IsPublic
   nameWithType: IPAddressExtensions.IsPublic
+- uid: Makaretu.Nat.Lease
+  name: Lease
+  href: api/Makaretu.Nat.Lease.html
+  commentId: T:Makaretu.Nat.Lease
+  fullName: Makaretu.Nat.Lease
+  nameWithType: Lease
+- uid: Makaretu.Nat.Lease.InternalPort
+  name: InternalPort
+  href: api/Makaretu.Nat.Lease.html#Makaretu_Nat_Lease_InternalPort
+  commentId: P:Makaretu.Nat.Lease.InternalPort
+  fullName: Makaretu.Nat.Lease.InternalPort
+  nameWithType: Lease.InternalPort
+- uid: Makaretu.Nat.Lease.InternalPort*
+  name: InternalPort
+  href: api/Makaretu.Nat.Lease.html#Makaretu_Nat_Lease_InternalPort_
+  commentId: Overload:Makaretu.Nat.Lease.InternalPort
+  isSpec: "True"
+  fullName: Makaretu.Nat.Lease.InternalPort
+  nameWithType: Lease.InternalPort
+- uid: Makaretu.Nat.Lease.Lifetime
+  name: Lifetime
+  href: api/Makaretu.Nat.Lease.html#Makaretu_Nat_Lease_Lifetime
+  commentId: P:Makaretu.Nat.Lease.Lifetime
+  fullName: Makaretu.Nat.Lease.Lifetime
+  nameWithType: Lease.Lifetime
+- uid: Makaretu.Nat.Lease.Lifetime*
+  name: Lifetime
+  href: api/Makaretu.Nat.Lease.html#Makaretu_Nat_Lease_Lifetime_
+  commentId: Overload:Makaretu.Nat.Lease.Lifetime
+  isSpec: "True"
+  fullName: Makaretu.Nat.Lease.Lifetime
+  nameWithType: Lease.Lifetime
+- uid: Makaretu.Nat.Lease.Nat
+  name: Nat
+  href: api/Makaretu.Nat.Lease.html#Makaretu_Nat_Lease_Nat
+  commentId: P:Makaretu.Nat.Lease.Nat
+  fullName: Makaretu.Nat.Lease.Nat
+  nameWithType: Lease.Nat
+- uid: Makaretu.Nat.Lease.Nat*
+  name: Nat
+  href: api/Makaretu.Nat.Lease.html#Makaretu_Nat_Lease_Nat_
+  commentId: Overload:Makaretu.Nat.Lease.Nat
+  isSpec: "True"
+  fullName: Makaretu.Nat.Lease.Nat
+  nameWithType: Lease.Nat
+- uid: Makaretu.Nat.Lease.PublicAddress
+  name: PublicAddress
+  href: api/Makaretu.Nat.Lease.html#Makaretu_Nat_Lease_PublicAddress
+  commentId: P:Makaretu.Nat.Lease.PublicAddress
+  fullName: Makaretu.Nat.Lease.PublicAddress
+  nameWithType: Lease.PublicAddress
+- uid: Makaretu.Nat.Lease.PublicAddress*
+  name: PublicAddress
+  href: api/Makaretu.Nat.Lease.html#Makaretu_Nat_Lease_PublicAddress_
+  commentId: Overload:Makaretu.Nat.Lease.PublicAddress
+  isSpec: "True"
+  fullName: Makaretu.Nat.Lease.PublicAddress
+  nameWithType: Lease.PublicAddress
+- uid: Makaretu.Nat.Lease.PublicPort
+  name: PublicPort
+  href: api/Makaretu.Nat.Lease.html#Makaretu_Nat_Lease_PublicPort
+  commentId: P:Makaretu.Nat.Lease.PublicPort
+  fullName: Makaretu.Nat.Lease.PublicPort
+  nameWithType: Lease.PublicPort
+- uid: Makaretu.Nat.Lease.PublicPort*
+  name: PublicPort
+  href: api/Makaretu.Nat.Lease.html#Makaretu_Nat_Lease_PublicPort_
+  commentId: Overload:Makaretu.Nat.Lease.PublicPort
+  isSpec: "True"
+  fullName: Makaretu.Nat.Lease.PublicPort
+  nameWithType: Lease.PublicPort
 - uid: Makaretu.Nat.LeasedEndpoint
   name: LeasedEndpoint
   href: api/Makaretu.Nat.LeasedEndpoint.html
   commentId: T:Makaretu.Nat.LeasedEndpoint
   fullName: Makaretu.Nat.LeasedEndpoint
   nameWithType: LeasedEndpoint
-- uid: Makaretu.Nat.LeasedEndpoint.#ctor(Makaretu.Nat.NatClient,System.Net.IPAddress,System.Int32,System.Int32,System.TimeSpan)
-  name: LeasedEndpoint(NatClient, IPAddress, Int32, Int32, TimeSpan)
-  href: api/Makaretu.Nat.LeasedEndpoint.html#Makaretu_Nat_LeasedEndpoint__ctor_Makaretu_Nat_NatClient_System_Net_IPAddress_System_Int32_System_Int32_System_TimeSpan_
-  commentId: M:Makaretu.Nat.LeasedEndpoint.#ctor(Makaretu.Nat.NatClient,System.Net.IPAddress,System.Int32,System.Int32,System.TimeSpan)
-  fullName: Makaretu.Nat.LeasedEndpoint.LeasedEndpoint(Makaretu.Nat.NatClient, System.Net.IPAddress, System.Int32, System.Int32, System.TimeSpan)
-  nameWithType: LeasedEndpoint.LeasedEndpoint(NatClient, IPAddress, Int32, Int32, TimeSpan)
+- uid: Makaretu.Nat.LeasedEndpoint.#ctor(Makaretu.Nat.Lease)
+  name: LeasedEndpoint(Lease)
+  href: api/Makaretu.Nat.LeasedEndpoint.html#Makaretu_Nat_LeasedEndpoint__ctor_Makaretu_Nat_Lease_
+  commentId: M:Makaretu.Nat.LeasedEndpoint.#ctor(Makaretu.Nat.Lease)
+  fullName: Makaretu.Nat.LeasedEndpoint.LeasedEndpoint(Makaretu.Nat.Lease)
+  nameWithType: LeasedEndpoint.LeasedEndpoint(Lease)
 - uid: Makaretu.Nat.LeasedEndpoint.#ctor*
   name: LeasedEndpoint
   href: api/Makaretu.Nat.LeasedEndpoint.html#Makaretu_Nat_LeasedEndpoint__ctor_
@@ -71,32 +142,19 @@ references:
   isSpec: "True"
   fullName: Makaretu.Nat.LeasedEndpoint.Dispose
   nameWithType: LeasedEndpoint.Dispose
-- uid: Makaretu.Nat.LeasedEndpoint.InternalPort
-  name: InternalPort
-  href: api/Makaretu.Nat.LeasedEndpoint.html#Makaretu_Nat_LeasedEndpoint_InternalPort
-  commentId: P:Makaretu.Nat.LeasedEndpoint.InternalPort
-  fullName: Makaretu.Nat.LeasedEndpoint.InternalPort
-  nameWithType: LeasedEndpoint.InternalPort
-- uid: Makaretu.Nat.LeasedEndpoint.InternalPort*
-  name: InternalPort
-  href: api/Makaretu.Nat.LeasedEndpoint.html#Makaretu_Nat_LeasedEndpoint_InternalPort_
-  commentId: Overload:Makaretu.Nat.LeasedEndpoint.InternalPort
+- uid: Makaretu.Nat.LeasedEndpoint.Lease
+  name: Lease
+  href: api/Makaretu.Nat.LeasedEndpoint.html#Makaretu_Nat_LeasedEndpoint_Lease
+  commentId: P:Makaretu.Nat.LeasedEndpoint.Lease
+  fullName: Makaretu.Nat.LeasedEndpoint.Lease
+  nameWithType: LeasedEndpoint.Lease
+- uid: Makaretu.Nat.LeasedEndpoint.Lease*
+  name: Lease
+  href: api/Makaretu.Nat.LeasedEndpoint.html#Makaretu_Nat_LeasedEndpoint_Lease_
+  commentId: Overload:Makaretu.Nat.LeasedEndpoint.Lease
   isSpec: "True"
-  fullName: Makaretu.Nat.LeasedEndpoint.InternalPort
-  nameWithType: LeasedEndpoint.InternalPort
-- uid: Makaretu.Nat.LeasedEndpoint.Lifetime
-  name: Lifetime
-  href: api/Makaretu.Nat.LeasedEndpoint.html#Makaretu_Nat_LeasedEndpoint_Lifetime
-  commentId: P:Makaretu.Nat.LeasedEndpoint.Lifetime
-  fullName: Makaretu.Nat.LeasedEndpoint.Lifetime
-  nameWithType: LeasedEndpoint.Lifetime
-- uid: Makaretu.Nat.LeasedEndpoint.Lifetime*
-  name: Lifetime
-  href: api/Makaretu.Nat.LeasedEndpoint.html#Makaretu_Nat_LeasedEndpoint_Lifetime_
-  commentId: Overload:Makaretu.Nat.LeasedEndpoint.Lifetime
-  isSpec: "True"
-  fullName: Makaretu.Nat.LeasedEndpoint.Lifetime
-  nameWithType: LeasedEndpoint.Lifetime
+  fullName: Makaretu.Nat.LeasedEndpoint.Lease
+  nameWithType: LeasedEndpoint.Lease
 - uid: Makaretu.Nat.NatClient
   name: NatClient
   href: api/Makaretu.Nat.NatClient.html
@@ -129,12 +187,12 @@ references:
   isSpec: "True"
   fullName: Makaretu.Nat.NatClient.CreatePublicEndpointAsync
   nameWithType: NatClient.CreatePublicEndpointAsync
-- uid: Makaretu.Nat.NatClient.DeletePublicEndpointAsync(Makaretu.Nat.LeasedEndpoint)
-  name: DeletePublicEndpointAsync(LeasedEndpoint)
-  href: api/Makaretu.Nat.NatClient.html#Makaretu_Nat_NatClient_DeletePublicEndpointAsync_Makaretu_Nat_LeasedEndpoint_
-  commentId: M:Makaretu.Nat.NatClient.DeletePublicEndpointAsync(Makaretu.Nat.LeasedEndpoint)
-  fullName: Makaretu.Nat.NatClient.DeletePublicEndpointAsync(Makaretu.Nat.LeasedEndpoint)
-  nameWithType: NatClient.DeletePublicEndpointAsync(LeasedEndpoint)
+- uid: Makaretu.Nat.NatClient.DeletePublicEndpointAsync(Makaretu.Nat.Lease)
+  name: DeletePublicEndpointAsync(Lease)
+  href: api/Makaretu.Nat.NatClient.html#Makaretu_Nat_NatClient_DeletePublicEndpointAsync_Makaretu_Nat_Lease_
+  commentId: M:Makaretu.Nat.NatClient.DeletePublicEndpointAsync(Makaretu.Nat.Lease)
+  fullName: Makaretu.Nat.NatClient.DeletePublicEndpointAsync(Makaretu.Nat.Lease)
+  nameWithType: NatClient.DeletePublicEndpointAsync(Lease)
 - uid: Makaretu.Nat.NatClient.DeletePublicEndpointAsync*
   name: DeletePublicEndpointAsync
   href: api/Makaretu.Nat.NatClient.html#Makaretu_Nat_NatClient_DeletePublicEndpointAsync_
@@ -639,12 +697,12 @@ references:
   isSpec: "True"
   fullName: Makaretu.Nat.Pcp.Client.CreatePublicEndpointAsync
   nameWithType: Client.CreatePublicEndpointAsync
-- uid: Makaretu.Nat.Pcp.Client.DeletePublicEndpointAsync(Makaretu.Nat.LeasedEndpoint)
-  name: DeletePublicEndpointAsync(LeasedEndpoint)
-  href: api/Makaretu.Nat.Pcp.Client.html#Makaretu_Nat_Pcp_Client_DeletePublicEndpointAsync_Makaretu_Nat_LeasedEndpoint_
-  commentId: M:Makaretu.Nat.Pcp.Client.DeletePublicEndpointAsync(Makaretu.Nat.LeasedEndpoint)
-  fullName: Makaretu.Nat.Pcp.Client.DeletePublicEndpointAsync(Makaretu.Nat.LeasedEndpoint)
-  nameWithType: Client.DeletePublicEndpointAsync(LeasedEndpoint)
+- uid: Makaretu.Nat.Pcp.Client.DeletePublicEndpointAsync(Makaretu.Nat.Lease)
+  name: DeletePublicEndpointAsync(Lease)
+  href: api/Makaretu.Nat.Pcp.Client.html#Makaretu_Nat_Pcp_Client_DeletePublicEndpointAsync_Makaretu_Nat_Lease_
+  commentId: M:Makaretu.Nat.Pcp.Client.DeletePublicEndpointAsync(Makaretu.Nat.Lease)
+  fullName: Makaretu.Nat.Pcp.Client.DeletePublicEndpointAsync(Makaretu.Nat.Lease)
+  nameWithType: Client.DeletePublicEndpointAsync(Lease)
 - uid: Makaretu.Nat.Pcp.Client.DeletePublicEndpointAsync*
   name: DeletePublicEndpointAsync
   href: api/Makaretu.Nat.Pcp.Client.html#Makaretu_Nat_Pcp_Client_DeletePublicEndpointAsync_
@@ -1255,12 +1313,12 @@ references:
   isSpec: "True"
   fullName: Makaretu.Nat.Pmp.Client.CreatePublicEndpointAsync
   nameWithType: Client.CreatePublicEndpointAsync
-- uid: Makaretu.Nat.Pmp.Client.DeletePublicEndpointAsync(Makaretu.Nat.LeasedEndpoint)
-  name: DeletePublicEndpointAsync(LeasedEndpoint)
-  href: api/Makaretu.Nat.Pmp.Client.html#Makaretu_Nat_Pmp_Client_DeletePublicEndpointAsync_Makaretu_Nat_LeasedEndpoint_
-  commentId: M:Makaretu.Nat.Pmp.Client.DeletePublicEndpointAsync(Makaretu.Nat.LeasedEndpoint)
-  fullName: Makaretu.Nat.Pmp.Client.DeletePublicEndpointAsync(Makaretu.Nat.LeasedEndpoint)
-  nameWithType: Client.DeletePublicEndpointAsync(LeasedEndpoint)
+- uid: Makaretu.Nat.Pmp.Client.DeletePublicEndpointAsync(Makaretu.Nat.Lease)
+  name: DeletePublicEndpointAsync(Lease)
+  href: api/Makaretu.Nat.Pmp.Client.html#Makaretu_Nat_Pmp_Client_DeletePublicEndpointAsync_Makaretu_Nat_Lease_
+  commentId: M:Makaretu.Nat.Pmp.Client.DeletePublicEndpointAsync(Makaretu.Nat.Lease)
+  fullName: Makaretu.Nat.Pmp.Client.DeletePublicEndpointAsync(Makaretu.Nat.Lease)
+  nameWithType: Client.DeletePublicEndpointAsync(Lease)
 - uid: Makaretu.Nat.Pmp.Client.DeletePublicEndpointAsync*
   name: DeletePublicEndpointAsync
   href: api/Makaretu.Nat.Pmp.Client.html#Makaretu_Nat_Pmp_Client_DeletePublicEndpointAsync_
