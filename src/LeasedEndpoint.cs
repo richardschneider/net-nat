@@ -15,52 +15,33 @@ namespace Makaretu.Nat
     ///   <see cref="NatClient.CreatePublicEndpointAsync"/> should be used to construct
     ///   the <b>LeasedEndpoint</b>.
     ///   <para>
-    ///   The lease is renewed in <see cref="Lifetime"/> / 2.
+    ///   The lease is renewed in <see cref="Lease.Lifetime"/> / 2.
     ///   </para>
     /// </remarks>
     public class LeasedEndpoint : IPEndPoint, IDisposable
     {
-        NatClient nat;
         CancellationTokenSource renewalCancellation = new CancellationTokenSource();
 
         /// <summary>
-        ///   Create a new instance of the <see cref="LeasedEndpoint"/> class.
+        ///   Create a new instance of the <see cref="LeasedEndpoint"/> class
+        ///   from the specified <see cref="Lease"/>.
         /// </summary>
-        /// <param name="nat">
-        ///   The NAT that owns the public endpoint.
-        /// </param>
-        /// <param name="address">
-        ///   The public IP address.
-        /// </param>
-        /// <param name="port">
-        ///   The public port.
-        /// </param>
-        /// <param name="internalPort">
-        ///   The host local port.
-        /// </param>
-        /// <param name="lifetime">
-        ///   The leased time.
+        /// <param name="lease">
+        ///   An agreement for a public endpoint.
         /// </param>
         /// <seealso cref="NatClient.CreatePublicEndpointAsync"/>
-        public LeasedEndpoint(NatClient nat, IPAddress address, int port, int internalPort, TimeSpan lifetime)
-            : base(address, port)
+        public LeasedEndpoint(Lease lease)
+            : base(lease.PublicAddress, lease.PublicPort)
         {
-            this.nat = nat;
-            InternalPort = internalPort;
-            Lifetime = lifetime;
-            
+            Lease = lease;
+
             Renewal(renewalCancellation.Token);
         }
 
         /// <summary>
-        ///   The internal port for the public endpoint.
+        ///   The lease agreement.
         /// </summary>
-        public int InternalPort { get; private set; }
-
-        /// <summary>
-        ///   The lifetime of the leased public endpoint.
-        /// </summary>
-        public TimeSpan Lifetime { get; set; }
+        public Lease Lease { get; private set; }
 
         /// <inheritdoc />
         public void Dispose()
@@ -72,17 +53,20 @@ namespace Makaretu.Nat
                 cancel.Dispose();
             }
 
-            if (nat != null)
+            if (Lease != null)
             {
-                var controller = nat;
-                nat = null;
-                controller.DeletePublicEndpointAsync(this); // do not wait for task to complete!
+                var lease = Lease;
+                Lease = null;
+                if (lease.Nat != null)
+                {
+                    lease.Nat.DeletePublicEndpointAsync(lease); // do not wait for task to complete!
+                }
             }
         }
 
         async void Renewal(CancellationToken cancel)
         {
-            int nextRenewal = (int)Lifetime.TotalMilliseconds / 2;
+            int nextRenewal = (int)Lease.Lifetime.TotalMilliseconds / 2;
 
             for (; nextRenewal >= 250; nextRenewal /= 2)
             {

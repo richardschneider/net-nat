@@ -56,7 +56,7 @@ namespace Makaretu.Nat
         public int MaxRetries { get; set; } = 4;
 
         /// <summary>
-        ///   The local endpoint of NAT.
+        ///   The local endpoint.
         /// </summary>
         /// <value>
         ///   An <see cref="IPEndPoint"/>.
@@ -86,20 +86,24 @@ namespace Makaretu.Nat
         /// </param>
         /// <returns>
         ///   A task that represents the asynchronous operation. The task's result is
-        ///   an endpoint that is connectable by devices not behind the NAT.
+        ///   a <see cref="Lease"/> that defines an endpoint that is connectable by 
+        ///   devices not behind the NAT.
         /// </returns>
-        public abstract Task<LeasedEndpoint> CreatePublicEndpointAsync(int port);
+        public abstract Task<Lease> CreatePublicEndpointAsync(int port);
 
         /// <summary>
-        ///   Remove the endpoint.
+        ///   Cancel the lease.
         /// </summary>
-        /// <param name="endpoint">
-        ///   The endpoint to remove.
+        /// <param name="lease">
+        ///   The lease to break.
         /// </param>
         /// <returns>
         ///   A task that represents the asynchronous operation.
         /// </returns>
-        public abstract Task DeletePublicEndpointAsync(LeasedEndpoint endpoint);
+        /// <remarks>
+        ///   Tells that NAT that the public endpoint can be removed.
+        /// </remarks>
+        public abstract Task DeletePublicEndpointAsync(Lease lease);
 
         /// <summary>
         ///   TODO

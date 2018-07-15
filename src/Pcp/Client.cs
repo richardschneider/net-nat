@@ -61,7 +61,7 @@ namespace Makaretu.Nat.Pcp
         }
 
         /// <inheritdoc />
-        public override async Task<LeasedEndpoint> CreatePublicEndpointAsync(int port)
+        public override async Task<Lease> CreatePublicEndpointAsync(int port)
         {
             var map = new MapRequest
             {
@@ -84,26 +84,29 @@ namespace Makaretu.Nat.Pcp
             {
                 address = address.MapToIPv4();
             }
-            return new LeasedEndpoint(
-                this, 
-                address, response.AssignedExternalPort,
-                response.InternalPort, response.Lifetime);
-            //return res[0] == ProtocolVersion && res[3] == 0;
-            //return null;
+            var lease = new Lease
+            {
+                Nat = this,
+                InternalPort = response.InternalPort,
+                Lifetime = response.Lifetime,
+                PublicAddress = address,
+                PublicPort = response.AssignedExternalPort
+            };
+            return lease;
         }
 
         /// <inheritdoc />
-        public override async Task DeletePublicEndpointAsync(LeasedEndpoint endpoint)
+        public override async Task DeletePublicEndpointAsync(Lease lease)
         {
             var map = new MapRequest
             {
                 ClientAddress = LocalEndPoint.Address,
-                InternalPort = (ushort)endpoint.InternalPort,
+                InternalPort = (ushort)lease.InternalPort,
                 Nonce = GenerateNonce(),
                 Protocol = 6, // TODO
                 RequestedLifetime = TimeSpan.Zero, // indicates delete
-                SuggestedExternalAdddress = endpoint.Address,
-                SuggestedExternalPort = (ushort)endpoint.Port
+                SuggestedExternalAdddress = lease.PublicAddress,
+                SuggestedExternalPort = (ushort)lease.PublicPort
             };
             var res = await SendAndReceiveAsync(map);
             var response = Message.Create<MapResponse>(res);

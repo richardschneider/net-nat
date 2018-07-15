@@ -15,7 +15,14 @@ namespace Makaretu.Nat
         [TestMethod]
         public async Task Expires()
         {
-            var endpoint = new LeasedEndpoint(null, IPAddress.Loopback, 1234, 1234, TimeSpan.FromSeconds(2));
+            var lease = new Lease
+            {
+                PublicAddress = IPAddress.Loopback,
+                PublicPort = 1234,
+                InternalPort = 1234,
+                Lifetime = TimeSpan.FromSeconds(2)
+            };
+            var endpoint = new LeasedEndpoint(lease);
 
             await Task.Delay(TimeSpan.FromSeconds(2.5));
         }
@@ -23,7 +30,14 @@ namespace Makaretu.Nat
         [TestMethod]
         public async Task Releasing()
         {
-            var endpoint = new LeasedEndpoint(null, IPAddress.Loopback, 1234, 1234, TimeSpan.FromSeconds(2));
+            var lease = new Lease
+            {
+                PublicAddress = IPAddress.Loopback,
+                PublicPort = 1234,
+                InternalPort = 1234,
+                Lifetime = TimeSpan.FromSeconds(2)
+            };
+            var endpoint = new LeasedEndpoint(lease);
             await Task.Delay(TimeSpan.FromMilliseconds(40));
 
             await Task.Delay(TimeSpan.FromMilliseconds(40));
