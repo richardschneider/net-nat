@@ -24,7 +24,8 @@ namespace Makaretu.Nat
         ///   A sequence of gateway IP addresses. 
         /// </returns>
         /// <remarks>
-        ///   A gateway device is typically also a NAT.
+        ///   The network interfaces are queried for any gateway. A gateway device is 
+        ///   typically also a NAT.
         /// </remarks>
         public static IEnumerable<IPAddress> GetGateways()
         {
@@ -55,6 +56,36 @@ namespace Makaretu.Nat
                 .Where(n => n.NetworkInterfaceType != NetworkInterfaceType.Loopback)
                 .SelectMany(nic => nic.GetIPProperties().UnicastAddresses)
                 .Select(u => u.Address);
+        }
+
+        /// <summary>
+        ///   Gets the NATs.
+        /// </summary>
+        /// <returns>
+        ///   A sequence of NAT clients that can be talked to, 
+        /// </returns>
+        /// <remarks>
+        ///   Asks each <see cref="GetGateways">gateways</see> if it supports
+        ///   PCP or PMP.  If true, then a <see cref="NatClient"/> is retuned.
+        /// </remarks>
+        public static IEnumerable<NatClient> GetNats()
+        {
+            foreach (var gateway in GetGateways())
+            {
+                NatClient nat = new Pcp.Client(gateway);
+                if (nat.IsAvailableAsync().Result)
+                {
+                    yield return nat;
+                    continue;
+                }
+
+                nat = new Pmp.Client(gateway);
+                if (nat.IsAvailableAsync().Result)
+                {
+                    yield return nat;
+                    continue;
+                }
+            }
         }
 
     }

@@ -70,7 +70,7 @@ namespace Makaretu.Nat
 
             for (; nextRenewal >= 250; nextRenewal /= 2)
             {
-                Console.WriteLine($"renewing lease in {nextRenewal}ms on {this}");
+                Console.WriteLine($"renewing lease in {nextRenewal/1000}s on {this}");
                 try
                 {
                     await Task.Delay(nextRenewal, cancel);

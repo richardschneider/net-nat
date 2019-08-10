@@ -17,7 +17,7 @@ namespace Makaretu.Nat
     public abstract class NatClient
     {
         /// <summary>
-        ///   The NAT port that receives  requests.
+        ///   The NAT port that receives requests.
         /// </summary>
         public const int RequestPort = 5351;
 

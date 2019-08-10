@@ -13,6 +13,14 @@ namespace Makaretu.Nat
     public class NatDiscoveryTest
     {
         [TestMethod]
+        public void Nats()
+        {
+            var nats = NatDiscovery.GetNats();
+            Assert.AreNotEqual(0, nats.Count(), "no nats found");
+        }
+
+
+        [TestMethod]
         public void Gateways()
         {
             var gateways = NatDiscovery.GetGateways();
