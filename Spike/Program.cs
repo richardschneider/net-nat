@@ -1,6 +1,6 @@
 ﻿using Makaretu.Nat;
 using System;
-using System.Net;
+using System.Collections.Generic;
 
 namespace Spike
 {
@@ -34,15 +34,22 @@ namespace Spike
                 Console.WriteLine($"    supports NAT-PMP {q}");
             }
 
+            var endpoints = new List<LeasedEndpoint>();
             foreach (var nat in NatDiscovery.GetNats())
             { 
                 Console.WriteLine();
                 Console.WriteLine("Create public end point");
                 var lease = nat.CreatePublicEndpointAsync(8080).Result;
-                using (var endpoint = new LeasedEndpoint(lease))
-                {
-                    Console.WriteLine($"  public address '{endpoint}'");
-                }
+                var endpoint = new LeasedEndpoint(lease);
+                endpoints.Add(endpoint);
+                Console.WriteLine($"  public address '{endpoint}'");
+            }
+
+            Console.ReadLine();
+
+            foreach (var endpoint in endpoints)
+            {
+                endpoint.Dispose();
             }
         }
     }

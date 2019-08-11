@@ -87,12 +87,47 @@ namespace Makaretu.Nat.Pcp
             var lease = new Lease
             {
                 Nat = this,
+                Nonce = response.Nonce,
                 InternalPort = response.InternalPort,
                 Lifetime = response.Lifetime,
                 PublicAddress = address,
                 PublicPort = response.AssignedExternalPort
             };
             return lease;
+        }
+
+        /// <inheritdoc />
+        public override async Task<Lease> RenewPublicEndpointAsync(Lease lease)
+        {
+            Console.WriteLine($"Need to renew {lease.PublicAddress}:{lease.PublicPort}");
+            var map = new MapRequest
+            {
+                ClientAddress = LocalEndPoint.Address,
+                InternalPort = (ushort)lease.InternalPort,
+                Nonce = lease.Nonce,
+                Protocol = 6, // TODO
+                RequestedLifetime = TimeSpan.FromHours(1), // TODO
+                SuggestedExternalAdddress = lease.PublicAddress,
+                SuggestedExternalPort = (ushort) lease.PublicPort
+            };
+            var res = await SendAndReceiveAsync(map);
+            var response = Message.Create<MapResponse>(res);
+            response.EnsureSuccess();
+            var address = response.AssignedExternalAdddress;
+            if (address.IsIPv4MappedToIPv6)
+            {
+                address = address.MapToIPv4();
+            }
+            var renewal = new Lease
+            {
+                Nat = this,
+                Nonce = response.Nonce,
+                InternalPort = response.InternalPort,
+                Lifetime = response.Lifetime,
+                PublicAddress = address,
+                PublicPort = response.AssignedExternalPort
+            };
+            return renewal;
         }
 
         /// <inheritdoc />

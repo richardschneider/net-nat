@@ -19,6 +19,11 @@ namespace Makaretu.Nat
         public NatClient Nat { get; set; }
 
         /// <summary>
+        ///   A random value assigned to this lease.
+        /// </summary>
+        public byte[] Nonce { get; set; }
+
+        /// <summary>
         ///   The public port assigned by the NAT.
         /// </summary>
         public IPAddress PublicAddress { get; set; }

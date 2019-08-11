@@ -66,24 +66,29 @@ namespace Makaretu.Nat
 
         async void Renewal(CancellationToken cancel)
         {
-            int nextRenewal = (int)Lease.Lifetime.TotalMilliseconds / 2;
-
-            for (; nextRenewal >= 250; nextRenewal /= 2)
+            while (!cancel.IsCancellationRequested)
             {
-                Console.WriteLine($"renewing lease in {nextRenewal/1000}s on {this}");
-                try
+                int nextRenewal = (int)Lease.Lifetime.TotalMilliseconds / 2;
+                for (; nextRenewal >= 250; nextRenewal /= 2)
                 {
-                    await Task.Delay(nextRenewal, cancel);
-                    // TODO: renew the lease
-                }
-                catch (TaskCanceledException) 
-                {
-                    Console.WriteLine($"cancelled lease on {this}");
-                    return;
-                }
-                catch (Exception)
-                {
-                    // keep on trucking
+                    Console.WriteLine($"renewing lease in {nextRenewal / 1000}s on {this}");
+                    try
+                    {
+                        await Task.Delay(nextRenewal, cancel);
+                        var nextLease = await Lease.Nat.RenewPublicEndpointAsync(Lease);
+                        // TODO: Check for endpoint change
+                        Lease = nextLease;
+                        break;
+                    }
+                    catch (TaskCanceledException)
+                    {
+                        Console.WriteLine($"cancelled lease on {this}");
+                        return;
+                    }
+                    catch (Exception)
+                    {
+                        // keep on trucking
+                    }
                 }
             }
 

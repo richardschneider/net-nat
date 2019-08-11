@@ -92,6 +92,23 @@ namespace Makaretu.Nat
         public abstract Task<Lease> CreatePublicEndpointAsync(int port);
 
         /// <summary>
+        ///   Renew the lease.
+        /// </summary>
+        /// <param name="lease">
+        ///   The lease to renew.
+        /// </param>
+        /// <returns>
+        ///   A task that represents the asynchronous operation. The task's result is
+        ///   a <see cref="Lease"/> that defines an endpoint that is connectable by 
+        ///   devices not behind the NAT.
+        /// </returns>
+        /// <remarks>
+        ///   The returned <see cref="Lease"/> may have different external address
+        ///   and/or port than the original <paramref name="lease"/>.
+        /// </remarks>
+        public abstract Task<Lease> RenewPublicEndpointAsync(Lease lease);
+
+        /// <summary>
         ///   Cancel the lease.
         /// </summary>
         /// <param name="lease">

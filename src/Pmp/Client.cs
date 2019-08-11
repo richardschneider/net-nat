@@ -66,6 +66,12 @@ namespace Makaretu.Nat.Pmp
         }
 
         /// <inheritdoc />
+        public override Task<Lease> RenewPublicEndpointAsync(Lease lease)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <inheritdoc />
         public override Task DeletePublicEndpointAsync(Lease lease)
         {
             throw new NotImplementedException();
