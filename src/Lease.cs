@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -24,12 +25,20 @@ namespace Makaretu.Nat
         public byte[] Nonce { get; set; }
 
         /// <summary>
-        ///   The public port assigned by the NAT.
+        ///   The supported protocol of the port.
+        /// </summary>
+        /// <value>
+        ///   Either <see cref="ProtocolType.Tcp"/> or <see cref="ProtocolType.Udp"/>.
+        /// </value>
+        public ProtocolType Protocol { get; set; }
+
+        /// <summary>
+        ///   The public IP address assigned by the NAT.
         /// </summary>
         public IPAddress PublicAddress { get; set; }
 
         /// <summary>
-        ///   The public IP address assigned by the NAT.
+        ///   The public port assigned by the NAT.
         /// </summary>
         public int PublicPort { get; set; }
 

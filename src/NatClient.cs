@@ -81,6 +81,9 @@ namespace Makaretu.Nat
         /// <summary>
         ///   Create an endpoint that can be connected to by devices outside of the NAT.
         /// </summary>
+        /// <param name="protocol">
+        ///   Either <see cref="ProtocolType.Tcp"/> or <see cref="ProtocolType.Udp"/>.
+        /// </param>
         /// <param name="port">
         ///   The intenral port of the server.
         /// </param>
@@ -89,7 +92,7 @@ namespace Makaretu.Nat
         ///   a <see cref="Lease"/> that defines an endpoint that is connectable by 
         ///   devices not behind the NAT.
         /// </returns>
-        public abstract Task<Lease> CreatePublicEndpointAsync(int port);
+        public abstract Task<Lease> CreatePublicEndpointAsync(ProtocolType protocol, int port);
 
         /// <summary>
         ///   Renew the lease.

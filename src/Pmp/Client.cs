@@ -60,7 +60,7 @@ namespace Makaretu.Nat.Pmp
         }
 
         /// <inheritdoc />
-        public override Task<Lease> CreatePublicEndpointAsync(int port)
+        public override Task<Lease> CreatePublicEndpointAsync(ProtocolType protocol, int port)
         {
             throw new NotImplementedException();
         }

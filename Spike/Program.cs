@@ -1,6 +1,7 @@
 ﻿using Makaretu.Nat;
 using System;
 using System.Collections.Generic;
+using System.Net.Sockets;
 
 namespace Spike
 {
@@ -39,7 +40,7 @@ namespace Spike
             { 
                 Console.WriteLine();
                 Console.WriteLine("Create public end point");
-                var lease = nat.CreatePublicEndpointAsync(8080).Result;
+                var lease = nat.CreatePublicEndpointAsync(ProtocolType.Tcp, 8080).Result;
                 var endpoint = new LeasedEndpoint(lease);
                 endpoints.Add(endpoint);
                 Console.WriteLine($"  public address '{endpoint}'");

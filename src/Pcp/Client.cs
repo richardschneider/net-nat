@@ -61,16 +61,15 @@ namespace Makaretu.Nat.Pcp
         }
 
         /// <inheritdoc />
-        public override async Task<Lease> CreatePublicEndpointAsync(int port)
+        public override async Task<Lease> CreatePublicEndpointAsync(ProtocolType protocol, int port)
         {
             var map = new MapRequest
             {
                 ClientAddress = LocalEndPoint.Address,
                 InternalPort = (ushort)port,
                 Nonce = GenerateNonce(),
-                Protocol = 6, // TODO
+                Protocol = protocol,
                 RequestedLifetime = TimeSpan.FromHours(1), // TODO
-                // TODO: SuggestedExternalAdddress
                 SuggestedExternalAdddress = LocalEndPoint.AddressFamily == AddressFamily.InterNetwork
                     ? IPAddress.Any
                     : IPAddress.IPv6Any,
@@ -88,6 +87,7 @@ namespace Makaretu.Nat.Pcp
             {
                 Nat = this,
                 Nonce = response.Nonce,
+                Protocol = response.Protocol,
                 InternalPort = response.InternalPort,
                 Lifetime = response.Lifetime,
                 PublicAddress = address,
@@ -105,7 +105,7 @@ namespace Makaretu.Nat.Pcp
                 ClientAddress = LocalEndPoint.Address,
                 InternalPort = (ushort)lease.InternalPort,
                 Nonce = lease.Nonce,
-                Protocol = 6, // TODO
+                Protocol = lease.Protocol,
                 RequestedLifetime = TimeSpan.FromHours(1), // TODO
                 SuggestedExternalAdddress = lease.PublicAddress,
                 SuggestedExternalPort = (ushort) lease.PublicPort
@@ -122,6 +122,7 @@ namespace Makaretu.Nat.Pcp
             {
                 Nat = this,
                 Nonce = response.Nonce,
+                Protocol = response.Protocol,
                 InternalPort = response.InternalPort,
                 Lifetime = response.Lifetime,
                 PublicAddress = address,
@@ -138,7 +139,7 @@ namespace Makaretu.Nat.Pcp
                 ClientAddress = LocalEndPoint.Address,
                 InternalPort = (ushort)lease.InternalPort,
                 Nonce = GenerateNonce(),
-                Protocol = 6, // TODO
+                Protocol = lease.Protocol,
                 RequestedLifetime = TimeSpan.Zero, // indicates delete
                 SuggestedExternalAdddress = lease.PublicAddress,
                 SuggestedExternalPort = (ushort)lease.PublicPort

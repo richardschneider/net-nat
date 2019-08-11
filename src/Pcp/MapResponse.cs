@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -37,7 +38,7 @@ namespace Makaretu.Nat.Pcp
         ///   indicates all protocols.
         /// </value>
         /// <seealso href="https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml"/>
-        public byte Protocol { get; set; }
+        public ProtocolType Protocol { get; set; }
 
         /// <summary>
         ///   Internal port for the mapping.
@@ -67,7 +68,7 @@ namespace Makaretu.Nat.Pcp
             base.Write(writer);
 
             writer.WriteBytes(Nonce);
-            writer.WriteByte(Protocol);
+            writer.WriteByte((byte)Protocol);
             writer.WriteByte(0); // reserved 24 bits (3 bytes)
             writer.WriteByte(0);
             writer.WriteByte(0);
@@ -82,7 +83,7 @@ namespace Makaretu.Nat.Pcp
             base.Read(reader);
 
             Nonce = reader.ReadBytes(NonceLength);
-            Protocol = reader.ReadByte();
+            Protocol = (ProtocolType)reader.ReadByte();
             reader.ReadByte(); // reserved 24 bits (3 bytes)
             reader.ReadByte();
             reader.ReadByte();

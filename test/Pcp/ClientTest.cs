@@ -68,11 +68,12 @@ namespace Makaretu.Nat.Pcp
                 };
                 var nat = new Client(server.Address);
 
-                var lease = await nat.CreatePublicEndpointAsync(4321);
+                var lease = await nat.CreatePublicEndpointAsync(ProtocolType.Udp, 4321);
                 Assert.AreEqual(IPAddress.Loopback, lease.PublicAddress);
                 Assert.AreEqual(4321, lease.InternalPort);
                 Assert.AreEqual(1234, lease.PublicPort);
                 Assert.AreEqual(ttl, lease.Lifetime);
+                Assert.AreEqual(ProtocolType.Udp, lease.Protocol);
 
                 await nat.DeletePublicEndpointAsync(lease);
             }
