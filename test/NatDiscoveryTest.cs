@@ -16,7 +16,7 @@ namespace Makaretu.Nat
         public void Nats()
         {
             var nats = NatDiscovery.GetNats();
-            Assert.AreNotEqual(0, nats.Count(), "no nats found");
+            Assert.IsNotNull(nats);
         }
 
 
