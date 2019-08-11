@@ -84,6 +84,32 @@ references:
   isSpec: "True"
   fullName: Makaretu.Nat.Lease.Nat
   nameWithType: Lease.Nat
+- uid: Makaretu.Nat.Lease.Nonce
+  name: Nonce
+  href: api/Makaretu.Nat.Lease.html#Makaretu_Nat_Lease_Nonce
+  commentId: P:Makaretu.Nat.Lease.Nonce
+  fullName: Makaretu.Nat.Lease.Nonce
+  nameWithType: Lease.Nonce
+- uid: Makaretu.Nat.Lease.Nonce*
+  name: Nonce
+  href: api/Makaretu.Nat.Lease.html#Makaretu_Nat_Lease_Nonce_
+  commentId: Overload:Makaretu.Nat.Lease.Nonce
+  isSpec: "True"
+  fullName: Makaretu.Nat.Lease.Nonce
+  nameWithType: Lease.Nonce
+- uid: Makaretu.Nat.Lease.Protocol
+  name: Protocol
+  href: api/Makaretu.Nat.Lease.html#Makaretu_Nat_Lease_Protocol
+  commentId: P:Makaretu.Nat.Lease.Protocol
+  fullName: Makaretu.Nat.Lease.Protocol
+  nameWithType: Lease.Protocol
+- uid: Makaretu.Nat.Lease.Protocol*
+  name: Protocol
+  href: api/Makaretu.Nat.Lease.html#Makaretu_Nat_Lease_Protocol_
+  commentId: Overload:Makaretu.Nat.Lease.Protocol
+  isSpec: "True"
+  fullName: Makaretu.Nat.Lease.Protocol
+  nameWithType: Lease.Protocol
 - uid: Makaretu.Nat.Lease.PublicAddress
   name: PublicAddress
   href: api/Makaretu.Nat.Lease.html#Makaretu_Nat_Lease_PublicAddress
@@ -174,12 +200,12 @@ references:
   isSpec: "True"
   fullName: Makaretu.Nat.NatClient.NatClient
   nameWithType: NatClient.NatClient
-- uid: Makaretu.Nat.NatClient.CreatePublicEndpointAsync(System.Int32)
-  name: CreatePublicEndpointAsync(Int32)
-  href: api/Makaretu.Nat.NatClient.html#Makaretu_Nat_NatClient_CreatePublicEndpointAsync_System_Int32_
-  commentId: M:Makaretu.Nat.NatClient.CreatePublicEndpointAsync(System.Int32)
-  fullName: Makaretu.Nat.NatClient.CreatePublicEndpointAsync(System.Int32)
-  nameWithType: NatClient.CreatePublicEndpointAsync(Int32)
+- uid: Makaretu.Nat.NatClient.CreatePublicEndpointAsync(System.Net.Sockets.ProtocolType,System.Int32)
+  name: CreatePublicEndpointAsync(ProtocolType, Int32)
+  href: api/Makaretu.Nat.NatClient.html#Makaretu_Nat_NatClient_CreatePublicEndpointAsync_System_Net_Sockets_ProtocolType_System_Int32_
+  commentId: M:Makaretu.Nat.NatClient.CreatePublicEndpointAsync(System.Net.Sockets.ProtocolType,System.Int32)
+  fullName: Makaretu.Nat.NatClient.CreatePublicEndpointAsync(System.Net.Sockets.ProtocolType, System.Int32)
+  nameWithType: NatClient.CreatePublicEndpointAsync(ProtocolType, Int32)
 - uid: Makaretu.Nat.NatClient.CreatePublicEndpointAsync*
   name: CreatePublicEndpointAsync
   href: api/Makaretu.Nat.NatClient.html#Makaretu_Nat_NatClient_CreatePublicEndpointAsync_
@@ -252,6 +278,19 @@ references:
   isSpec: "True"
   fullName: Makaretu.Nat.NatClient.MaxRetries
   nameWithType: NatClient.MaxRetries
+- uid: Makaretu.Nat.NatClient.RenewPublicEndpointAsync(Makaretu.Nat.Lease)
+  name: RenewPublicEndpointAsync(Lease)
+  href: api/Makaretu.Nat.NatClient.html#Makaretu_Nat_NatClient_RenewPublicEndpointAsync_Makaretu_Nat_Lease_
+  commentId: M:Makaretu.Nat.NatClient.RenewPublicEndpointAsync(Makaretu.Nat.Lease)
+  fullName: Makaretu.Nat.NatClient.RenewPublicEndpointAsync(Makaretu.Nat.Lease)
+  nameWithType: NatClient.RenewPublicEndpointAsync(Lease)
+- uid: Makaretu.Nat.NatClient.RenewPublicEndpointAsync*
+  name: RenewPublicEndpointAsync
+  href: api/Makaretu.Nat.NatClient.html#Makaretu_Nat_NatClient_RenewPublicEndpointAsync_
+  commentId: Overload:Makaretu.Nat.NatClient.RenewPublicEndpointAsync
+  isSpec: "True"
+  fullName: Makaretu.Nat.NatClient.RenewPublicEndpointAsync
+  nameWithType: NatClient.RenewPublicEndpointAsync
 - uid: Makaretu.Nat.NatClient.RequestPort
   name: RequestPort
   href: api/Makaretu.Nat.NatClient.html#Makaretu_Nat_NatClient_RequestPort
@@ -312,6 +351,19 @@ references:
   isSpec: "True"
   fullName: Makaretu.Nat.NatDiscovery.GetIPAddresses
   nameWithType: NatDiscovery.GetIPAddresses
+- uid: Makaretu.Nat.NatDiscovery.GetNats
+  name: GetNats()
+  href: api/Makaretu.Nat.NatDiscovery.html#Makaretu_Nat_NatDiscovery_GetNats
+  commentId: M:Makaretu.Nat.NatDiscovery.GetNats
+  fullName: Makaretu.Nat.NatDiscovery.GetNats()
+  nameWithType: NatDiscovery.GetNats()
+- uid: Makaretu.Nat.NatDiscovery.GetNats*
+  name: GetNats
+  href: api/Makaretu.Nat.NatDiscovery.html#Makaretu_Nat_NatDiscovery_GetNats_
+  commentId: Overload:Makaretu.Nat.NatDiscovery.GetNats
+  isSpec: "True"
+  fullName: Makaretu.Nat.NatDiscovery.GetNats
+  nameWithType: NatDiscovery.GetNats
 - uid: Makaretu.Nat.NatMessage
   name: NatMessage
   href: api/Makaretu.Nat.NatMessage.html
@@ -684,12 +736,12 @@ references:
   isSpec: "True"
   fullName: Makaretu.Nat.Pcp.Client.Client
   nameWithType: Client.Client
-- uid: Makaretu.Nat.Pcp.Client.CreatePublicEndpointAsync(System.Int32)
-  name: CreatePublicEndpointAsync(Int32)
-  href: api/Makaretu.Nat.Pcp.Client.html#Makaretu_Nat_Pcp_Client_CreatePublicEndpointAsync_System_Int32_
-  commentId: M:Makaretu.Nat.Pcp.Client.CreatePublicEndpointAsync(System.Int32)
-  fullName: Makaretu.Nat.Pcp.Client.CreatePublicEndpointAsync(System.Int32)
-  nameWithType: Client.CreatePublicEndpointAsync(Int32)
+- uid: Makaretu.Nat.Pcp.Client.CreatePublicEndpointAsync(System.Net.Sockets.ProtocolType,System.Int32)
+  name: CreatePublicEndpointAsync(ProtocolType, Int32)
+  href: api/Makaretu.Nat.Pcp.Client.html#Makaretu_Nat_Pcp_Client_CreatePublicEndpointAsync_System_Net_Sockets_ProtocolType_System_Int32_
+  commentId: M:Makaretu.Nat.Pcp.Client.CreatePublicEndpointAsync(System.Net.Sockets.ProtocolType,System.Int32)
+  fullName: Makaretu.Nat.Pcp.Client.CreatePublicEndpointAsync(System.Net.Sockets.ProtocolType, System.Int32)
+  nameWithType: Client.CreatePublicEndpointAsync(ProtocolType, Int32)
 - uid: Makaretu.Nat.Pcp.Client.CreatePublicEndpointAsync*
   name: CreatePublicEndpointAsync
   href: api/Makaretu.Nat.Pcp.Client.html#Makaretu_Nat_Pcp_Client_CreatePublicEndpointAsync_
@@ -729,6 +781,19 @@ references:
   commentId: F:Makaretu.Nat.Pcp.Client.ProtocolVersion
   fullName: Makaretu.Nat.Pcp.Client.ProtocolVersion
   nameWithType: Client.ProtocolVersion
+- uid: Makaretu.Nat.Pcp.Client.RenewPublicEndpointAsync(Makaretu.Nat.Lease)
+  name: RenewPublicEndpointAsync(Lease)
+  href: api/Makaretu.Nat.Pcp.Client.html#Makaretu_Nat_Pcp_Client_RenewPublicEndpointAsync_Makaretu_Nat_Lease_
+  commentId: M:Makaretu.Nat.Pcp.Client.RenewPublicEndpointAsync(Makaretu.Nat.Lease)
+  fullName: Makaretu.Nat.Pcp.Client.RenewPublicEndpointAsync(Makaretu.Nat.Lease)
+  nameWithType: Client.RenewPublicEndpointAsync(Lease)
+- uid: Makaretu.Nat.Pcp.Client.RenewPublicEndpointAsync*
+  name: RenewPublicEndpointAsync
+  href: api/Makaretu.Nat.Pcp.Client.html#Makaretu_Nat_Pcp_Client_RenewPublicEndpointAsync_
+  commentId: Overload:Makaretu.Nat.Pcp.Client.RenewPublicEndpointAsync
+  isSpec: "True"
+  fullName: Makaretu.Nat.Pcp.Client.RenewPublicEndpointAsync
+  nameWithType: Client.RenewPublicEndpointAsync
 - uid: Makaretu.Nat.Pcp.MapRequest
   name: MapRequest
   href: api/Makaretu.Nat.Pcp.MapRequest.html
@@ -1300,12 +1365,12 @@ references:
   isSpec: "True"
   fullName: Makaretu.Nat.Pmp.Client.Client
   nameWithType: Client.Client
-- uid: Makaretu.Nat.Pmp.Client.CreatePublicEndpointAsync(System.Int32)
-  name: CreatePublicEndpointAsync(Int32)
-  href: api/Makaretu.Nat.Pmp.Client.html#Makaretu_Nat_Pmp_Client_CreatePublicEndpointAsync_System_Int32_
-  commentId: M:Makaretu.Nat.Pmp.Client.CreatePublicEndpointAsync(System.Int32)
-  fullName: Makaretu.Nat.Pmp.Client.CreatePublicEndpointAsync(System.Int32)
-  nameWithType: Client.CreatePublicEndpointAsync(Int32)
+- uid: Makaretu.Nat.Pmp.Client.CreatePublicEndpointAsync(System.Net.Sockets.ProtocolType,System.Int32)
+  name: CreatePublicEndpointAsync(ProtocolType, Int32)
+  href: api/Makaretu.Nat.Pmp.Client.html#Makaretu_Nat_Pmp_Client_CreatePublicEndpointAsync_System_Net_Sockets_ProtocolType_System_Int32_
+  commentId: M:Makaretu.Nat.Pmp.Client.CreatePublicEndpointAsync(System.Net.Sockets.ProtocolType,System.Int32)
+  fullName: Makaretu.Nat.Pmp.Client.CreatePublicEndpointAsync(System.Net.Sockets.ProtocolType, System.Int32)
+  nameWithType: Client.CreatePublicEndpointAsync(ProtocolType, Int32)
 - uid: Makaretu.Nat.Pmp.Client.CreatePublicEndpointAsync*
   name: CreatePublicEndpointAsync
   href: api/Makaretu.Nat.Pmp.Client.html#Makaretu_Nat_Pmp_Client_CreatePublicEndpointAsync_
@@ -1345,6 +1410,19 @@ references:
   commentId: F:Makaretu.Nat.Pmp.Client.ProtocolVersion
   fullName: Makaretu.Nat.Pmp.Client.ProtocolVersion
   nameWithType: Client.ProtocolVersion
+- uid: Makaretu.Nat.Pmp.Client.RenewPublicEndpointAsync(Makaretu.Nat.Lease)
+  name: RenewPublicEndpointAsync(Lease)
+  href: api/Makaretu.Nat.Pmp.Client.html#Makaretu_Nat_Pmp_Client_RenewPublicEndpointAsync_Makaretu_Nat_Lease_
+  commentId: M:Makaretu.Nat.Pmp.Client.RenewPublicEndpointAsync(Makaretu.Nat.Lease)
+  fullName: Makaretu.Nat.Pmp.Client.RenewPublicEndpointAsync(Makaretu.Nat.Lease)
+  nameWithType: Client.RenewPublicEndpointAsync(Lease)
+- uid: Makaretu.Nat.Pmp.Client.RenewPublicEndpointAsync*
+  name: RenewPublicEndpointAsync
+  href: api/Makaretu.Nat.Pmp.Client.html#Makaretu_Nat_Pmp_Client_RenewPublicEndpointAsync_
+  commentId: Overload:Makaretu.Nat.Pmp.Client.RenewPublicEndpointAsync
+  isSpec: "True"
+  fullName: Makaretu.Nat.Pmp.Client.RenewPublicEndpointAsync
+  nameWithType: Client.RenewPublicEndpointAsync
 - uid: Makaretu.Nat.Pmp.ExternalAddressRequest
   name: ExternalAddressRequest
   href: api/Makaretu.Nat.Pmp.ExternalAddressRequest.html

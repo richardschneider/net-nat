@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class NatDiscovery
    | Life behind a NAT ">
-    <meta name="generator" content="docfx 2.37.0.0">
+    <meta name="generator" content="docfx 2.44.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -121,7 +121,7 @@
     <a href="https://github.com/richardschneider/net-nat/new/master/apiSpec/new?filename=Makaretu_Nat_NatDiscovery_GetGateways.md&amp;value=---%0Auid%3A%20Makaretu.Nat.NatDiscovery.GetGateways%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-nat/blob/master/src/NatDiscovery.cs/#L29">View Source</a>
+    <a href="https://github.com/richardschneider/net-nat/blob/master/src/NatDiscovery.cs/#L30">View Source</a>
   </span>
   <a id="Makaretu_Nat_NatDiscovery_GetGateways_" data-uid="Makaretu.Nat.NatDiscovery.GetGateways*"></a>
   <h4 id="Makaretu_Nat_NatDiscovery_GetGateways" data-uid="Makaretu.Nat.NatDiscovery.GetGateways">GetGateways()</h4>
@@ -149,14 +149,15 @@
     </tbody>
   </table>
   <h5 id="Makaretu_Nat_NatDiscovery_GetGateways_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>A gateway device is typically also a NAT.</p>
+  <div class="markdown level1 remarks"><p>The network interfaces are queried for any gateway. A gateway device is 
+typically also a NAT.</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/richardschneider/net-nat/new/master/apiSpec/new?filename=Makaretu_Nat_NatDiscovery_GetIPAddresses.md&amp;value=---%0Auid%3A%20Makaretu.Nat.NatDiscovery.GetIPAddresses%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-nat/blob/master/src/NatDiscovery.cs/#L50">View Source</a>
+    <a href="https://github.com/richardschneider/net-nat/blob/master/src/NatDiscovery.cs/#L51">View Source</a>
   </span>
   <a id="Makaretu_Nat_NatDiscovery_GetIPAddresses_" data-uid="Makaretu.Nat.NatDiscovery.GetIPAddresses*"></a>
   <h4 id="Makaretu_Nat_NatDiscovery_GetIPAddresses" data-uid="Makaretu.Nat.NatDiscovery.GetIPAddresses">GetIPAddresses()</h4>
@@ -183,6 +184,42 @@
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-nat/new/master/apiSpec/new?filename=Makaretu_Nat_NatDiscovery_GetNats.md&amp;value=---%0Auid%3A%20Makaretu.Nat.NatDiscovery.GetNats%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-nat/blob/master/src/NatDiscovery.cs/#L71">View Source</a>
+  </span>
+  <a id="Makaretu_Nat_NatDiscovery_GetNats_" data-uid="Makaretu.Nat.NatDiscovery.GetNats*"></a>
+  <h4 id="Makaretu_Nat_NatDiscovery_GetNats" data-uid="Makaretu.Nat.NatDiscovery.GetNats">GetNats()</h4>
+  <div class="markdown level1 summary"><p>Gets the NATs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;NatClient&gt; GetNats()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Makaretu.Nat.NatClient.html">NatClient</a>&gt;</td>
+        <td><p>A sequence of NAT clients that can be talked to, </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Makaretu_Nat_NatDiscovery_GetNats_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Asks each <a class="xref" href="Makaretu.Nat.NatDiscovery.html#Makaretu_Nat_NatDiscovery_GetGateways">GetGateways()</a> if it supports
+PCP or PMP.  If true, then a <a class="xref" href="Makaretu.Nat.NatClient.html">NatClient</a> is retuned.</p>
+</div>
 </article>
           </div>
           

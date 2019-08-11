@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Client
    | Life behind a NAT ">
-    <meta name="generator" content="docfx 2.37.0.0">
+    <meta name="generator" content="docfx 2.44.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -214,19 +214,19 @@ IP Address of the NAT.</p>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/net-nat/new/master/apiSpec/new?filename=Makaretu_Nat_Pmp_Client_CreatePublicEndpointAsync_System_Int32_.md&amp;value=---%0Auid%3A%20Makaretu.Nat.Pmp.Client.CreatePublicEndpointAsync(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/richardschneider/net-nat/new/master/apiSpec/new?filename=Makaretu_Nat_Pmp_Client_CreatePublicEndpointAsync_System_Net_Sockets_ProtocolType_System_Int32_.md&amp;value=---%0Auid%3A%20Makaretu.Nat.Pmp.Client.CreatePublicEndpointAsync(System.Net.Sockets.ProtocolType%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/richardschneider/net-nat/blob/master/src/Pmp/Client.cs/#L63">View Source</a>
   </span>
   <a id="Makaretu_Nat_Pmp_Client_CreatePublicEndpointAsync_" data-uid="Makaretu.Nat.Pmp.Client.CreatePublicEndpointAsync*"></a>
-  <h4 id="Makaretu_Nat_Pmp_Client_CreatePublicEndpointAsync_System_Int32_" data-uid="Makaretu.Nat.Pmp.Client.CreatePublicEndpointAsync(System.Int32)">CreatePublicEndpointAsync(Int32)</h4>
+  <h4 id="Makaretu_Nat_Pmp_Client_CreatePublicEndpointAsync_System_Net_Sockets_ProtocolType_System_Int32_" data-uid="Makaretu.Nat.Pmp.Client.CreatePublicEndpointAsync(System.Net.Sockets.ProtocolType,System.Int32)">CreatePublicEndpointAsync(ProtocolType, Int32)</h4>
   <div class="markdown level1 summary"><p>Create an endpoint that can be connected to by devices outside of the NAT.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override Task&lt;Lease&gt; CreatePublicEndpointAsync(int port)</code></pre>
+    <pre><code class="lang-csharp hljs">public override Task&lt;Lease&gt; CreatePublicEndpointAsync(ProtocolType protocol, int port)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -238,6 +238,12 @@ IP Address of the NAT.</p>
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.net.sockets.protocoltype">ProtocolType</a></td>
+        <td><span class="parametername">protocol</span></td>
+        <td><p>Either <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.net.sockets.protocoltype#System_Net_Sockets_ProtocolType_Tcp">Tcp</a> or <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.net.sockets.protocoltype#System_Net_Sockets_ProtocolType_Udp">Udp</a>.</p>
+</td>
+      </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td><span class="parametername">port</span></td>
@@ -265,13 +271,13 @@ devices not behind the NAT.</p>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Makaretu.Nat.NatClient.html#Makaretu_Nat_NatClient_CreatePublicEndpointAsync_System_Int32_">NatClient.CreatePublicEndpointAsync(Int32)</a></div>
+  <div><a class="xref" href="Makaretu.Nat.NatClient.html#Makaretu_Nat_NatClient_CreatePublicEndpointAsync_System_Net_Sockets_ProtocolType_System_Int32_">NatClient.CreatePublicEndpointAsync(ProtocolType, Int32)</a></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/richardschneider/net-nat/new/master/apiSpec/new?filename=Makaretu_Nat_Pmp_Client_DeletePublicEndpointAsync_Makaretu_Nat_Lease_.md&amp;value=---%0Auid%3A%20Makaretu.Nat.Pmp.Client.DeletePublicEndpointAsync(Makaretu.Nat.Lease)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-nat/blob/master/src/Pmp/Client.cs/#L69">View Source</a>
+    <a href="https://github.com/richardschneider/net-nat/blob/master/src/Pmp/Client.cs/#L75">View Source</a>
   </span>
   <a id="Makaretu_Nat_Pmp_Client_DeletePublicEndpointAsync_" data-uid="Makaretu.Nat.Pmp.Client.DeletePublicEndpointAsync*"></a>
   <h4 id="Makaretu_Nat_Pmp_Client_DeletePublicEndpointAsync_Makaretu_Nat_Lease_" data-uid="Makaretu.Nat.Pmp.Client.DeletePublicEndpointAsync(Makaretu.Nat.Lease)">DeletePublicEndpointAsync(Lease)</h4>
@@ -356,6 +362,64 @@ devices not behind the NAT.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="Makaretu.Nat.NatClient.html#Makaretu_Nat_NatClient_IsAvailableAsync">NatClient.IsAvailableAsync()</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-nat/new/master/apiSpec/new?filename=Makaretu_Nat_Pmp_Client_RenewPublicEndpointAsync_Makaretu_Nat_Lease_.md&amp;value=---%0Auid%3A%20Makaretu.Nat.Pmp.Client.RenewPublicEndpointAsync(Makaretu.Nat.Lease)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-nat/blob/master/src/Pmp/Client.cs/#L69">View Source</a>
+  </span>
+  <a id="Makaretu_Nat_Pmp_Client_RenewPublicEndpointAsync_" data-uid="Makaretu.Nat.Pmp.Client.RenewPublicEndpointAsync*"></a>
+  <h4 id="Makaretu_Nat_Pmp_Client_RenewPublicEndpointAsync_Makaretu_Nat_Lease_" data-uid="Makaretu.Nat.Pmp.Client.RenewPublicEndpointAsync(Makaretu.Nat.Lease)">RenewPublicEndpointAsync(Lease)</h4>
+  <div class="markdown level1 summary"><p>Renew the lease.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;Lease&gt; RenewPublicEndpointAsync(Lease lease)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Makaretu.Nat.Lease.html">Lease</a></td>
+        <td><span class="parametername">lease</span></td>
+        <td><p>The lease to renew.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Makaretu.Nat.Lease.html">Lease</a>&gt;</td>
+        <td><p>A task that represents the asynchronous operation. The task&apos;s result is
+a <a class="xref" href="Makaretu.Nat.Lease.html">Lease</a> that defines an endpoint that is connectable by 
+devices not behind the NAT.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Makaretu.Nat.NatClient.html#Makaretu_Nat_NatClient_RenewPublicEndpointAsync_Makaretu_Nat_Lease_">NatClient.RenewPublicEndpointAsync(Lease)</a></div>
+  <h5 id="Makaretu_Nat_Pmp_Client_RenewPublicEndpointAsync_Makaretu_Nat_Lease__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The returned <a class="xref" href="Makaretu.Nat.Lease.html">Lease</a> may have different external address
+and/or port than the original <code data-dev-comment-type="paramref" class="paramref">lease</code>.</p>
+</div>
   <h3 id="seealso">See Also</h3>
   <div class="seealso">
       <div><span><a href="https://tools.ietf.org/html/rfc6886">RFC 6886 - NAT Port Mapping Protocol</a></span></div>
