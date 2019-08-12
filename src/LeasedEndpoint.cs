@@ -12,10 +12,12 @@ namespace Makaretu.Nat
     ///   A public endpoint that is rented from a NAT.
     /// </summary>
     /// <remarks>
-    ///   <see cref="NatClient.CreatePublicEndpointAsync"/> should be used to construct
-    ///   the <b>LeasedEndpoint</b>.
+    ///   <see cref="NatClient.CreatePublicEndpointAsync"/> is used to create
+    ///   a <see cref="Lease"/>.
     ///   <para>
-    ///   The lease is renewed in <see cref="Lease.Lifetime"/> / 2.
+    ///   A background task is created to renew the lease every 
+    ///   <see cref="Lease.Lifetime"/> / 2.  Use <see cref="Dispose"/> to
+    ///   cancel the task.
     ///   </para>
     /// </remarks>
     public class LeasedEndpoint : IPEndPoint, IDisposable
