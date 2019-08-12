@@ -1,8 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net45;netcoreapp2.2</TargetFrameworks>
+    <TargetFrameworks>netcoreapp2;net45</TargetFrameworks>
 
+    <IsTestProject>true</IsTestProject>
     <IsPackable>false</IsPackable>
     <DebugType>full</DebugType>
     <RootNamespace>Makaretu.Nat</RootNamespace>
