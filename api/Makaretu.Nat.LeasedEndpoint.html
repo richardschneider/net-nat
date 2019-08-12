@@ -139,10 +139,12 @@
     <pre><code class="lang-csharp hljs">public class LeasedEndpoint : IPEndPoint, IDisposable</code></pre>
   </div>
   <h5 id="Makaretu_Nat_LeasedEndpoint_remarks"><strong>Remarks</strong></h5>
-  <div class="markdown level0 remarks"><p><a class="xref" href="Makaretu.Nat.NatClient.html#Makaretu_Nat_NatClient_CreatePublicEndpointAsync_System_Net_Sockets_ProtocolType_System_Int32_">CreatePublicEndpointAsync(ProtocolType, Int32)</a> should be used to construct
-the <strong>LeasedEndpoint</strong>.
+  <div class="markdown level0 remarks"><p><a class="xref" href="Makaretu.Nat.NatClient.html#Makaretu_Nat_NatClient_CreatePublicEndpointAsync_System_Net_Sockets_ProtocolType_System_Int32_">CreatePublicEndpointAsync(ProtocolType, Int32)</a> is used to create
+a <a class="xref" href="Makaretu.Nat.LeasedEndpoint.html#Makaretu_Nat_LeasedEndpoint_Lease">Lease</a>.
 <p>
-The lease is renewed in <a class="xref" href="Makaretu.Nat.Lease.html#Makaretu_Nat_Lease_Lifetime">Lifetime</a> / 2.
+A background task is created to renew the lease every 
+<a class="xref" href="Makaretu.Nat.Lease.html#Makaretu_Nat_Lease_Lifetime">Lifetime</a> / 2.  Use <a class="xref" href="Makaretu.Nat.LeasedEndpoint.html#Makaretu_Nat_LeasedEndpoint_Dispose">Dispose()</a> to
+cancel the task.
 </p></p>
 </div>
   <h3 id="constructors">Constructors
@@ -152,7 +154,7 @@ The lease is renewed in <a class="xref" href="Makaretu.Nat.Lease.html#Makaretu_N
     <a href="https://github.com/richardschneider/net-nat/new/master/apiSpec/new?filename=Makaretu_Nat_LeasedEndpoint__ctor_Makaretu_Nat_Lease_.md&amp;value=---%0Auid%3A%20Makaretu.Nat.LeasedEndpoint.%23ctor(Makaretu.Nat.Lease)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-nat/blob/master/src/LeasedEndpoint.cs/#L33">View Source</a>
+    <a href="https://github.com/richardschneider/net-nat/blob/master/src/LeasedEndpoint.cs/#L35">View Source</a>
   </span>
   <a id="Makaretu_Nat_LeasedEndpoint__ctor_" data-uid="Makaretu.Nat.LeasedEndpoint.#ctor*"></a>
   <h4 id="Makaretu_Nat_LeasedEndpoint__ctor_Makaretu_Nat_Lease_" data-uid="Makaretu.Nat.LeasedEndpoint.#ctor(Makaretu.Nat.Lease)">LeasedEndpoint(Lease)</h4>
@@ -193,7 +195,7 @@ from the specified <a class="xref" href="Makaretu.Nat.LeasedEndpoint.html#Makare
     <a href="https://github.com/richardschneider/net-nat/new/master/apiSpec/new?filename=Makaretu_Nat_LeasedEndpoint_Lease.md&amp;value=---%0Auid%3A%20Makaretu.Nat.LeasedEndpoint.Lease%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-nat/blob/master/src/LeasedEndpoint.cs/#L44">View Source</a>
+    <a href="https://github.com/richardschneider/net-nat/blob/master/src/LeasedEndpoint.cs/#L46">View Source</a>
   </span>
   <a id="Makaretu_Nat_LeasedEndpoint_Lease_" data-uid="Makaretu.Nat.LeasedEndpoint.Lease*"></a>
   <h4 id="Makaretu_Nat_LeasedEndpoint_Lease" data-uid="Makaretu.Nat.LeasedEndpoint.Lease">Lease</h4>
@@ -226,7 +228,7 @@ from the specified <a class="xref" href="Makaretu.Nat.LeasedEndpoint.html#Makare
     <a href="https://github.com/richardschneider/net-nat/new/master/apiSpec/new?filename=Makaretu_Nat_LeasedEndpoint_Dispose.md&amp;value=---%0Auid%3A%20Makaretu.Nat.LeasedEndpoint.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-nat/blob/master/src/LeasedEndpoint.cs/#L47">View Source</a>
+    <a href="https://github.com/richardschneider/net-nat/blob/master/src/LeasedEndpoint.cs/#L49">View Source</a>
   </span>
   <a id="Makaretu_Nat_LeasedEndpoint_Dispose_" data-uid="Makaretu.Nat.LeasedEndpoint.Dispose*"></a>
   <h4 id="Makaretu_Nat_LeasedEndpoint_Dispose" data-uid="Makaretu.Nat.LeasedEndpoint.Dispose">Dispose()</h4>
@@ -251,7 +253,7 @@ from the specified <a class="xref" href="Makaretu.Nat.LeasedEndpoint.html#Makare
                     <a href="https://github.com/richardschneider/net-nat/new/master/apiSpec/new?filename=Makaretu_Nat_LeasedEndpoint.md&amp;value=---%0Auid%3A%20Makaretu.Nat.LeasedEndpoint%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/richardschneider/net-nat/blob/master/src/LeasedEndpoint.cs/#L21" class="contribution-link">View Source</a>
+                    <a href="https://github.com/richardschneider/net-nat/blob/master/src/LeasedEndpoint.cs/#L23" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
