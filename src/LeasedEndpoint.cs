@@ -22,6 +22,12 @@ namespace Makaretu.Nat
     /// </remarks>
     public class LeasedEndpoint : IPEndPoint, IDisposable
     {
+        /// <summary>
+        ///   Raised when the lease is renewed and the public address and/or port
+        ///   changes.
+        /// </summary>
+        public event EventHandler<LeasedEndpointEventArgs> Changed;
+
         CancellationTokenSource renewalCancellation = new CancellationTokenSource();
 
         /// <summary>
@@ -80,12 +86,25 @@ namespace Makaretu.Nat
                 int nextRenewal = (int)Lease.Lifetime.TotalMilliseconds / 2;
                 for (; nextRenewal >= 250; nextRenewal /= 2)
                 {
-                    Console.WriteLine($"renewing lease in {nextRenewal / 1000}s on {this}");
+                    Console.WriteLine($"renewing lease in {nextRenewal / 1000.0}s on {this}");
                     try
                     {
                         await Task.Delay(nextRenewal, cancel);
                         var nextLease = await Lease.Nat.RenewPublicEndpointAsync(Lease);
-                        // TODO: Check for endpoint change
+
+                        // Check for endpoint change.
+                        if (nextLease.PublicAddress != Lease.PublicAddress ||
+                            nextLease.PublicPort != Lease.PublicPort)
+                        {
+                            this.Address = nextLease.PublicAddress;
+                            this.Port = nextLease.PublicPort;
+                            Changed?.Invoke(this, new LeasedEndpointEventArgs
+                            {
+                                Previous = Lease,
+                                Current = nextLease
+                            });
+                        }
+
                         Lease = nextLease;
                         break;
                     }
