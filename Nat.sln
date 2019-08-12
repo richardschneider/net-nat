@@ -18,7 +18,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nat", "src\Nat.csproj", "{F
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NatTests", "test\NatTests.csproj", "{B459FBC7-4A28-4170-AD83-7348A403407F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spike", "Spike\Spike.csproj", "{D3CAF3EB-D02E-452C-AF4F-BE51E8DDF5D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spike", "Spike\Spike.csproj", "{D3CAF3EB-D02E-452C-AF4F-BE51E8DDF5D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NancyServer", "NancyServer\NancyServer.csproj", "{6FF98256-1D46-4B47-B814-971A9C79C379}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,6 +42,10 @@ Global
 		{D3CAF3EB-D02E-452C-AF4F-BE51E8DDF5D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3CAF3EB-D02E-452C-AF4F-BE51E8DDF5D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3CAF3EB-D02E-452C-AF4F-BE51E8DDF5D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FF98256-1D46-4B47-B814-971A9C79C379}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FF98256-1D46-4B47-B814-971A9C79C379}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FF98256-1D46-4B47-B814-971A9C79C379}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FF98256-1D46-4B47-B814-971A9C79C379}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
