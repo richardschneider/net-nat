@@ -37,7 +37,13 @@ namespace Makaretu.Nat
         {
             Lease = lease;
 
-            Renewal(renewalCancellation.Token);
+            var t = new Thread(Renewal)
+            {
+                IsBackground = true,
+                Priority = ThreadPriority.BelowNormal,
+                Name = "Leased endpoint renewal"
+            };
+            t.Start();
         }
 
         /// <summary>
@@ -66,8 +72,9 @@ namespace Makaretu.Nat
             }
         }
 
-        async void Renewal(CancellationToken cancel)
+        async void Renewal()
         {
+            var cancel = renewalCancellation.Token;
             while (!cancel.IsCancellationRequested)
             {
                 int nextRenewal = (int)Lease.Lifetime.TotalMilliseconds / 2;
