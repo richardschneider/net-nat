@@ -5,13 +5,13 @@ using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 
-namespace Spike
+namespace Natcheck
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("NAT Spike!");
+            Console.WriteLine("Check your NAT(s)");
 
             Console.WriteLine();
             Console.WriteLine("Unicast addresses");

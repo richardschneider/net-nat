@@ -1,31 +1,31 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net45;netstandard2</TargetFrameworks>
-    <AssemblyName>Makaretu.Nat</AssemblyName>
-    <RootNamespace>Makaretu.Nat</RootNamespace>
-    <DocumentationFile>Makaretu.Nat.xml</DocumentationFile>
-    <DebugType>full</DebugType>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
     
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>natcheck</ToolCommandName>
+    <PackageOutputPath>./nupkg</PackageOutputPath>
+
     <!-- developer build is always 0.42 -->
     <AssemblyVersion>0.42</AssemblyVersion>
     <Version>0.42</Version>
-    
+
     <!-- Nuget specs -->
-    <PackageId>Makaretu.Nat</PackageId>
+    <PackageId>natcheck</PackageId>
     <Authors>Richard Schneider</Authors>
     <Title>Life behind a NAT</Title>
-    <Description>Break through the NAT barriar</Description>
+    <Description>Check you NAT</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageReleaseNotes></PackageReleaseNotes>
-    <Copyright>© 2018 Richard Schneider</Copyright>
+    <Copyright>© 2018-2019 Richard Schneider</Copyright>
     <PackageTags>NAT traversal</PackageTags>
-    <IncludeSymbols>True</IncludeSymbols>
     <PackageProjectUrl>https://github.com/richardschneider/net-nat</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="IPNetwork2" Version="2.1.2" />
+    <ProjectReference Include="..\src\Nat.csproj" />
   </ItemGroup>
 
 </Project>
