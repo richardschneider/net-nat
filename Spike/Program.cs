@@ -1,6 +1,8 @@
 ﻿using Makaretu.Nat;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Net;
 using System.Net.Sockets;
 
 namespace Spike
@@ -23,9 +25,9 @@ namespace Spike
             Console.WriteLine("Gateways");
             foreach (var g in NatDiscovery.GetGateways())
             {
-                bool q;
                 Console.WriteLine($"  {g}");
 
+                bool q;
                 var pcp = new Makaretu.Nat.Pcp.Client(g);
                 q = pcp.IsAvailableAsync().Result;
                 Console.WriteLine($"    supports NAT-PCP {q}");
@@ -33,10 +35,27 @@ namespace Spike
                 var pmp = new Makaretu.Nat.Pmp.Client(g);
                 q = pmp.IsAvailableAsync().Result;
                 Console.WriteLine($"    supports NAT-PMP {q}");
+
+            }
+
+            var nats = NatDiscovery.GetNats().ToArray();
+
+            Console.WriteLine();
+            Console.WriteLine("Nats");
+            foreach (var nat in nats)
+            {
+                Console.Write($"  {nat.RemoteEndPoint} ");
+                try
+                {
+                    var name = Dns.GetHostEntry(nat.RemoteEndPoint.Address).HostName;
+                    Console.Write(name);
+                }
+                catch { }
+                Console.WriteLine();
             }
 
             var endpoints = new List<LeasedEndpoint>();
-            foreach (var nat in NatDiscovery.GetNats())
+            foreach (var nat in nats)
             { 
                 Console.WriteLine();
                 Console.WriteLine("Create public end point");

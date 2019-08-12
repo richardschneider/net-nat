@@ -70,6 +70,20 @@ namespace Makaretu.Nat
         }
 
         /// <summary>
+        ///   The remote endpoint.
+        /// </summary>
+        /// <value>
+        ///   An <see cref="IPEndPoint"/>.
+        /// </value>
+        public IPEndPoint RemoteEndPoint
+        {
+            get
+            {
+                return (IPEndPoint)nat.Client.RemoteEndPoint;
+            }
+        }
+
+        /// <summary>
         ///   Determines if the NAT is online.
         /// </summary>
         /// <returns>
