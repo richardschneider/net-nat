@@ -65,16 +65,16 @@ after_test:
     - choco install codecov -y
     - codecov -f "test/coverage.opencover.xml"
     - dotnet tool install --global coveralls.net --version 1.0.0
-    - if defined COVERALLS_REPO_TOKEN
-        csmacnz.coveralls.exe
-        --opencover -i test/coverage.opencover.xml --useRelativePaths --serviceName appveyor --jobId %APPVEYOR_BUILD_NUMBER%
+#    - if defined COVERALLS_REPO_TOKEN
+#        csmacnz.coveralls.exe
+#        --opencover -i test/coverage.opencover.xml --useRelativePaths --serviceName appveyor --jobId %APPVEYOR_BUILD_NUMBER%
 
     - dotnet run --project Natcheck <nul
 
 artifacts:
-  - path: 'src/**/*.nupkg'
+  - path: './**/*.nupkg'
     name: nupkg
-  - path: 'src/**/*.snupkg'
+  - path: './**/*.snupkg'
     name: snupkg
 
 

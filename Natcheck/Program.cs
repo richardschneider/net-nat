@@ -15,7 +15,7 @@ namespace Natcheck
 
             Console.WriteLine();
             Console.WriteLine("Unicast addresses");
-            foreach (var a in NatDiscovery.GetIPAddresses())
+            foreach (var a in NatDiscovery.GetIPAddresses().OrderBy(a => a.AddressFamily))
             {
                 Console.WriteLine($"  {a} is public {a.IsPublic()}");
             }
@@ -54,22 +54,30 @@ namespace Natcheck
                 Console.WriteLine();
             }
 
-            var endpoints = new List<LeasedEndpoint>();
             foreach (var nat in nats)
-            { 
-                Console.WriteLine();
-                Console.WriteLine("Create public end point");
-                var lease = nat.CreatePublicEndpointAsync(ProtocolType.Tcp, 8080).Result;
-                var endpoint = new LeasedEndpoint(lease);
-                endpoints.Add(endpoint);
-                Console.WriteLine($"  public address '{endpoint}'");
-            }
-
-            Console.ReadLine();
-
-            foreach (var endpoint in endpoints)
             {
-                endpoint.Dispose();
+                Lease lease = null;
+                try
+                {
+                    lease = nat.CreatePublicEndpointAsync(ProtocolType.Tcp, 8080).Result;
+                    Console.WriteLine($"  Public endpoint {lease.PublicAddress}:{lease.PublicPort}");
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine($"  Failed to create public endpoint. {e.Message}");
+                }
+
+                if (lease != null)
+                {
+                    try
+                    {
+                        nat.DeletePublicEndpointAsync(lease).Wait();
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine($"  Failed to delete public endpoint. {e.Message}");
+                    }
+                }
             }
         }
     }

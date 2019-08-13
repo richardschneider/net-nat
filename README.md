@@ -22,13 +22,19 @@ It supports the following runtimes
 
 More information is on the [Documentation](https://richardschneider.github.io/net-nat/) web site.
 
-## Getting started
+## Library
+
+### Getting started
 
 Published releases are available on [NuGet](https://www.nuget.org/packages/Makaretu.Nat/).  To install, run the following command in the [Package Manager Console](https://docs.nuget.org/docs/start-here/using-the-package-manager-console).
 
     PM> Install-Package Makaretu.Nat
     
-## Usage
+Or using [dotnet](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet?tabs=netcore21)
+
+    > dotnet add package Makaretu.Nat
+
+### Usage
 
 Find the NAT(s) and create a public address, [LeasedEndPoint](https://richardschneider.github.io/net-nat/api/Makaretu.Nat.LeasedEndpoint.html).
 
@@ -52,4 +58,43 @@ foreach (var endpoint in endpoints)
     endpoint.Dispose();
 }
 
+```
+
+## Tool
+
+### Install
+
+The `natcheck` tool is available on [Nuget]() and
+is installed with dotnet.
+
+    > dotnet tool install --global natcheck
+
+### Usage
+
+`natcheck` is a tool to examine the environment and display the network settings.
+
+> natcheck
+
+```
+Check your NAT(s)
+
+Unicast addresses
+  169.254.253.248 is public False
+  192.168.178.21 is public False
+  fe80::8891:f4b8:3f8:fdf8%10 is public False
+  2406:e001:xxxx:f601:7573:b0a8:46b0:xxxx is public True
+  2406:e001:xxxx:f601:49f5:3a68:e240:xxxx is public True
+  fe80::7573:xxxx:46b0:xxxx%11 is public False
+
+Gateways
+  fe80::3a10:d5ff:fe09:1c0e%11
+    supports NAT-PCP False
+    supports NAT-PMP False
+  192.168.178.1
+    supports NAT-PCP True
+    supports NAT-PMP False
+
+Nats
+  192.168.178.1:5351 fritz.box
+  Public endpoint 165.84.19.45:8080
 ```
