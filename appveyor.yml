@@ -65,7 +65,8 @@ after_test:
 #        csmacnz.coveralls.exe
 #        --opencover -i test/coverage.opencover.xml --useRelativePaths --serviceName appveyor --jobId %APPVEYOR_BUILD_NUMBER%
 
-    - dotnet run --project Natcheck <nul
+  - dotnet tool install --global --add-source Natcheck/bin/Release natcheck
+  - natcheck
 
 artifacts:
   - path: './**/*.nupkg'
