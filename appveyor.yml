@@ -21,9 +21,6 @@ init:
   - git config --global user.email "noreply@emanon.org"
   - git config --global user.name "Appveyor CI"
 
-cache:
-  - packages -> **\packages.config      # preserve "packages" directory in the root of build folder but will reset it if packages.config is modified
-
 environment:
   COVERALLS_REPO_TOKEN:
     secure: WIkInmdVmU4HtE95FDe1dkU+OAWgLyXxG08l8vLXM0DNX+sqZXiKX8EWGstH2Iz4
@@ -31,8 +28,7 @@ environment:
 
 # tools we need for bulding/testing/deploying
 install:
-   - choco install gitversion.portable -pre -y
-   - choco install docfx -y
+   - choco install gitversion.portable -y
    - npm install gh-pages -g
 
 # gitversion will change the assembly info
@@ -40,40 +36,44 @@ pull_requests:
   do_not_increment_build_number: true
 
 before_build:
-  - nuget restore
   - ps: gitversion /output buildserver /updateAssemblyInfo >gitversion.log
+  - echo %GitVersion_MajorMinorPatch%
+  - echo %GitVersion_NuGetVersion%
 
 build_script:
   - dotnet build -c %CONFIGURATION% -p:Version=%GitVersion_MajorMinorPatch% -p:AssemblyVersion=%GitVersion_MajorMinorPatch%
-  - dotnet pack -c %CONFIGURATION% --no-build --no-restore -p:Version=%GitVersion_MajorMinorPatch% -p:AssemblyVersion=%GitVersion_MajorMinorPatch%
 
 after_build:
-  - cmd: appveyor PushArtifact "src\bin\%CONFIGURATION%\Makaretu.Nat.%GitVersion_MajorMinorPatch%.nupkg"
+# Build documentation in doc\_site
+# v2.43 is requiring VS 2019!!!
+  - cmd: choco install docfx -y --version 2.42 --force
+  - cmd: docfx doc\docfx.json --logLevel Warning
+  - cmd: 7z a -tzip docs.zip doc\_site
+  - cmd: appveyor PushArtifact docs.zip
+  - if defined git_token gh-pages -d doc\_site -m "new docs %GitVersion_FullSemVer%"
 
 test_script:
   - dotnet test -c %CONFIGURATION% --no-build --no-restore test
 
 after_test: 
 # Generate coverage report
-    - packages\OpenCover.4.6.519\tools\OpenCover.Console.exe 
-        -register:user -filter:"+[Makaretu.Nat*]* -[*Tests]*" 
-        -target:"c:\Program Files\dotnet\dotnet.exe" 
-        -targetargs:"test -c Release --no-build --no-restore --framework net45 test" 
-        -output:coverage.xml  
-        -mergeoutput 
-        -hideskipped:File 
-        -oldStyle 
-    - if defined COVERALLS_REPO_TOKEN 
-        packages\coveralls.net.0.6.0\tools\csmacnz.coveralls.exe 
-        --opencover -i ./coverage.xml --useRelativePaths --serviceName appveyor --jobId %APPVEYOR_BUILD_NUMBER%
-# Build documentation in doc\_site
-    - del src\obj\*.* /s /q
-    - docfx doc\docfx.json --logLevel Warning
-    - 7z a -tzip docs.zip doc\_site
-    - appveyor PushArtifact docs.zip
-    - if defined git_token gh-pages -d doc\_site -m "new docs %GitVersion_FullSemVer%"
+    - dotnet test -c %CONFIGURATION% -f netcoreapp2 --no-build --no-restore test /p:CollectCoverage=true
+    - choco install codecov -y
+    - codecov -f "test/coverage.opencover.xml"
+    - dotnet tool install --global coveralls.net --version 1.0.0
+#    - if defined COVERALLS_REPO_TOKEN
+#        csmacnz.coveralls.exe
+#        --opencover -i test/coverage.opencover.xml --useRelativePaths --serviceName appveyor --jobId %APPVEYOR_BUILD_NUMBER%
 
-    - dotnet run --project Spike <nul
+    - dotnet tool install --global --ignore-failed-sources --add-source .\Natcheck\bin\Release natcheck
+    - natcheck
+
+artifacts:
+  - path: './**/*.nupkg'
+    name: nupkg
+  - path: './**/*.snupkg'
+    name: snupkg
+
 
 # publish NuGet package on tag build
 nuget:

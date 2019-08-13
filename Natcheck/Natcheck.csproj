@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>natcheck</ToolCommandName>
+    <GeneratePackageOnBuild Condition=" '$(Configuration)' == 'Release' ">true</GeneratePackageOnBuild>
+
+    <!-- developer build is always 0.42 -->
+    <AssemblyVersion>0.42</AssemblyVersion>
+    <Version>0.42</Version>
+
+    <!-- Nuget specs -->
+    <PackageId>natcheck</PackageId>
+    <Authors>Richard Schneider</Authors>
+    <Title>Life behind a NAT</Title>
+    <Description>Check you NAT</Description>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageReleaseNotes>https://github.com/richardschneider/net-nat/releases</PackageReleaseNotes>
+    <Copyright>© 2018-2019 Richard Schneider</Copyright>
+    <PackageTags>NAT traversal</PackageTags>
+    <PackageProjectUrl>https://github.com/richardschneider/net-nat</PackageProjectUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\src\Nat.csproj" />
+  </ItemGroup>
+
+</Project>
