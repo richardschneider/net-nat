@@ -15,4 +15,4 @@ script:
   - dotnet test  -c Release --no-restore --framework netcoreapp2 ./test
   - dotnet build -c Release --no-restore --framework netcoreapp2.1 ./Natcheck
   - dotnet tool install --global --add-source Natcheck/bin/Release natcheck
-  - natcheck
+  - $HOME/.dotnet/tools/natcheck
