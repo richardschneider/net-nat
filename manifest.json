@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Nat.IPAddressExtensions.html",
-          "hash": "OA9Yr+GUvV06yzrKhWH3TA=="
+          "hash": "S1LMi/nf4L6zWeyCHBpGDA=="
         }
       },
       "is_incremental": false,
@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Nat.Lease.html",
-          "hash": "cEKFs/jAksqayNJpkO9XMw=="
+          "hash": "Prha56sh00VkS23u5R9JDA=="
         }
       },
       "is_incremental": false,
@@ -33,7 +33,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Nat.LeasedEndpoint.html",
-          "hash": "x4MQdV/GF3Ihje10L+Q0fQ=="
+          "hash": "YBf9M2mt2pePzCnxgMesHQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Makaretu.Nat.LeasedEndpointEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Makaretu.Nat.LeasedEndpointEventArgs.html",
+          "hash": "JHSKYQs2bjEjXpGiDMRj3w=="
         }
       },
       "is_incremental": false,
@@ -45,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Nat.NatClient.html",
-          "hash": "v6cSIWDhY+IburMTPDI1OQ=="
+          "hash": "0gAShE3gtLn678xpScVx5Q=="
         }
       },
       "is_incremental": false,
@@ -57,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Nat.NatDiscovery.html",
-          "hash": "JmWfYfuF8aVbmDt69BQ05g=="
+          "hash": "B5w8MPWuvcyFsye97Qcs+A=="
         }
       },
       "is_incremental": false,
@@ -69,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Nat.NatMessage.html",
-          "hash": "FunvhzFeLQP1xH3peYgqJA=="
+          "hash": "l+W67+90J/bCGv68d/1g3w=="
         }
       },
       "is_incremental": false,
@@ -81,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Nat.NatReader.html",
-          "hash": "HYDNrQixkVd1DFz23oe0uA=="
+          "hash": "tgSKnIXOnIlAKykDxpcJbA=="
         }
       },
       "is_incremental": false,
@@ -93,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Nat.NatWriter.html",
-          "hash": "nKDWa7YOQIv1/QQ+SuB92g=="
+          "hash": "2Zu7hIQOkSMUNPcESi+mqw=="
         }
       },
       "is_incremental": false,
@@ -105,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Nat.Pcp.AnnounceRequest.html",
-          "hash": "92RQ+QV/aGnqF3KFrm6pAw=="
+          "hash": "ZVuPdvfqrZ0UJFbMiTusGg=="
         }
       },
       "is_incremental": false,
@@ -117,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Nat.Pcp.Client.html",
-          "hash": "yXASnwj5VKYs0QmWCShOjg=="
+          "hash": "xwyUDKDdL4owtBfzHlHHIQ=="
         }
       },
       "is_incremental": false,
@@ -129,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Nat.Pcp.MapRequest.html",
-          "hash": "+FNXZ8otibfESFaKO0jhkA=="
+          "hash": "ijQrnSsBNhLrRW8T/GOpbw=="
         }
       },
       "is_incremental": false,
@@ -141,7 +153,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Nat.Pcp.MapResponse.html",
-          "hash": "wSHqMkMwhCwzTovtZiKG9Q=="
+          "hash": "MqL39Q5VTRdHkLBfGXx9kw=="
         }
       },
       "is_incremental": false,
@@ -153,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Nat.Pcp.Message.html",
-          "hash": "1csOZnvsG1vrRIa5Eq0RPg=="
+          "hash": "HrKer0vKSw/FWsyi8yIafg=="
         }
       },
       "is_incremental": false,
@@ -165,7 +177,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Nat.Pcp.Opcode.html",
-          "hash": "ZWxr7ErprxVpfCRuGsMZZQ=="
+          "hash": "eE4b99HQdIL520uykcZrBQ=="
         }
       },
       "is_incremental": false,
@@ -177,7 +189,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Nat.Pcp.PeerRequest.html",
-          "hash": "PIzALCHlQGKzh9RtBGkVew=="
+          "hash": "kjV0oH60lhGj1BSESOrAHQ=="
         }
       },
       "is_incremental": false,
@@ -189,7 +201,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Nat.Pcp.Request.html",
-          "hash": "XgIPwGHkD6Tnv/QfaHmtiQ=="
+          "hash": "dAYQXGohtWoORbHu4106MA=="
         }
       },
       "is_incremental": false,
@@ -201,7 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Nat.Pcp.Response.html",
-          "hash": "RqbvlW8c1xTTjFLaN5jZwA=="
+          "hash": "e6wQiFoXdPvbWlg6Go4iXg=="
         }
       },
       "is_incremental": false,
@@ -213,7 +225,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Nat.Pcp.html",
-          "hash": "l7MXaDk7L3C7nerzjA6qUw=="
+          "hash": "JGmvqkHIfGBgVLejfHIvzw=="
         }
       },
       "is_incremental": false,
@@ -225,7 +237,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Nat.Pmp.Client.html",
-          "hash": "55BLELrSv8SW9DGg5H3vMg=="
+          "hash": "i7ccWGkk0KXkTWpnF7icTQ=="
         }
       },
       "is_incremental": false,
@@ -237,7 +249,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Nat.Pmp.ExternalAddressRequest.html",
-          "hash": "51wybHnlNSBcYGEoOFzsPQ=="
+          "hash": "AOhT1wPBKX6JErZDb5yc/Q=="
         }
       },
       "is_incremental": false,
@@ -249,7 +261,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Nat.Pmp.MapRequest.html",
-          "hash": "K8dzsTw8GjV1Ua8fSRuo8Q=="
+          "hash": "ok2X5axNQiq7wf49o+CK0A=="
         }
       },
       "is_incremental": false,
@@ -261,7 +273,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Nat.Pmp.Message.html",
-          "hash": "3qsG0ErgBM5mi0PjRRS91A=="
+          "hash": "TfRH1OLBm9SFW0nPjhrUNQ=="
         }
       },
       "is_incremental": false,
@@ -273,7 +285,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Nat.Pmp.Opcode.html",
-          "hash": "YfBF0lAl9eUbGeMi3cGqAQ=="
+          "hash": "DlAgiu/XrCrxePF1BCiBuA=="
         }
       },
       "is_incremental": false,
@@ -285,7 +297,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Nat.Pmp.html",
-          "hash": "oN8a5K4X1Wbr0i5BA8af0Q=="
+          "hash": "nhO5yjUspihQZvCRCfQPPg=="
         }
       },
       "is_incremental": false,
@@ -297,7 +309,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Nat.html",
-          "hash": "i7R+vR0Ef5z0nMv0gZeB5Q=="
+          "hash": "NtF5kN0U8HlhPYx0pDXVkA=="
         }
       },
       "is_incremental": false,
@@ -309,7 +321,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "Cch51QeFH4RA2Gi89LP+wA=="
+          "hash": "wG0mnoEyWxg9W0avPjcIJw=="
         }
       },
       "is_incremental": false,
@@ -321,7 +333,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/intro.html",
-          "hash": "fs0aRbJEwFanSq4xzGgJNw=="
+          "hash": "A+attrdiE/1yXXVxrqVi9Q=="
         }
       },
       "is_incremental": false,
@@ -356,7 +368,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "qFj+3ohydhpZMnjH5vfDgg=="
+          "hash": "dEFyKJFlfQfZe0jw2oUopw=="
         }
       },
       "is_incremental": false,
@@ -386,9 +398,9 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "TocDocumentProcessor": {
+        "ResourceDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0
@@ -399,17 +411,17 @@
           "total_file_count": 2,
           "skipped_file_count": 0
         },
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 25,
+          "total_file_count": 26,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
           "skipped_file_count": 0
         }
       }

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class LeasedEndpoint
    | Life behind a NAT ">
-    <meta name="generator" content="docfx 2.44.0.0">
+    <meta name="generator" content="docfx 2.42.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -154,7 +154,7 @@ cancel the task.
     <a href="https://github.com/richardschneider/net-nat/new/master/apiSpec/new?filename=Makaretu_Nat_LeasedEndpoint__ctor_Makaretu_Nat_Lease_.md&amp;value=---%0Auid%3A%20Makaretu.Nat.LeasedEndpoint.%23ctor(Makaretu.Nat.Lease)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-nat/blob/master/src/LeasedEndpoint.cs/#L35">View Source</a>
+    <a href="https://github.com/richardschneider/net-nat/blob/master/src/LeasedEndpoint.cs/#L41">View Source</a>
   </span>
   <a id="Makaretu_Nat_LeasedEndpoint__ctor_" data-uid="Makaretu.Nat.LeasedEndpoint.#ctor*"></a>
   <h4 id="Makaretu_Nat_LeasedEndpoint__ctor_Makaretu_Nat_Lease_" data-uid="Makaretu.Nat.LeasedEndpoint.#ctor(Makaretu.Nat.Lease)">LeasedEndpoint(Lease)</h4>
@@ -195,7 +195,7 @@ from the specified <a class="xref" href="Makaretu.Nat.LeasedEndpoint.html#Makare
     <a href="https://github.com/richardschneider/net-nat/new/master/apiSpec/new?filename=Makaretu_Nat_LeasedEndpoint_Lease.md&amp;value=---%0Auid%3A%20Makaretu.Nat.LeasedEndpoint.Lease%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-nat/blob/master/src/LeasedEndpoint.cs/#L52">View Source</a>
+    <a href="https://github.com/richardschneider/net-nat/blob/master/src/LeasedEndpoint.cs/#L58">View Source</a>
   </span>
   <a id="Makaretu_Nat_LeasedEndpoint_Lease_" data-uid="Makaretu.Nat.LeasedEndpoint.Lease*"></a>
   <h4 id="Makaretu_Nat_LeasedEndpoint_Lease" data-uid="Makaretu.Nat.LeasedEndpoint.Lease">Lease</h4>
@@ -228,7 +228,7 @@ from the specified <a class="xref" href="Makaretu.Nat.LeasedEndpoint.html#Makare
     <a href="https://github.com/richardschneider/net-nat/new/master/apiSpec/new?filename=Makaretu_Nat_LeasedEndpoint_Dispose.md&amp;value=---%0Auid%3A%20Makaretu.Nat.LeasedEndpoint.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-nat/blob/master/src/LeasedEndpoint.cs/#L55">View Source</a>
+    <a href="https://github.com/richardschneider/net-nat/blob/master/src/LeasedEndpoint.cs/#L61">View Source</a>
   </span>
   <a id="Makaretu_Nat_LeasedEndpoint_Dispose_" data-uid="Makaretu.Nat.LeasedEndpoint.Dispose*"></a>
   <h4 id="Makaretu_Nat_LeasedEndpoint_Dispose" data-uid="Makaretu.Nat.LeasedEndpoint.Dispose">Dispose()</h4>
@@ -238,6 +238,39 @@ from the specified <a class="xref" href="Makaretu.Nat.LeasedEndpoint.html#Makare
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
   </div>
+  <h3 id="events">Events
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-nat/new/master/apiSpec/new?filename=Makaretu_Nat_LeasedEndpoint_Changed.md&amp;value=---%0Auid%3A%20Makaretu.Nat.LeasedEndpoint.Changed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-nat/blob/master/src/LeasedEndpoint.cs/#L29">View Source</a>
+  </span>
+  <h4 id="Makaretu_Nat_LeasedEndpoint_Changed" data-uid="Makaretu.Nat.LeasedEndpoint.Changed">Changed</h4>
+  <div class="markdown level1 summary"><p>Raised when the lease is renewed and the public address and/or port
+changes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;LeasedEndpointEventArgs&gt; Changed</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="Makaretu.Nat.LeasedEndpointEventArgs.html">LeasedEndpointEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>

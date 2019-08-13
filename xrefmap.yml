@@ -155,6 +155,12 @@ references:
   isSpec: "True"
   fullName: Makaretu.Nat.LeasedEndpoint.LeasedEndpoint
   nameWithType: LeasedEndpoint.LeasedEndpoint
+- uid: Makaretu.Nat.LeasedEndpoint.Changed
+  name: Changed
+  href: api/Makaretu.Nat.LeasedEndpoint.html#Makaretu_Nat_LeasedEndpoint_Changed
+  commentId: E:Makaretu.Nat.LeasedEndpoint.Changed
+  fullName: Makaretu.Nat.LeasedEndpoint.Changed
+  nameWithType: LeasedEndpoint.Changed
 - uid: Makaretu.Nat.LeasedEndpoint.Dispose
   name: Dispose()
   href: api/Makaretu.Nat.LeasedEndpoint.html#Makaretu_Nat_LeasedEndpoint_Dispose
@@ -181,6 +187,38 @@ references:
   isSpec: "True"
   fullName: Makaretu.Nat.LeasedEndpoint.Lease
   nameWithType: LeasedEndpoint.Lease
+- uid: Makaretu.Nat.LeasedEndpointEventArgs
+  name: LeasedEndpointEventArgs
+  href: api/Makaretu.Nat.LeasedEndpointEventArgs.html
+  commentId: T:Makaretu.Nat.LeasedEndpointEventArgs
+  fullName: Makaretu.Nat.LeasedEndpointEventArgs
+  nameWithType: LeasedEndpointEventArgs
+- uid: Makaretu.Nat.LeasedEndpointEventArgs.Current
+  name: Current
+  href: api/Makaretu.Nat.LeasedEndpointEventArgs.html#Makaretu_Nat_LeasedEndpointEventArgs_Current
+  commentId: P:Makaretu.Nat.LeasedEndpointEventArgs.Current
+  fullName: Makaretu.Nat.LeasedEndpointEventArgs.Current
+  nameWithType: LeasedEndpointEventArgs.Current
+- uid: Makaretu.Nat.LeasedEndpointEventArgs.Current*
+  name: Current
+  href: api/Makaretu.Nat.LeasedEndpointEventArgs.html#Makaretu_Nat_LeasedEndpointEventArgs_Current_
+  commentId: Overload:Makaretu.Nat.LeasedEndpointEventArgs.Current
+  isSpec: "True"
+  fullName: Makaretu.Nat.LeasedEndpointEventArgs.Current
+  nameWithType: LeasedEndpointEventArgs.Current
+- uid: Makaretu.Nat.LeasedEndpointEventArgs.Previous
+  name: Previous
+  href: api/Makaretu.Nat.LeasedEndpointEventArgs.html#Makaretu_Nat_LeasedEndpointEventArgs_Previous
+  commentId: P:Makaretu.Nat.LeasedEndpointEventArgs.Previous
+  fullName: Makaretu.Nat.LeasedEndpointEventArgs.Previous
+  nameWithType: LeasedEndpointEventArgs.Previous
+- uid: Makaretu.Nat.LeasedEndpointEventArgs.Previous*
+  name: Previous
+  href: api/Makaretu.Nat.LeasedEndpointEventArgs.html#Makaretu_Nat_LeasedEndpointEventArgs_Previous_
+  commentId: Overload:Makaretu.Nat.LeasedEndpointEventArgs.Previous
+  isSpec: "True"
+  fullName: Makaretu.Nat.LeasedEndpointEventArgs.Previous
+  nameWithType: LeasedEndpointEventArgs.Previous
 - uid: Makaretu.Nat.NatClient
   name: NatClient
   href: api/Makaretu.Nat.NatClient.html
@@ -278,6 +316,19 @@ references:
   isSpec: "True"
   fullName: Makaretu.Nat.NatClient.MaxRetries
   nameWithType: NatClient.MaxRetries
+- uid: Makaretu.Nat.NatClient.RemoteEndPoint
+  name: RemoteEndPoint
+  href: api/Makaretu.Nat.NatClient.html#Makaretu_Nat_NatClient_RemoteEndPoint
+  commentId: P:Makaretu.Nat.NatClient.RemoteEndPoint
+  fullName: Makaretu.Nat.NatClient.RemoteEndPoint
+  nameWithType: NatClient.RemoteEndPoint
+- uid: Makaretu.Nat.NatClient.RemoteEndPoint*
+  name: RemoteEndPoint
+  href: api/Makaretu.Nat.NatClient.html#Makaretu_Nat_NatClient_RemoteEndPoint_
+  commentId: Overload:Makaretu.Nat.NatClient.RemoteEndPoint
+  isSpec: "True"
+  fullName: Makaretu.Nat.NatClient.RemoteEndPoint
+  nameWithType: NatClient.RemoteEndPoint
 - uid: Makaretu.Nat.NatClient.RenewPublicEndpointAsync(Makaretu.Nat.Lease)
   name: RenewPublicEndpointAsync(Lease)
   href: api/Makaretu.Nat.NatClient.html#Makaretu_Nat_NatClient_RenewPublicEndpointAsync_Makaretu_Nat_Lease_
