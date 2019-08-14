@@ -7,6 +7,8 @@
       href: server.md
 - name: NAT Discovery
 - name: Leasing
+- name: NAT Check
+  href: natcheck.md
 - name: Class Reference
   href: ../api/Makaretu.Nat.yml
   
