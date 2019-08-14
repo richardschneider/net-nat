@@ -51,11 +51,33 @@ namespace Makaretu.Nat.Pcp
             {
                 var res = await SendAndReceiveAsync(hello);
                 var response = Message.Create<Response>(res);
-                response.EnsureSuccess();
-                return response.Version == ProtocolVersion;
+                switch (response.ResultCode)
+                {
+                    case 0:
+                        if (response.Version == ProtocolVersion)
+                        {
+                            UnavailableReason = "";
+                            return true;
+                        }
+
+                        UnavailableReason = "Protocol version not support.";
+                        return false;
+                    case 2:
+                        UnavailableReason = "Unathorised";
+                        return false;
+                    default:
+                        UnavailableReason = $"Error code {response.ResultCode}.";
+                        return false;
+                }
             }
-            catch (Exception)
+            catch (TimeoutException)
             {
+                UnavailableReason = "No response received.";
+                return false;
+            }
+            catch (Exception e)
+            {
+                UnavailableReason = $"Unexpected exception '{e.GetType().FullName}'. {e.Message}.";
                 return false;
             }
         }

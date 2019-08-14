@@ -50,11 +50,22 @@ namespace Makaretu.Nat.Pmp
             {
                 var res = await SendAndReceiveAsync(hello);
                 if (res[0] != ProtocolVersion)
+                {
+                    UnavailableReason = "Not supported";
                     return false;
+                }
+
+                UnavailableReason = "";
                 return true;
             }
-            catch (Exception)
+            catch (TimeoutException)
             {
+                UnavailableReason = "No response received.";
+                return false;
+            }
+            catch (Exception e)
+            {
+                UnavailableReason = $"Unexpected exception '{e.GetType().FullName}'. {e.Message}.";
                 return false;
             }
         }

@@ -30,11 +30,11 @@ namespace Natcheck
                 bool q;
                 var pcp = new Makaretu.Nat.Pcp.Client(g);
                 q = pcp.IsAvailableAsync().Result;
-                Console.WriteLine($"    supports NAT-PCP {q}");
+                Console.WriteLine($"    supports NAT-PCP {q} {pcp.UnavailableReason}");
 
                 var pmp = new Makaretu.Nat.Pmp.Client(g);
                 q = pmp.IsAvailableAsync().Result;
-                Console.WriteLine($"    supports NAT-PMP {q}");
+                Console.WriteLine($"    supports NAT-PMP {q} {pmp.UnavailableReason}");
 
             }
 
@@ -60,11 +60,11 @@ namespace Natcheck
                 try
                 {
                     lease = nat.CreatePublicEndpointAsync(ProtocolType.Tcp, 8080).Result;
-                    Console.WriteLine($"  Public endpoint {lease.PublicAddress}:{lease.PublicPort}");
+                    Console.WriteLine($"    Public endpoint {lease.PublicAddress}:{lease.PublicPort}");
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine($"  Failed to create public endpoint. {e.Message}");
+                    Console.WriteLine($"    Failed to create public endpoint. {e.Message}");
                 }
 
                 if (lease != null)
@@ -75,7 +75,7 @@ namespace Natcheck
                     }
                     catch (Exception e)
                     {
-                        Console.WriteLine($"  Failed to delete public endpoint. {e.Message}");
+                        Console.WriteLine($"    Failed to delete public endpoint. {e.Message}");
                     }
                 }
             }

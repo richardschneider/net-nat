@@ -93,6 +93,18 @@ namespace Makaretu.Nat
         public abstract Task<bool> IsAvailableAsync();
 
         /// <summary>
+        ///   The reason why the NAT is not availble.
+        /// </summary>
+        /// <value>
+        ///   "" if the NAT is available, or a reason why it is not available. <b>null</b>
+        ///   when <see cref="IsAvailableAsync"/> has not been called,
+        /// </value>
+        /// <remarks>
+        ///   The property is only valid, after the <see cref="IsAvailableAsync"/> method is called.
+        /// </remarks>
+        public string UnavailableReason { get; protected set; }
+
+        /// <summary>
         ///   Create an endpoint that can be connected to by devices outside of the NAT.
         /// </summary>
         /// <param name="protocol">
