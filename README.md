@@ -64,7 +64,7 @@ foreach (var endpoint in endpoints)
 
 ### Install
 
-The `natcheck` tool is available on [Nuget]() and
+The `natcheck` tool is available on [Nuget](https://www.nuget.org/packages/Makaretu.Nat/) and
 is installed with dotnet.
 
     > dotnet tool install --global natcheck

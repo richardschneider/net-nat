@@ -1,5 +1,11 @@
 - name: Introduction
   href: intro.md
+  items:
+    - name: Usage
+      href: usage.md
+    - name: Server Example
+- name: NAT Discovery
+- name: Leasing
 - name: Class Reference
   href: ../api/Makaretu.Nat.yml
   
