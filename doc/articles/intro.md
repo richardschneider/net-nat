@@ -17,7 +17,11 @@ It uses the following protocols to create a public IP address
 - [RFC 6886 - NAT Port Mapping Protocol](https://tools.ietf.org/html/rfc6886)
 
 > [!WARNING]
->  NAT Port Mapping Protocol is not fully implemented.  See [issue #3](https://github.com/richardschneider/net-nat/issues/3).
+>  NAT Port Mapping Protocol is not fully implemented.  See [**issue #3**](https://github.com/richardschneider/net-nat/issues/3).
 
-Use the [natcheck](natcheck.md) tool to examine your network environment. See the [gotchas]()
-for reasons why things fail.
+> [!NOTE]
+> Please read the [**Prerequisites**](prerequisite.md) article, before running the software.
+
+## NAT checker
+
+Use the [natcheck](natcheck.md) tool to examine your network environment.
