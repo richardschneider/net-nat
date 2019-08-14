@@ -71,6 +71,31 @@
 
 <p><a href="https://github.com/richardschneider/net-nat/tree/master/NancyServer">Nancy Server</a> is a sample
 project that demostrates a simple <a href="http://nancyfx.org/">nancy</a> server that creates a public address.</p>
+<h2 id="setup">Setup</h2>
+<p>On Windows, <code>HTTP.SYS</code> must be configured to allow incoming requests
+on port 80.</p>
+<blockquote><p>netsh http add urlacl url=&quot;http://+:80/&quot; user=&quot;Everyone&quot;</p>
+</blockquote>
+<h2 id="testing-locally">Testing locally</h2>
+<p>Run the server in a different process</p>
+<pre><code>&gt; start dotnet run --project NancyServer
+
+listening on http://localhost:80
+listening on public address &#39;165.84.19.45:80&#39;
+Press enter to stop
+</code></pre><p>Get a page from the server</p>
+<pre><code>&gt; curl http://localhost
+
+Hello World!
+</code></pre><h2 id="testing-publicly">Testing publicly</h2>
+<p>Run the server in a different process</p>
+<pre><code>&gt; start dotnet run --project NancyServer
+
+listening on http://localhost:80
+listening on public address &#39;165.84.19.45:80&#39;
+Press enter to stop
+</code></pre><p>In your browser, go to a web proxy, such as <a href="https://www.proxysite.com/">proxysite.com</a>,
+and enter the public address (in this case <code>165.84.19.45</code>).</p>
 </article>
           </div>
           
