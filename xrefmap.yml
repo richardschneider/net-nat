@@ -370,6 +370,19 @@ references:
   isSpec: "True"
   fullName: Makaretu.Nat.NatClient.SendAndReceiveAsync
   nameWithType: NatClient.SendAndReceiveAsync
+- uid: Makaretu.Nat.NatClient.UnavailableReason
+  name: UnavailableReason
+  href: api/Makaretu.Nat.NatClient.html#Makaretu_Nat_NatClient_UnavailableReason
+  commentId: P:Makaretu.Nat.NatClient.UnavailableReason
+  fullName: Makaretu.Nat.NatClient.UnavailableReason
+  nameWithType: NatClient.UnavailableReason
+- uid: Makaretu.Nat.NatClient.UnavailableReason*
+  name: UnavailableReason
+  href: api/Makaretu.Nat.NatClient.html#Makaretu_Nat_NatClient_UnavailableReason_
+  commentId: Overload:Makaretu.Nat.NatClient.UnavailableReason
+  isSpec: "True"
+  fullName: Makaretu.Nat.NatClient.UnavailableReason
+  nameWithType: NatClient.UnavailableReason
 - uid: Makaretu.Nat.NatDiscovery
   name: NatDiscovery
   href: api/Makaretu.Nat.NatDiscovery.html
