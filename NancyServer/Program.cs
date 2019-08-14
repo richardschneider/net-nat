@@ -14,15 +14,15 @@ namespace NancyServer
             {
                 UrlReservations = new UrlReservations() { CreateAutomatically = true }
             };
-            using (var nancyHost = new NancyHost(new Uri("http://localhost:8888")))
+            using (var nancyHost = new NancyHost(new Uri("http://localhost:80")))
             {
                 nancyHost.Start();
-                Console.WriteLine("listening on http://localhost:8888");
+                Console.WriteLine("listening on http://localhost:80");
 
                 var endpoints = new List<LeasedEndpoint>();
                 foreach (var nat in NatDiscovery.GetNats())
                 {
-                    var lease = nat.CreatePublicEndpointAsync(ProtocolType.Tcp, 8888).Result;
+                    var lease = nat.CreatePublicEndpointAsync(ProtocolType.Tcp, 80).Result;
                     var endpoint = new LeasedEndpoint(lease);
                     endpoints.Add(endpoint);
                     Console.WriteLine($"listening on public address '{endpoint}'");

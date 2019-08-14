@@ -4,6 +4,7 @@
     - name: Usage
       href: usage.md
     - name: Server Example
+      href: server.md
 - name: NAT Discovery
 - name: Leasing
 - name: Class Reference
