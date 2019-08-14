@@ -18,3 +18,6 @@ It uses the following protocols to create a public IP address
 
 > [!WARNING]
 >  NAT Port Mapping Protocol is not fully implemented.  See [issue #3](https://github.com/richardschneider/net-nat/issues/3).
+
+Use the [natcheck](natcheck.md) tool to examine your network environment. See the [gotchas]()
+for reasons why things fail.

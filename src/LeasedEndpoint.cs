@@ -57,7 +57,10 @@ namespace Makaretu.Nat
         /// </summary>
         public Lease Lease { get; private set; }
 
-        /// <inheritdoc />
+        /// <summary>
+        ///   Stops the renewal process and deletes the public endpoint.
+        /// </summary>
+        /// <seealso cref="NatClient.DeletePublicEndpointAsync(Lease)"/>
         public void Dispose()
         {
             if (renewalCancellation != null) {

@@ -11,9 +11,9 @@ is installed with dotnet.
 
 `natcheck` is a tool to examine the environment and display the network settings.
 
+```
 > natcheck
 
-```
 Check your NAT(s)
 
 Unicast addresses

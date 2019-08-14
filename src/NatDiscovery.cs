@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace Makaretu.Nat
 {
     /// <summary>
-    ///   Discoveres the possible NATs.
+    ///   Discovers the possible NATs.
     /// </summary>
     /// <remarks>
     ///   A gateway to the internet can be a NAT.

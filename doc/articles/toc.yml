@@ -6,9 +6,13 @@
     - name: Server Example
       href: server.md
 - name: NAT Discovery
-- name: Leasing
+  href: discovery.md
+- name: Public Address
+  href: pubaddr.md
 - name: NAT Check
   href: natcheck.md
+- name: Gotchas
+  href: gotchas.md
 - name: Class Reference
   href: ../api/Makaretu.Nat.yml
   
