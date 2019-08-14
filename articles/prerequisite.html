@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Gotchas | Life behind a NAT </title>
+    <title>Prerequisites | Life behind a NAT </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Gotchas | Life behind a NAT ">
+    <meta name="title" content="Prerequisites | Life behind a NAT ">
     <meta name="generator" content="docfx 2.42.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -67,10 +67,23 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="gotchas">Gotchas</h1>
+<h1 id="prerequisites">Prerequisites</h1>
 
-<p>TODO</p>
-</article>
+<p>The net-nat package requires other network components to be configured.</p>
+<h2 id="router">Router</h2>
+<p>Your router must be configured to be a NAT that performs port forwarding to your computer.
+As each router has a different administration UI, you will have to read the guide on your
+router.  </p>
+<p>Here&#39;s a good article on <a href="https://www.howtogeek.com/66214/how-to-forward-ports-on-your-router/">port forwarding</a>.</p>
+<h2 id="firewall">Firewall</h2>
+<p>If your computer has a firewall (for example Windows Defender), you must also 
+configure the firewall to open your local port.</p>
+<p>Here&#39;s a good article on configuring <a href="https://www.howtogeek.com/394735/how-do-i-open-a-port-on-windows-firewall/">Windows Defender</a>.</p>
+<h2 id="http">HTTP</h2>
+<p>If you are forwarding HTTP requests, then on Windows, <code>HTTP.SYS</code> must be configured to allow incoming requests
+on port 80.</p>
+<pre><code class="lang-console">&gt; netsh http add urlacl url=&quot;http://+:80/&quot; user=&quot;Everyone&quot;
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
@@ -78,7 +91,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/richardschneider/net-nat/blob/master/doc/articles/gotchas.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/richardschneider/net-nat/blob/master/doc/articles/prerequisite.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
