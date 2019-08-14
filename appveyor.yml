@@ -61,9 +61,9 @@ after_test:
     - choco install codecov -y
     - codecov -f "test/coverage.opencover.xml"
     - dotnet tool install --global coveralls.net --version 1.0.0
-#    - if defined COVERALLS_REPO_TOKEN
-#        csmacnz.coveralls.exe
-#        --opencover -i test/coverage.opencover.xml --useRelativePaths --serviceName appveyor --jobId %APPVEYOR_BUILD_NUMBER%
+    - if defined COVERALLS_REPO_TOKEN
+        csmacnz.coveralls.exe
+        --opencover -i test/coverage.opencover.xml --useRelativePaths --serviceName appveyor --jobId %APPVEYOR_BUILD_NUMBER%
 
     - dotnet tool install --global --ignore-failed-sources --add-source .\Natcheck\bin\Release natcheck
     - natcheck
