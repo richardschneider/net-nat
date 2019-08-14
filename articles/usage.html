@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Makaretu NAT | Life behind a NAT </title>
+    <title>Usage | Life behind a NAT </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Makaretu NAT | Life behind a NAT ">
+    <meta name="title" content="Usage | Life behind a NAT ">
     <meta name="generator" content="docfx 2.42.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -67,23 +67,33 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="makaretu-nat">Makaretu NAT</h1>
+<h1 id="usage">Usage</h1>
 
-<p>The main purpose of this package is to allow a server behind a NAT to accept connections from the public internet.
-This allows any internet user to access your home server.</p>
-<p>The basic idea is that your home NAT (router/gateway) is asked to create an IP address
-this is publically addressable.  The NAT then forwards any messsages to the public address
-to your local host.</p>
-<p>The source code is on <a href="https://github.com/richardschneider/net-nat">GitHub</a> and the 
-package is published on <a href="https://www.nuget.org/packages/Makaretu.Nat">NuGet</a>. </p>
-<p>It uses the following protocols to create a public IP address</p>
+<p>The general pattern is to </p>
 <ul>
-<li><a href="https://tools.ietf.org/html/rfc6887">RFC 6887 - NAT Port Control Protocol</a></li>
-<li><a href="https://tools.ietf.org/html/rfc6886">RFC 6886 - NAT Port Mapping Protocol</a></li>
+<li>find the NAT(s), <a class="xref" href="../api/Makaretu.Nat.NatDiscovery.html#Makaretu_Nat_NatDiscovery_GetNats_">NatDiscovery.GetNats</a></li>
+<li>create a public address on the NAT, <a class="xref" href="../api/Makaretu.Nat.LeasedEndpoint.html">LeasedEndPoint</a>.</li>
+<li>inform others of the public address</li>
 </ul>
-<div class="WARNING"><h5>Warning</h5><p> NAT Port Mapping Protocol is not fully implemented.  See <a href="https://github.com/richardschneider/net-nat/issues/3">issue #3</a>.</p>
-</div>
-</article>
+<pre><code class="lang-csharp">using Makaretu.Nat;
+using System.Net.Sockets;
+
+var endpoints = new List&lt;LeasedEndpoint&gt;();
+foreach (var nat in NatDiscovery.GetNats())
+{ 
+    var lease = await nat.CreatePublicEndpointAsync(ProtocolType.Tcp, 8080);
+    var endpoint = new LeasedEndpoint(lease);
+    endpoints.Add(endpoint);
+    Console.WriteLine($&quot;Public address {endpoint}&quot;);
+}
+
+// Do your work.
+
+foreach (var endpoint in endpoints)
+{
+    endpoint.Dispose();
+}
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
@@ -91,7 +101,7 @@ package is published on <a href="https://www.nuget.org/packages/Makaretu.Nat">Nu
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/richardschneider/net-nat/blob/master/doc/articles/intro.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/richardschneider/net-nat/blob/master/doc/articles/usage.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
