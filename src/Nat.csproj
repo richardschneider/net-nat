@@ -14,12 +14,12 @@
     <PackageId>Makaretu.Nat</PackageId>
     <Authors>Richard Schneider</Authors>
     <Title>Life behind a NAT</Title>
-    <Description>Break through the NAT barriar</Description>
+    <Description>Break through the NAT barrier. Create a public address for your home server.</Description>
     <PackageProjectUrl>https://github.com/richardschneider/net-nat</PackageProjectUrl>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageReleaseNotes>https://github.com/richardschneider/net-nat/releases</PackageReleaseNotes>
     <Copyright>© 2018-2019 Richard Schneider</Copyright>
-    <PackageTags>NAT traversal</PackageTags>
+    <PackageTags>NAT gateway router traversal pcp pmp p2p</PackageTags>
     <IncludeSymbols>True</IncludeSymbols>
 
     <GeneratePackageOnBuild Condition=" '$(Configuration)' == 'Release' ">true</GeneratePackageOnBuild>
